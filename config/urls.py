@@ -3,8 +3,17 @@ from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
 
+from core import views as core_views
+from blog import views as blog_views
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', core_views.index, name="index"),
+    path('about/', core_views.about, name="about"),
+    path('category/<int:id>/', blog_views.category, name="category"),
+    path('blog/<int:id>/', blog_views.blog, name="blog"),
+    path('contact/', core_views.contact, name="contact"),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

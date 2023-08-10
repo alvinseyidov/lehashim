@@ -1,0 +1,586 @@
+{% load static%}
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Le Hashim</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/imgs/theme/favicon.png'%}">
+    <!-- Template CSS  -->
+    <link rel="stylesheet" href="{% static 'assets/css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/widgets.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css'%}">
+</head>
+
+<body class="home-page-1">
+    <div class="scroll-progress bg-grey-900"></div>
+    <!-- Start Preloader -->
+    <div class="preloader text-center">
+        <div class="loader"></div>
+    </div>
+    <!--Offcanvas sidebar-->
+   <aside id="sidebar-wrapper" class="custom-scrollbar offcanvas-sidebar">
+        <button class="off-canvas-close"><img class="svg-icon-24" src="{% static 'assets/imgs/theme/svg/close.svg'%}" alt=""></button>
+        <div class="sidebar-inner">
+            <div class="sidebar-widget widget-creative-menu">
+                <ul>
+                    <li><a href="category.html">Rəqəmsal<sup>235</sup></a></li>
+                    <li><a href="category-big.html">Həyat Tərzi<sup>186</sup></a></li>
+                    <li><a href="category-grid.html">Səyahət<sup>98</sup></a></li>
+                    <li><a href="category-list.html">Təlimlər<sup>247</sup></a></li>
+                </ul>
+            </div>
+            <div class="offcanvas-copyright mt-65">
+                <h6 class="text-muted text-uppercase mb-20 font-heading text-white">Flow Magazine</h6>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Odio suspendisse leo neque.
+                </p>
+                <p><strong class="color-black">Address</strong><br>
+                    123 Main Street<br>
+                    New York, NY 10001</p>
+                <p><strong class="color-black">Phone</strong><br>
+                    (+01) 234 567 89</p>
+            </div>
+        </div>
+    </aside>
+    <!-- Start Header -->
+    <header class="main-header header-sticky">
+        <div class="position-relative">
+            <div class="container align-self-center">
+                <div class="header-style-1">
+                    <div class="logo">
+                        <a href="index.html"><img src="{% static 'assets/imgs/theme/logo.svg'%}" alt=""></a>
+                    </div>
+                    <div class="main-nav d-none d-lg-block">
+                        <nav>
+                            <!--Desktop menu-->
+                            <ul class="main-menu d-none d-lg-inline">
+                                <li class="menu-item-has-children">
+                                    <a href="index.html">Əsas</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="index.html">Home default</a></li>
+                                        <li><a href="home-2.html">Homepage 2</a></li>
+                                        <li><a href="home-3.html">Homepage 3</a></li>
+                                    </ul>
+                                </li>
+                                <li> <a href="page-about.html">Haqqımda</a> </li>
+                                <li class="menu-item-has-children">
+                                    <a href="category.html">Yazılar</a>
+                                    <ul class="sub-menu font-small">
+                                        <li><a href="category-big.html">Categories Big</a></li>
+                                        <li><a href="category-grid.html">Categories Grid</a></li>
+                                        <li><a href="category-list.html">Categories List</a></li>
+                                        <li><a href="category-list-2.html">Categories List 2</a></li>
+                                    </ul>
+                                </li>
+                                <li> <a href="page-design.html">Təlimlər</a> </li>
+                                <li> <a href="page-contact.html">Əlaqə</a> </li>
+                            </ul>
+                            <!--Mobile menu-->
+                            <ul id="mobile-menu" class="d-block d-lg-none text-muted">
+                                <li class="menu-item-has-children">
+                                    <a href="index.html">Home</a>
+                                    <ul class="sub-menu font-small">
+                                        <li><a href="index.html">Home default</a></li>
+                                        <li><a href="home-2.html">Homepage 2</a></li>
+                                        <li><a href="home-3.html">Homepage 3</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children"><a href="#">Pages</a>
+                                    <ul class="sub-menu font-small">
+                                        <li><a href="page-about.html">About</a></li>
+                                        <li><a href="page-contact.html">Contact</a></li>
+                                        <li><a href="page-design.html">Typography</a></li>
+                                        <li><a href="page-register.html">Register</a></li>
+                                        <li><a href="page-login.html">Login</a></li>
+                                        <li><a href="page-search.html">Search</a></li>
+                                        <li><a href="page-author.html">Author</a></li>
+                                        <li><a href="page-404.html">404 page</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children"><a href="#">Category</a>
+                                    <ul class="sub-menu font-small">
+                                        <li><a href="category-list.html">List layout</a></li>
+                                        <li><a href="category-grid.html">Grid layout</a></li>
+                                        <li><a href="category-list-2.html">List 2 layout</a></li>
+                                        <li><a href="category-big.html">Big layout</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children"><a href="#">Single post</a>
+                                    <ul class="sub-menu font-small">
+                                        <li><a href="single.html">Default</a></li>
+                                        <li><a href="single-2.html">Big image</a></li>
+                                        <li><a href="single-3.html">Right sidebar</a></li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!--end: main-nav-->
+                    <div class="header-right">
+                        <button class="search-icon d-md-inline">
+                            <img src="{% static 'assets/imgs/theme/svg/search.svg'%}" alt="">
+                        </button>
+                        <button class="btn btn-md bg-dark text-white ml-15 box-shadow d-none d-lg-inline"><a href="https://themeforest.net/item/flow-html-personal-blog-template/30381120">Təklif Et</a></button>
+                    </div>
+                </div>
+                <div class="mobile_menu d-lg-none d-block"></div>
+            </div>
+            <div class="off-canvas-toggle-cover d-inline-block">
+                <div class="off-canvas-toggle hidden d-inline-block" id="off-canvas-toggle">
+                    <img class="svg-icon-24" src="{% static 'assets/imgs/theme/svg/menu.svg'%}" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--Start search form-->
+    <div class="main-search-form bg-brand-4">
+        <div class="container">
+            <div class=" pt-50 pb-50 ">
+                <div class="row mb-20">
+                    <div class="col-12 align-self-center main-search-form-cover m-auto">
+                        <p class="text-center"><span class="display-1">Search</span></p>
+                        <form action="#" class="search-header">
+                            <div class="input-group w-100">
+                                <input type="text" class="form-control" placeholder="Search articles, places and people">
+                                <div class="input-group-append">
+                                    <button class="btn btn-search bg-white" type="submit">
+                                        <img class="svg-icon-24" src="{% static 'assets/imgs/theme/svg/search.svg'%}" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row mt-80 text-center">
+                    <div class="col-12 font-small suggested-area">
+                        <h5 class="suggested font-heading mb-20 text-grey-400"> <strong>Suggested keywords:</strong></h5>
+                        <ul class="list-inline d-inline-block">
+                            <li class="list-inline-item"><a href="category.html">Health</a></li>
+                            <li class="list-inline-item"><a href="category.html">Travel tips</a></li>
+                            <li class="list-inline-item"><a href="category.html">Lifestyle</a></li>
+                            <li class="list-inline-item"><a href="category.html">Technology</a></li>
+                            <li class="list-inline-item"><a href="category.html">Food</a></li>
+                            <li class="list-inline-item"><a href="category.html">Books</a></li>
+                            <li class="list-inline-item"><a href="category.html">Drink</a></li>
+                            <li class="list-inline-item"><a href="category.html">Fashion</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Start Main content -->
+    <main>
+        <div class="entry-header entry-header-style-2 pb-80 pt-80 mb-50 text-white" style="background-image: url({% static 'assets/imgs/news/news-20.jpg'%})">
+            <div class="entry-header-content">
+                <div class="post-meta-1 mb-20">
+                    <a href="category.html" class="tag-category bg-brand-1 shadown-1 text-dark button-shadow hover-up-3" tabindex="0">Lifestyle</a>
+                    <span class="post-date  text-white font-md">September 15, 2021</span>
+                </div>
+                <h1 class="entry-title mb-50 fw-700">
+                    30 Best Lifestyle Blogs to Follow in 2021
+                </h1>
+                <div class="post-meta-2 font-md d-flext align-self-center mb-md-30">
+                    <a href="page-author.html" tabindex="0">
+                        <img src="{% static 'assets/imgs/authors/author.jpg'%}" alt="">
+                        <span class="author-namge">Kate Adie</span>
+                    </a>
+                    <span class="time-to-read has-dot text-white">6 mins to read</span>
+                </div>
+            </div>
+        </div>
+        <div class="container single-content">
+            <article class="entry-wraper mb-50">
+                <div class="excerpt mb-30">
+                    <p>Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard roadrunner flapped lynx far that and jeepers giggled far and far bald that roadrunner python inside held shrewdly the manatee.</p>
+                </div>
+                <div class="entry-main-content wow fadeIn animated">
+                    <p>Fretful human far recklessly while caterpillar well a well blubbered added one a some far whispered rampantly whispered while irksome far clung irrespective wailed more rosily and where saluted while black dear so yikes as considering recast to some crass until.</p>
+                    <hr class="wp-block-separator is-style-dots">
+                    <p>Thanks sniffed in hello after in foolhardy and some far purposefully much one at the much conjointly leapt skimpily that quail sheep some goodness <a href="#">nightingale</a> the instead exited expedient up far ouch mellifluous altruistic and and lighted more instead much when ferret but the.</p>
+                    <figure class="wp-block-gallery columns-3 wp-block-image">
+                        <ul class="blocks-gallery-grid">
+                            <li class="blocks-gallery-item"><a href="#"><img class="border-radius-5" src="{% static 'assets/imgs/news/thumb-2.jpg'%}" alt=""></a></li>
+                            <li class="blocks-gallery-item"><a href="#"><img class="border-radius-5" src="{% static 'assets/imgs/news/thumb-3.jpg'%}" alt=""></a></li>
+                            <li class="blocks-gallery-item"><a href="#"><img class="border-radius-5" src="{% static 'assets/imgs/news/thumb-4.jpg'%}" alt=""></a></li>
+                        </ul>
+                        <figcaption> <i class="ti-credit-card mr-5"></i>Image credit: Behance </figcaption>
+                    </figure>
+                    <hr class="section-divider">
+                    <p>Yet more some certainly yet alas abandonedly whispered <a href="#">intriguingly</a><sup><a href="#">[2]</a></sup> well extensive one howled talkative admonishingly below a rethought overlaid dear gosh activated less <a href="#">however</a> hawk yet oh scratched ostrich some outside crud irrespective lightheartedly and much far amenably that the elephant since when.</p>
+                    <h2>The Guitar Legends</h2>
+                    <p>Furrowed this in the upset <a href="#">some across</a><sup><a href="#">[3]</a></sup> tiger oh loaded house gosh whispered <a href="#">faltering alas</a><sup><a href="#">[4]</a></sup> ouch cuckoo coward in scratched undid together bit fumblingly so besides salamander heron during the jeepers hello fitting jauntily much smoothly globefish darn blessedly far so along bluebird leopard and.</p>
+                    <blockquote>
+                        <p>Integer eu faucibus <a href="#">dolor</a><sup><a href="#">[5]</a></sup>. Ut venenatis tincidunt diam elementum imperdiet. Etiam accumsan semper nisl eu congue. Sed aliquam magna erat, ac eleifend lacus rhoncus in.</p>
+                    </blockquote>
+                    <p>Fretful human far recklessly while caterpillar well a well blubbered added one a some far whispered rampantly whispered while irksome far clung irrespective wailed more rosily and where saluted while black dear so yikes as considering recast to some crass until cow much less and rakishly overdrew consistent for by responsible oh one hypocritical less bastard hey oversaw zebra browbeat a well.</p>
+                    <h3>Getting Crypto Rich</h3>
+                    <hr class="wp-block-separator is-style-wide">
+                    <div class="wp-block-image">
+                        <figure class="alignleft is-resized">
+                            <img class="border-radius-5" src="{% static 'assets/imgs/news/news-7.jpg'%}">
+                            <figcaption> And far contrary smoked some contrary among stealthy </figcaption>
+                        </figure>
+                    </div>
+                    <p>And far contrary smoked some contrary among stealthy engagingly suspiciously a cockatoo far circa sank dully lewd slick cracked llama the much gecko yikes more squirrel sniffed this and the the much within uninhibited this abominable a blubbered overdid foresaw through alas the pessimistic.</p>
+                    <p>Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard roadrunner flapped lynx far that and jeepers giggled far and far bald that roadrunner python inside held shrewdly the manatee.</p>
+                    <hr class="section-divider">
+                    <p>Thanks sniffed in hello after in foolhardy and some far purposefully much one at the much conjointly leapt skimpily that quail sheep some goodness nightingale the instead exited expedient up far ouch mellifluous altruistic and and lighted more instead much when ferret but the.</p>
+                    <!--Begin Subcrible-->
+                    <div class="border-radius-10 border bg-white mb-30 p-65 wow fadeIn animated text-center">
+                        <h4 class="mb-0 mt-0">Become a member</h4>
+                        <p class="font-md text-grey-400">Get the latest news right in your inbox. We never spam!</p>
+                        <form class="mt-30 d-flex wow fadeIn  animated" style="visibility: visible; animation-name: fadeIn;">
+                            <input type="email" class="form-control mr-15" placeholder="Enter your email">
+                            <button type="submit" class="btn btn-lg bg-dark text-white d-inline-block">Subscribe</button>
+                        </form>
+                    </div>
+                    <!--End Subcrible-->
+                    <p>Yet more some certainly yet alas abandonedly whispered intriguingly well extensive one howled talkative admonishingly below a rethought overlaid dear gosh activated less however hawk yet oh scratched ostrich some outside crud irrespective lightheartedly and much far amenably that the elephant since when.</p>
+                </div>
+                <div class="entry-bottom mt-50 mb-30 wow fadeIn animated">
+                    <div class="tags w-50 w-sm-100">
+                        <h5 class="mb-15">Tags: </h5>
+                        <a href="category.html" rel="tag" class="hover-up-3">deer</a>
+                        <a href="category.html" rel="tag" class="hover-up-3">nature</a>
+                        <a href="category.html" rel="tag" class="hover-up-3">conserve</a>
+                    </div>
+                    <div class="single-social-share clearfix wow fadeIn animated mb-15 w-50 w-sm-100">
+                        <ul class="header-social-network d-inline-block list-inline float-md-right mt-md-0 mt-4">
+                            <li class="list-inline-item text-muted"><span>Share this: </span></li>
+                            <li class="list-inline-item"><a class="social-icon fb text-xs-center" target="_blank" href="#"><i class="elegant-icon social_facebook"></i></a></li>
+                            <li class="list-inline-item"><a class="social-icon tw text-xs-center" target="_blank" href="#"><i class="elegant-icon social_twitter "></i></a></li>
+                            <li class="list-inline-item"><a class="social-icon pt text-xs-center" target="_blank" href="#"><i class="elegant-icon social_pinterest "></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--author box-->
+                <div class="author-bio mt-50 border-radius-10 bg-white wow fadeIn animated">
+                    <div class="author-image mb-md-30">
+                        <a href="page-author.html"><img src="{% static 'assets/imgs/authors/author-details.jpg'%}" alt="" class="avatar"></a>
+                    </div>
+                    <div class="author-info">
+                        <h4 class="font-weight-bold mb-20"><span class="vcard author"><span class="fn"><a href="page-author.html" title="Posted by Barbara Cartland" rel="author">Barbara Cartland</a></span></span>
+                        </h4>
+                        <div class="author-description text-muted">You should write because you love the shape of Flow and sentences and the creation of different words on a page. </div>
+                        <h6 class="text-grey-400">Social Media</h6>
+                        <div class="author-social-small">
+                            <ul class="author-social-icons">
+                                <li class="author-social-link-facebook"><a href="#" target="_blank"><i class="elegant-icon social_facebook"></i></a></li>
+                                <li class="author-social-link-twitter"><a href="#" target="_blank"><i class="elegant-icon social_twitter "></i></a></li>
+                                <li class="author-social-link-pinterest"><a href="#" target="_blank"><i class="elegant-icon  social_pinterest "></i></a></li>
+                                <li class="author-social-link-instagram"><a href="#" target="_blank"><i class="elegant-icon social_instagram "></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--Comments-->
+                <div class="comments-area wow fadeIn animated">
+                    <div class="widget-header-2 position-relative mb-30">
+                        <h3 class="mt-5 mb-30 font-heading">Comments</h3>
+                    </div>
+                    <div class="comment-list wow fadeIn animated">
+                        <div class="single-comment justify-content-between d-flex">
+                            <div class="user justify-content-between d-flex">
+                                <div class="thumb">
+                                    <img src="{% static 'assets/imgs/authors/author-4.jpg'%}" alt="">
+                                </div>
+                                <div class="desc">
+                                    <p class="comment">
+                                        Vestibulum euismod, leo eget varius gravida, eros enim interdum urna, non rutrum enim ante quis metus. Duis porta ornare nulla ut bibendum
+                                    </p>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="d-flex align-items-center">
+                                            <h5>
+                                                <a href="#">Rosie</a>
+                                            </h5>
+                                            <p class="date">6 minutes ago </p>
+                                        </div>
+                                        <div class="reply-btn">
+                                            <a href="#" class="btn-reply">Reply</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment-list wow fadeIn animated">
+                        <div class="single-comment justify-content-between d-flex">
+                            <div class="user justify-content-between d-flex">
+                                <div class="thumb">
+                                    <img src="{% static 'assets/imgs/authors/author-2.jpg'%}" alt="">
+                                </div>
+                                <div class="desc">
+                                    <p class="comment">
+                                        Sed ac lorem felis. Ut in odio lorem. Quisque magna dui, maximus ut commodo sed, vestibulum ac nibh. Aenean a tortor in sem tempus auctor
+                                    </p>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="d-flex align-items-center">
+                                            <h5>
+                                                <a href="#">Agatha Christie</a>
+                                            </h5>
+                                            <p class="date">December 4, 2020 at 3:12 pm </p>
+                                        </div>
+                                        <div class="reply-btn">
+                                            <a href="#" class="btn-reply">Reply</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-comment depth-2 justify-content-between d-flex mt-50">
+                            <div class="user justify-content-between d-flex">
+                                <div class="thumb">
+                                    <img src="{% static 'assets/imgs/authors/author.jpg'%}" alt="">
+                                </div>
+                                <div class="desc">
+                                    <p class="comment">
+                                        Sed ac lorem felis. Ut in odio lorem. Quisque magna dui, maximus ut commodo sed, vestibulum ac nibh. Aenean a tortor in sem tempus auctor
+                                    </p>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="d-flex align-items-center">
+                                            <h5>
+                                                <a href="#">Steven</a>
+                                            </h5>
+                                            <p class="date">December 4, 2020 at 3:12 pm </p>
+                                        </div>
+                                        <div class="reply-btn">
+                                            <a href="#" class="btn-reply">Reply</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment-list wow fadeIn animated">
+                        <div class="single-comment justify-content-between d-flex">
+                            <div class="user justify-content-between d-flex">
+                                <div class="thumb">
+                                    <img src="{% static 'assets/imgs/authors/author-3.jpg'%}" alt="">
+                                </div>
+                                <div class="desc">
+                                    <p class="comment">
+                                        Donec in ullamcorper quam. Aenean vel nibh eu magna gravida fermentum. Praesent eget nisi pulvinar, sollicitudin eros vitae, tristique odio.
+                                    </p>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="d-flex align-items-center">
+                                            <h5>
+                                                <a href="#">Danielle Steel</a>
+                                            </h5>
+                                            <p class="date">December 4, 2020 at 3:12 pm </p>
+                                        </div>
+                                        <div class="reply-btn">
+                                            <a href="#" class="btn-reply">Reply</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--comment form-->
+                <div class="comment-form wow fadeIn animated pb-35">
+                    <div class="widget-header-2 position-relative mb-30">
+                        <h3 class="mt-5 mb-30 font-heading">Leave a Reply</h3>
+                    </div>
+                    <form class="form-contact comment_form" action="#" id="commentForm">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <textarea class="form-control w-100" name="comment" id="comment" cols="30" rows="9" placeholder="Write Comment"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input class="form-control" name="name" id="name" type="text" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input class="form-control" name="email" id="email" type="email" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <input class="form-control" name="website" id="website" type="text" placeholder="Website">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-lg bg-dark text-white d-inline-block">Post Comment</button>
+                        </div>
+                    </form>
+                </div>
+                <!--More posts-->
+                <div class="single-more-articles border-radius-10">
+                    <div class="widget-header-2 position-relative mb-30">
+                        <h5 class="mb-30 font-heading">Related posts</h5>
+                        <button class="single-more-articles-close"><i class="elegant-icon icon_close"></i></button>
+                    </div>
+                    <div class="post-block-list post-module-1">
+                        <ul class="list-post">
+                            <li>
+                                <div class="d-flex latest-small-thumb">
+                                    <div class="post-thumb d-flex mr-15 border-radius-10 img-hover-scale overflow-hidden">
+                                        <a class="color-white" href="single.html" tabindex="0">
+                                            <img src="{% static 'assets/imgs/news/thumb-11.jpg'%}" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="post-content media-body align-self-center">
+                                        <h5 class="post-title mb-15 text-limit-3-row font-medium">
+                                            <a href="single.html" tabindex="0">9 Things I Love About Shaving My Head During Quarantine</a>
+                                        </h5>
+                                        <div class="entry-meta meta-1 float-left font-sm">
+                                            <span class="post-on has-dot">September 15, 2021</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="d-flex latest-small-thumb">
+                                    <div class="post-thumb d-flex mr-15 border-radius-10 img-hover-scale overflow-hidden">
+                                        <a class="color-white" href="single.html" tabindex="0">
+                                            <img src="{% static 'assets/imgs/news/thumb-12.jpg'%}" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="post-content media-body align-self-center">
+                                        <h5 class="post-title mb-15 text-limit-3-row font-medium">
+                                            <a href="single.html" tabindex="0">Where to Score the Best Travel Deals on Cyber Monday</a>
+                                        </h5>
+                                        <div class="entry-meta meta-1 float-left font-sm">
+                                            <span class="post-on has-dot">November 12, 2021</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </div>
+        <!--container-->
+        <section class="newsletter bg-brand-3 pt-100 pb-100">
+            <div class="container">
+                <div class="position-relative">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="header-title-2 mb-65">
+                                <h4 class="mb-0 text-grey-400 wow fadeIn  animated" style="visibility: visible; animation-name: fadeIn;">
+                                    <img src="{% static 'assets/imgs/theme/svg/send.svg'%}" alt="">
+                                    <span>Subscribe</span>
+                                </h4>
+                                <h3 class="font-heading wow fadeIn  animated" style="visibility: visible; animation-name: fadeIn;">to Our Newsletter</h3>
+                            </div>
+                            <form class="form-subcriber mt-30 d-flex wow fadeIn  animated" style="visibility: visible; animation-name: fadeIn;">
+                                <input type="email" class="form-control bg-white font-small" placeholder="Enter your email">
+                                <button class="btn bg-dark text-white" type="submit">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                    <img src="{% static 'assets/imgs/theme/sketch-1.png'%}" alt="" class="sketch-1 wow fadeIn  animated" style="visibility: visible; animation-name: fadeIn;">
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- End Main content -->
+    <!--end site-bottom-->
+    <footer class="pt-65 bg-dark">
+        <div class="container">
+            <div class="row mb-65">
+                <div class="col-md-6">
+                    <div class="logo wow fadeIn animated">
+                        <a href="index.html"> <img src="{% static 'assets/imgs/theme/logo-white.svg'%}" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-flex text-right text-sm-left align-self-center justify-content-end wow fadeIn animated">
+                        <h5 class="mr-15 text-white mb-0 align-self-center">All you need to build new site</h5>
+                        <button class="btn btn-lg bg-brand-1">Download Now</button>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="bottom-line mt-40"></div>
+                </div>
+            </div>
+            <div class="row bottom-area-2">
+                <div class="col-lg-4 col-md-6">
+                    <div class="sidebar-widget widget-about wow fadeIn animated mb-30">
+                        <div class="widget-header-2 position-relative mb-30">
+                            <h5 class="mt-5 mb-30">About</h5>
+                        </div>
+                        <div class="textwidget">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Odio suspendisse leo neque iaculis molestie sagittis maecenas aenean eget molestie sagittis.
+                            </p>
+                            <p><strong class="color-black">Address</strong><br>
+                                123 Main Street<br>
+                                New York, NY 10001</p>
+                            <p><strong class="color-black">Phone</strong><br>
+                                (+01) 234 567 89</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="sidebar-widget widget_categories wow fadeIn animated mb-30" data-wow-delay="0.1s">
+                        <div class="widget-header-2 position-relative mb-30">
+                            <h5 class="mt-5 mb-30">Quick link</h5>
+                        </div>
+                        <ul class="font-small">
+                            <li class="cat-item cat-item-2"><a href="#">About me</a></li>
+                            <li class="cat-item cat-item-4"><a href="#">Help & Support</a></li>
+                            <li class="cat-item cat-item-5"><a href="#">Licensing Policy</a></li>
+                            <li class="cat-item cat-item-6"><a href="#">Refund Policy</a></li>
+                            <li class="cat-item cat-item-7"><a href="#">Hire me</a></li>
+                            <li class="cat-item cat-item-7"><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="sidebar-widget widget_tagcloud wow fadeIn animated mb-30" data-wow-delay="0.2s">
+                        <div class="widget-header-2 position-relative mb-30">
+                            <h5 class="mt-5 mb-30">Tagcloud</h5>
+                        </div>
+                        <div class="tagcloud mt-50">
+                            <a class="tag-cloud-link" href="category.html">beautiful</a>
+                            <a class="tag-cloud-link" href="category.html">New York</a>
+                            <a class="tag-cloud-link" href="category.html">droll</a>
+                            <a class="tag-cloud-link" href="category.html">intimate</a>
+                            <a class="tag-cloud-link" href="category.html">loving</a>
+                            <a class="tag-cloud-link" href="category.html">travel</a>
+                            <a class="tag-cloud-link" href="category.html">fighting </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copy-right pt-30 mt-20 wow fadeIn animated font-md">
+                <p class="float-md-left font-small text-muted">&copy; 2021, Flow - Design by <a href="https://alithemes.com" target="_blank">AliThemes</a></p>
+                <ul class="social-network d-inline-block list-inline color-white mb-20 float-right">
+                    <li class="list-inline-item"><a href="#" target="_blank" title="Facebook"><i class="elegant-icon social_facebook"></i></a></li>
+                    <li class="list-inline-item"><a href="#" target="_blank" title="Tweet now"><i class="elegant-icon social_twitter"></i></a></li>
+                    <li class="list-inline-item"><a href="#" target="_blank" title="Pin it"><i class="elegant-icon social_pinterest"></i></a></li>
+                    <li class="list-inline-item"><a href="#" target="_blank" title="Pin it"><i class="elegant-icon social_skype"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+    <div class="dark-mark"></div>
+    <!-- Vendor JS-->
+    <script src="{% static 'assets/js/vendor/modernizr-3.5.0.min.js'%}"></script>
+    <script src="{% static 'assets/js/vendor/jquery-3.5.1.min.js'%}"></script>
+    <script src="{% static 'assets/js/vendor/bootstrap.min.js'%}"></script>
+    <script src="{% static 'assets/js/vendor/jquery.slicknav.js'%}"></script>
+    <script src="{% static 'assets/js/vendor/slick.min.js'%}"></script>
+    <script src="{% static 'assets/js/vendor/wow.min.js'%}"></script>
+    <script src="{% static 'assets/js/vendor/jquery.scrollUp.min.js'%}"></script>
+    <script src="{% static 'assets/js/vendor/jquery.theia.sticky.js'%}"></script>
+    <!-- Template  JS -->
+    <script src="{% static 'assets/js/main.js'%}"></script>
+</body>
+
+</html>
