@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from core.models import *
-from blog.models import Category
+from blog.models import BlogCategory as Category
 
 
 def category(request, id):
