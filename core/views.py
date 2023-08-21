@@ -1,10 +1,10 @@
 from django.shortcuts import render
 from core.models import *
-from blog.models import MainCategory
+from blog.models import Category
 
 
 def index(request):
-    categories = MainCategory.objects.all()
+    categories = Category.objects.all()
     general = General.objects.all()
     socials = Social.objects.all()
     context = {
@@ -16,7 +16,7 @@ def index(request):
 
 
 def about(request):
-    categories = MainCategory.objects.all()
+    categories = Category.objects.all()
     general = General.objects.all()
     socials = Social.objects.all()
     context = {
@@ -28,7 +28,7 @@ def about(request):
 
 
 def contact(request):
-    categories = MainCategory.objects.all()
+    categories = Category.objects.all()
     general = General.objects.all()
     socials = Social.objects.all()
     context = {
