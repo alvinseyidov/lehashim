@@ -158,6 +158,9 @@ color: #ffffff !important;
   color: #fff !important;
 }
 
+.theme-night .patt {
+background-image: url(/static/assets/patt2.png) !important;
+}
 
 
 
