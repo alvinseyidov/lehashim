@@ -12,6 +12,7 @@ urlpatterns = [
     path('', core_views.index, name="index"),
     path('about/', core_views.about, name="about"),
     path('category/<int:id>/', blog_views.category, name="category"),
+    path('tag/<str:slug>/', blog_views.tag, name="tag"),
     path('blog/<int:id>/', blog_views.blog, name="blog"),
     path('contact/', core_views.contact, name="contact"),
 ]

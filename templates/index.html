@@ -231,12 +231,17 @@
                     {% for b in blogs %}
                     <div class="card-list-posts wow animate__animated animate__fadeIn" style="margin-bottom: 27px;">
                       <a href="{% url 'blog' b.id%}"style="background-image:url({{b.main_image.url}});border-radius:14px;" class="card-image hover-up"></a>
-                      <div class="card-info"><a class="btn btn-tag bg-gray-800 hover-up" href="{% url 'category' b.category.id%}">{{b.category.name}}</a><a href="single-sidebar.html">
+                      <div class="card-info"><a class="btn btn-tag bg-gray-800 hover-up" href="{% url 'category' b.category.id %}">{{b.category.name}}</a>
+                        <a href="single-sidebar.html">
                           <h4 class="mt-15 mb-20 color-white">{{b.title}}</h4></a>
                         <p class="color-gray-500">{{b.short_description}}</p>
                         <div class="row mt-20">
-                          <div class="col-7"><a class="color-gray-700 text-sm mr-15" href="blog-archive.html"># Travel</a><a class="color-gray-700 text-sm" href="blog-archive.html"># Lifestyle</a></div>
-                          <div class="col-5 text-end"><span class="color-gray-700 text-sm timeread">3 mins read</span></div>
+                          <div class="col-7">
+                            {% for t in b.tags.all %}
+                            <a class="color-gray-700 text-sm mr-15" href="{% url 'tag' t.slug %}">#{{t.name}}</a>
+                            {% endfor%}
+                          </div>
+                          <div class="col-5 text-end"><span class="color-gray-700 text-sm timeread">3 dəq</span></div>
                         </div>
                       </div>
                     </div>

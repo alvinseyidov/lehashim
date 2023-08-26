@@ -3,6 +3,7 @@ from django.db import models
 
 class Tag(models.Model):
     name = models.CharField(max_length=256, unique=True)
+    slug = models.CharField(max_length=256, unique=True)
 
     def __str__(self):
         return self.name
@@ -28,7 +29,7 @@ class Blog(models.Model):
     short_description = models.TextField()
     description = models.TextField()
     category = models.ForeignKey(BlogCategory, on_delete=models.CASCADE, null=True, blank=True,related_name="blogs")
-    tags = models.ManyToManyField(Tag, null=True, related_name="blogs")
+    tags = models.ManyToManyField(Tag, blank=True, related_name="blogs")
 
     def __str__(self):
         return self.title

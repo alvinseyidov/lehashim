@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from core.models import *
-from blog.models import BlogCategory as Category
+from blog.models import BlogCategory as Category, Tag
 
 
 def category(request, id):
@@ -14,6 +14,19 @@ def category(request, id):
     }
     return render(request, 'category.html', context)
 
+
+def tag(request, slug):
+    categories = Category.objects.filter(parent__isnull=True)
+    tag = Tag.objects.get(slug=slug)
+    general = General.objects.all()
+    socials = Social.objects.all()
+    context = {
+        "general": general,
+        "tag": tag,
+        "socials": socials,
+        "categories": categories
+    }
+    return render(request, 'tag.html', context)
 
 def blog(request, id):
     categories = Category.objects.filter(parent__isnull=True)
