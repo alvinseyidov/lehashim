@@ -141,12 +141,17 @@ color: #ffffff !important;
 }
 
 
+.theme-day li a.active {
+  color: #EB2810 !important;
+}
+
+
 
 .theme-day .header .main-menu li a:hover, .header .main-menu li a.active {
   color: #EB2810 !important;
 }
 
-.header .main-menu li a:hover, .header .main-menu li a.active {
+theme-night .header .main-menu li a:hover, .header .main-menu li a.active {
   color: #fff !important;
 }
 
