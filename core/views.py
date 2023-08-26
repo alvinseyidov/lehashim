@@ -6,9 +6,11 @@ from blog.models import BlogCategory as Category
 def index(request):
     categories = Category.objects.filter(parent__isnull=True)
     featured = Featured.objects.all()
+    topics = HotTopics.objects.all()
     general = General.objects.all()
     socials = Social.objects.all()
     context = {
+        "topics": topics,
         "general": general,
         "featured": featured,
         "socials": socials,

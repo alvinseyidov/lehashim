@@ -31,3 +31,12 @@ class Featured(models.Model):
 
     def __str__(self):
         return self.blog.title
+
+
+
+class HotTopics(models.Model):
+    category = models.ForeignKey('blog.BlogCategory', on_delete=models.CASCADE)
+    image = models.ImageField()
+
+    def __str__(self):
+        return self.category.name
