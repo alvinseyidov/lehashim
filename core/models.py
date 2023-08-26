@@ -30,4 +30,4 @@ class Featured(models.Model):
         ordering = ('sort',)
 
     def __str__(self):
-        return self.blog.name
+        return self.blog.title
