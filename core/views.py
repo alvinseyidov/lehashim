@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from core.models import *
-from blog.models import BlogCategory as Category
+from blog.models import BlogCategory as Category, Blog
 
 
 def index(request):
@@ -8,8 +8,10 @@ def index(request):
     featured = Featured.objects.all()
     topics = HotTopics.objects.all()
     general = General.objects.all()
+    blogs = Blog.objects.all()
     socials = Social.objects.all()
     context = {
+        "blogs": blogs,
         "topics": topics,
         "general": general,
         "featured": featured,

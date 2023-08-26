@@ -184,7 +184,7 @@
 
 
              
-              <div class="mb-70">
+              <div class="">
                 <div class="box-topics border-gray-800 bg-gray-850">
                   <div class="row">
                     <div class="col-lg-2">
@@ -223,66 +223,24 @@
               </div>
 
 
-              <div class="row mt-70">
+              <div class="row "  style="margin-top:50px;">
                 <div class="col-lg-8">
                   <h2 class="color-linear d-inline-block mb-10">Ən Son Paylaşılanlar</h2>
                   <p class="text-lg color-gray-500">İzləmədə qalın yeniliklərdən xəbərdar olun.</p>
-                  <div class="box-list-posts mt-70">
-                    <div class="card-list-posts wow animate__animated animate__fadeIn">
-                      <div class="card-image hover-up"><a href="single-sidebar.html"><img src="{% static 'assets/imgs/page/homepage1/img-news-1.jpg'%}" alt="Genz"></a></div>
+                  <div class="box-list-posts "style=" margin-top: 25px; ">
+                    {% for b in blogs %}
+                    <div class="card-list-posts wow animate__animated animate__fadeIn" style="margin-bottom: 27px;">
+                      <div class="card-image hover-up"><a href="single-sidebar.html"><img src="{{b.main_image.url}}" alt="Genz"></a></div>
                       <div class="card-info"><a class="btn btn-tag bg-gray-800 hover-up" href="blog-archive.html">Working Tips</a><a href="single-sidebar.html">
-                          <h4 class="mt-15 mb-20 color-white">Helpful Tips for Working from Home as a Freelancer</h4></a>
-                        <p class="color-gray-500">Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard roadrunner flapped lynx far that and jeepers giggled far and far</p>
+                          <h4 class="mt-15 mb-20 color-white">{{b.title}}</h4></a>
+                        <p class="color-gray-500">{{b.short_description}}</p>
                         <div class="row mt-20">
                           <div class="col-7"><a class="color-gray-700 text-sm mr-15" href="blog-archive.html"># Travel</a><a class="color-gray-700 text-sm" href="blog-archive.html"># Lifestyle</a></div>
                           <div class="col-5 text-end"><span class="color-gray-700 text-sm timeread">3 mins read</span></div>
                         </div>
                       </div>
                     </div>
-                    <div class="card-list-posts wow animate__animated animate__fadeIn">
-                      <div class="card-image hover-up"><a href="single-sidebar.html"><img src="{% static 'assets/imgs/page/homepage1/img-news-2.jpg'%}" alt="Genz"></a></div>
-                      <div class="card-info"><a class="btn btn-tag bg-gray-800 hover-up" href="blog-archive.html">Working Tips</a><a href="single-sidebar.html">
-                          <h4 class="mt-15 mb-20 color-white">Helpful Tips for Working from Home as a Freelancer</h4></a>
-                        <p class="color-gray-500">Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard roadrunner flapped lynx far that and jeepers giggled far and far</p>
-                        <div class="row mt-20">
-                          <div class="col-7"><a class="color-gray-700 text-sm mr-15" href="blog-archive.html"># Travel</a><a class="color-gray-700 text-sm" href="blog-archive.html"># Lifestyle</a></div>
-                          <div class="col-5 text-end"><span class="color-gray-700 text-sm timeread">3 mins read</span></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card-list-posts wow animate__animated animate__fadeIn">
-                      <div class="card-image hover-up"><a href="single-sidebar.html"><img src="{% static 'assets/imgs/page/homepage1/img-news-3.jpg'%}" alt="Genz"></a></div>
-                      <div class="card-info"><a class="btn btn-tag bg-gray-800 hover-up" href="blog-archive.html">Working Tips</a><a href="single-sidebar.html">
-                          <h4 class="mt-15 mb-20 color-white">Helpful Tips for Working from Home as a Freelancer</h4></a>
-                        <p class="color-gray-500">Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard roadrunner flapped lynx far that and jeepers giggled far and far</p>
-                        <div class="row mt-20">
-                          <div class="col-7"><a class="color-gray-700 text-sm mr-15" href="blog-archive.html"># Travel</a><a class="color-gray-700 text-sm" href="blog-archive.html"># Lifestyle</a></div>
-                          <div class="col-5 text-end"><span class="color-gray-700 text-sm timeread">3 mins read</span></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card-list-posts wow animate__animated animate__fadeIn">
-                      <div class="card-image hover-up"><a href="single-sidebar.html"><img src="{% static 'assets/imgs/page/homepage1/img-news-4.jpg'%}" alt="Genz"></a></div>
-                      <div class="card-info"><a class="btn btn-tag bg-gray-800 hover-up" href="blog-archive.html">Working Tips</a><a href="single-sidebar.html">
-                          <h4 class="mt-15 mb-20 color-white">Helpful Tips for Working from Home as a Freelancer</h4></a>
-                        <p class="color-gray-500">Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard roadrunner flapped lynx far that and jeepers giggled far and far</p>
-                        <div class="row mt-20">
-                          <div class="col-7"><a class="color-gray-700 text-sm mr-15" href="blog-archive.html"># Travel</a><a class="color-gray-700 text-sm" href="blog-archive.html"># Lifestyle</a></div>
-                          <div class="col-5 text-end"><span class="color-gray-700 text-sm timeread">3 mins read</span></div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card-list-posts wow animate__animated animate__fadeIn">
-                      <div class="card-image hover-up"><a href="single-sidebar.html"><img src="{% static 'assets/imgs/page/homepage1/img-news-5.jpg'%}" alt="Genz"></a></div>
-                      <div class="card-info"><a class="btn btn-tag bg-gray-800 hover-up" href="blog-archive.html">Working Tips</a><a href="single-sidebar.html">
-                          <h4 class="mt-15 mb-20 color-white">Helpful Tips for Working from Home as a Freelancer</h4></a>
-                        <p class="color-gray-500">Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard roadrunner flapped lynx far that and jeepers giggled far and far</p>
-                        <div class="row mt-20">
-                          <div class="col-7"><a class="color-gray-700 text-sm mr-15" href="blog-archive.html"># Travel</a><a class="color-gray-700 text-sm" href="blog-archive.html"># Lifestyle</a></div>
-                          <div class="col-5 text-end"><span class="color-gray-700 text-sm timeread">3 mins read</span></div>
-                        </div>
-                      </div>
-                    </div>
+                    {% endfor %}
                   </div>
 
                 </div>
