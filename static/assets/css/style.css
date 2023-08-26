@@ -122,6 +122,33 @@ video {
   vertical-align: baseline;
 }
 
+
+
+
+
+
+.theme-day .maintext {
+    color: #EB2810 !important;
+    background: linear-gradient(90deg, #EB2810, #a00000 51%, #F52910) var(--x, 0)/200% !important;
+    -webkit-background-clip: text !important;
+}
+
+
+.maintext {
+color: #ffffff !important;
+    background: linear-gradient(90deg, #ffffff, #ffffff 51%, #ffffff) var(--x, 0)/200% !important;
+    -webkit-background-clip: text !important;
+}
+
+
+
+
+
+
+
+
+
+
 main {
   display: block;
   clear: both;
