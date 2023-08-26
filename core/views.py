@@ -4,7 +4,7 @@ from blog.models import BlogCategory as Category
 
 
 def index(request):
-    categories = Category.objects.all()
+    categories = Category.objects.filter(parent__isnull=True)
     general = General.objects.all()
     socials = Social.objects.all()
     context = {
@@ -16,7 +16,7 @@ def index(request):
 
 
 def about(request):
-    categories = Category.objects.all()
+    categories = Category.objects.filter(parent__isnull=True)
     general = General.objects.all()
     socials = Social.objects.all()
     context = {
@@ -28,7 +28,7 @@ def about(request):
 
 
 def contact(request):
-    categories = Category.objects.all()
+    categories = Category.objects.filter(parent__isnull=True)
     general = General.objects.all()
     socials = Social.objects.all()
     context = {
