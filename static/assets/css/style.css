@@ -145,6 +145,10 @@ color: #ffffff !important;
   color: #EB2810 !important;
 }
 
+.theme-day li a {
+  color: #EB2810 !important;
+}
+
 
 
 .theme-day .header .main-menu li a:hover, .header .main-menu li a.active {
