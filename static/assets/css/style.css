@@ -2324,7 +2324,7 @@ input {
   position: relative;
 }
 .header .main-menu li a:hover, .header .main-menu li a.active {
-  color: #1CC2E7;
+  color: #fff;
 }
 .header .main-menu li a:hover i, .header .main-menu li a.active i {
   opacity: 1;
