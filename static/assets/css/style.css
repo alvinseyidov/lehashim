@@ -148,7 +148,9 @@ color: #ffffff !important;
 .theme-day li a {
   color: #556281 !important;
 }
-
+.cover-home1::before {
+    height: unset !important;
+    }
 
  .theme-night li a.active {
   color: #fff !important;
