@@ -162,11 +162,10 @@
 
                   {% for f in featured %}
                   <div class="col-lg-4">
-                    <div class="project" data-category="web motion">
+                    <div class="project" data-category="web motion" style=" height: 201px; background-image:url({{f.blog.main_image.url}});">
                       <div class="item-content">
                         <div class="card-style-1 hover-up mb-30" data-wow-delay=".0s">
                           <div class="card-image"><a class="link-post" href="{% url 'blog' f.blog.id %}">
-                            <img src="{{f.blog.main_image.url}}" alt="Genz">
                               <div class="card-info card-bg-2">
                                 <div class="info-bottom mb-15">
                                   <h3 class="color-white mb-10">{{f.blog.name}}</h3>
