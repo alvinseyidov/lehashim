@@ -73,7 +73,7 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'lehashim',
+        'NAME': 'hashim2',
         'USER': 'trivasoft',
         'PASSWORD': 'Triva12748294!',
         'HOST': 'localhost',
