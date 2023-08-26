@@ -150,7 +150,14 @@ color: #ffffff !important;
 }
 
 
- 
+ .theme-night li a.active {
+  color: #fff !important;
+}
+
+.theme-danighty li a {
+  color: #fff !important;
+}
+
 
 
 
