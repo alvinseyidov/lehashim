@@ -257,51 +257,17 @@
                       </div>
                       <div class="content-sidebar">
                         <div class="list-posts">
+                          {% for b in blogs %}
                           <div class="item-post wow animate__animated animate__fadeIn">
-                            <div class="image-post"><a href="single-sidebar.html"><img src="{% static 'assets/imgs/page/homepage1/img-post.jpg'%}" alt="Genz"></a></div>
+                            <div class="image-post"><a href="single-sidebar.html"><img src="{{b.main_image.url}}" alt="Genz"></a></div>
                             <div class="info-post border-gray-800"><a href="single-sidebar.html">
-                                <h6 class="color-white">Creating is a privilege but it’s also a gift</h6></a><span class="color-gray-700">15 mins read</span>
+                                <h6 class="color-white">{{b.title}}</h6></a><span class="color-gray-700">15 dəq</span>
                               <ul class="d-inline-block">
                                 <li class="color-gray-700">15 April 2022</li>
                               </ul>
                             </div>
                           </div>
-                          <div class="item-post wow animate__animated animate__fadeIn">
-                            <div class="image-post"><a href="single-sidebar.html"><img src="{% static 'assets/imgs/page/homepage1/img-post2.jpg'%}" alt="Genz"></a></div>
-                            <div class="info-post border-gray-800"><a href="single-sidebar.html">
-                                <h6 class="color-white">Being unique is better than being perfect</h6></a><span class="color-gray-700">15 mins read</span>
-                              <ul class="d-inline-block">
-                                <li class="color-gray-700">15 April 2022</li>
-                              </ul>
-                            </div>
-                          </div>
-                          <div class="item-post wow animate__animated animate__fadeIn">
-                            <div class="image-post"><a href="single-sidebar.html"><img src="{% static 'assets/imgs/page/homepage1/img-post3.jpg'%}" alt="Genz"></a></div>
-                            <div class="info-post border-gray-800"><a href="single-sidebar.html">
-                                <h6 class="color-white">Every day, in every city and town across the country</h6></a><span class="color-gray-700">15 mins read</span>
-                              <ul class="d-inline-block">
-                                <li class="color-gray-700">15 April 2022</li>
-                              </ul>
-                            </div>
-                          </div>
-                          <div class="item-post wow animate__animated animate__fadeIn">
-                            <div class="image-post"><a href="single-sidebar.html"><img src="{% static 'assets/imgs/page/homepage1/img-post4.jpg'%}" alt="Genz"></a></div>
-                            <div class="info-post border-gray-800"><a href="single-sidebar.html">
-                                <h6 class="color-white">Your voice, your mind, your story, your vision</h6></a><span class="color-gray-700">15 mins read</span>
-                              <ul class="d-inline-block">
-                                <li class="color-gray-700">15 April 2022</li>
-                              </ul>
-                            </div>
-                          </div>
-                          <div class="item-post wow animate__animated animate__fadeIn">
-                            <div class="image-post"><a href="single-sidebar.html"><img src="{% static 'assets/imgs/page/homepage1/img-post4.jpg'%}" alt="Genz"></a></div>
-                            <div class="info-post border-gray-800"><a href="single-sidebar.html">
-                                <h6 class="color-white">Your voice, your mind, your story, your vision</h6></a><span class="color-gray-700">15 mins read</span>
-                              <ul class="d-inline-block">
-                                <li class="color-gray-700">15 April 2022</li>
-                              </ul>
-                            </div>
-                          </div>
+                           {% endfor%}
                         </div>
                       </div>
                     </div>
