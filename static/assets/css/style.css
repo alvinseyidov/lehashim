@@ -142,7 +142,13 @@ color: #ffffff !important;
 
 
 
+.theme-day .header .main-menu li a:hover, .header .main-menu li a.active {
+  color: #EB2810 !important;
+}
 
+.header .main-menu li a:hover, .header .main-menu li a.active {
+  color: #fff !important;
+}
 
 
 
@@ -2323,9 +2329,7 @@ input {
   text-decoration: none;
   position: relative;
 }
-.header .main-menu li a:hover, .header .main-menu li a.active {
-  color: #fff;
-}
+
 .header .main-menu li a:hover i, .header .main-menu li a.active i {
   opacity: 1;
   transition: 0.2s;
