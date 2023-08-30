@@ -169,14 +169,17 @@ color: #ffffff !important;
 
 
 .theme-night .cccc {
-  color: #000 !important;
+  color: #fff !important;
   font-weight: 400 !important;
   font-size: 17px !important;
 }
 
 
 
-
+.theme-night .sub-menu {
+background: #27292d !important;
+    border: 0px solid #27292d !important;
+}
 
 
 main {
@@ -2393,7 +2396,7 @@ input {
   width: 100%;
 }
 .header .main-menu li ul li a {
-  font-size: 17px;
+  font-size: 17px !important;
   color: #000;
   font-size: 13px;
   line-height: 16px;
