@@ -5152,7 +5152,7 @@ input {
   width: 500px;
   content: "";
   z-index: 1;
-  background: url(../imgs/template/shadow-1.svg) no-repeat right top;
+
   position: absolute;
   left: 0px;
   top: 0px;
@@ -5162,7 +5162,7 @@ input {
   width: 500px;
   content: "";
   z-index: 1;
-  background: url(../imgs/template/shadow-3.svg) no-repeat right bottom;
+  
   position: absolute;
   right: 0px;
   top: 700px;
