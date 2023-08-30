@@ -142,11 +142,14 @@ color: #ffffff !important;
 
 
 .theme-day li a.active {
-  color: #556281 !important;
+  color: #000000 !important;
+    font-weight: bold !important;
+    font-size: 17px !important;
 }
 
 .theme-day li a {
   color: #556281 !important;
+  font-size: 17px !important;
 }
 .cover-home1::before {
     height: unset !important;
@@ -154,10 +157,14 @@ color: #ffffff !important;
 
  .theme-night li a.active {
   color: #fff !important;
+  font-weight: bold !important;
+  font-size: 17px !important;
 }
 
 .theme-night li a {
   color: #fff !important;
+  font-weight: bold !important;
+  font-size: 17px !important;
 }
 
 
