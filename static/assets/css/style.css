@@ -224,7 +224,7 @@ input,
 select,
 button,
 textarea {
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Montserrat';
   font-size: 14px;
 }
 
@@ -402,88 +402,88 @@ a:hover {
 }
 
 body {
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Montserrat';
 }
 
 .text-head-2 {
   font-size: 42px;
   line-height: 44px;
   font-weight: bold;
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Montserrat';
 }
 
 .text-heading-4 {
   color: #ffffff;
   font-size: 28px;
   line-height: 32px;
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Montserrat';
 }
 
 .text-base {
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Montserrat';
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
 }
 
 .text-3xl {
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Montserrat';
   font-weight: 400;
   font-size: 30px;
   line-height: 36px;
 }
 
 .text-2xl {
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Montserrat';
   font-weight: 400;
   font-size: 24px;
   line-height: 32px;
 }
 
 .text-xl {
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Montserrat';
   font-weight: 400;
   font-size: 20px;
   line-height: 28px;
 }
 
 .text-lg {
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Montserrat';
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
 }
 
 .text-md {
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Montserrat';
   font-size: 16px !important;
   line-height: 22px !important;
   font-weight: 400;
 }
 
 .text-sm {
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Montserrat';
   font-size: 14px !important;
   line-height: 20px !important;
   font-weight: 400;
 }
 
 .text-sm-bold {
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Montserrat';
   font-size: 14px !important;
   line-height: 20px !important;
   font-weight: 700;
 }
 
 .text-xs {
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Montserrat';
   font-weight: 400;
   font-size: 12px !important;
   line-height: 16px !important;
 }
 
 h1 {
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Montserrat';
   font-weight: 800;
   font-size: 64px;
   line-height: 87px;
@@ -491,7 +491,7 @@ h1 {
 }
 
 h2 {
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Montserrat';
   font-weight: 700;
   font-size: 45px;
   line-height: 61px;
@@ -499,7 +499,7 @@ h2 {
 }
 
 h3 {
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Montserrat';
   font-weight: 700;
   font-size: 32px;
   line-height: 44px;
@@ -507,7 +507,7 @@ h3 {
 }
 
 h4, .heading-4 {
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Montserrat';
   font-weight: 700;
   font-size: 24px;
   line-height: 33px;
@@ -515,7 +515,7 @@ h4, .heading-4 {
 }
 
 h5 {
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Montserrat';
   font-weight: 700;
   font-size: 20px;
   line-height: 27px;
@@ -523,7 +523,7 @@ h5 {
 }
 
 h6 {
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Montserrat';
   font-weight: 700;
   font-size: 16px;
   line-height: 22px;
@@ -1068,7 +1068,7 @@ h4 {
 body {
   color: #94A9C9;
   background-color: #27292d;
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Montserrat';
   font-size: 14px;
   line-height: 18px;
   font-style: normal;
@@ -1081,7 +1081,7 @@ body {
 .display-2,
 .heading-lg,
 .heading-sm-1 {
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Montserrat';
   color: #0EA5EA;
   font-weight: 700;
   line-height: 1.2;
@@ -1111,7 +1111,7 @@ a.text-brand-3:hover {
 .btn {
   border-radius: 6px;
   padding: 10px 16px;
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Montserrat';
   font-size: 14px;
   line-height: 20px;
   font-weight: 700;
@@ -2330,7 +2330,7 @@ input {
   margin: 5px 0;
 }
 .header .main-menu li a {
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -2400,7 +2400,7 @@ input {
   width: 100%;
 }
 .header .text-link-bd-btom {
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -2519,7 +2519,7 @@ input {
   margin-top: 30px;
 }
 .header-top span {
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Montserrat';
   font-size: 16px;
   line-height: 24px;
   font-weight: bold;
@@ -2875,7 +2875,7 @@ input {
 }
 .mobile-header-wrapper-style .mobile-header-wrapper-inner .mobile-header-content-area .mobile-menu-wrap nav .mobile-menu li a {
   font-size: 16px;
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Montserrat';
   line-height: 1;
   text-transform: capitalize;
   font-weight: 500;
@@ -5162,7 +5162,7 @@ input {
   width: 500px;
   content: "";
   z-index: 1;
-  
+
   position: absolute;
   right: 0px;
   top: 700px;
