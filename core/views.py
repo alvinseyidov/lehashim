@@ -9,11 +9,14 @@ def index(request):
     topics = HotTopics.objects.all()
     general = General.objects.all()
     blogs = Blog.objects.all()
+    blogsf = Blog.objects.all()[:3]
     tags = Tag.objects.all()[:6]
     socials = Social.objects.all()
+
     context = {
         "tags": tags,
         "blogs": blogs,
+        "blogsf": blogsf,
         "topics": topics,
         "general": general,
         "featured": featured,
