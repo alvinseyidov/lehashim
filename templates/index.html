@@ -63,17 +63,17 @@
                 </li>
                 {% for c in categories%}
                 {% if c.categories.count > 0 %}
-                <li class=""><a class="active" >{{c.name}}</a>
+                <li class=""><a class="active " >{{c.name}}</a>
                   <ul class="sub-menu" style=" background: #f9fbff; border: 0px solid #E9EEF5; box-shadow: none; margin-top: 11px; min-width: 268px; ">
                     {% for s in c.categories.all %}
 
 
                     {% if s.categories.count > 0 %}
-                    <li><a class="color-gray-500" href="{% url 'category' s.id %}">{{s.name}}</a>
+                    <li><a class="color-gray-500 cccc" href="{% url 'category' s.id %}">{{s.name}}</a>
 
                      <ul class="sub-menu" style=" background: #f9fbff; border: 1px solid #E9EEF5; box-shadow: none; margin-top: 11px; width: 192px; left: 8px; ">
                     {% for t in s.categories.all %}
-                       <li><a class="color-gray-500" href="{% url 'category' s.id %}" style="font-size: 14px !important;line-height: 1px;">{{t.name}}</a></li>
+                       <li><a class="color-gray-500 cccc" href="{% url 'category' s.id %}" style="font-size: 14px !important;line-height: 1px;">{{t.name}}</a></li>
                        {% endfor%}
                        </ul>
 

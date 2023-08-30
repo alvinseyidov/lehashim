@@ -161,12 +161,18 @@ color: #ffffff !important;
   font-size: 17px !important;
 }
 
-.theme-night li a {
+.theme-night .bbb {
   color: #fff !important;
   font-weight: bold !important;
   font-size: 17px !important;
 }
 
+
+.theme-night .cccc {
+  color: #000 !important;
+  font-weight: 400 !important;
+  font-size: 17px !important;
+}
 
 
 
@@ -2387,8 +2393,8 @@ input {
   width: 100%;
 }
 .header .main-menu li ul li a {
-  font-size: 14px;
-  color: #94A9C9;
+  font-size: 17px;
+  color: #000;
   font-size: 13px;
   line-height: 16px;
   position: relative;
@@ -2397,7 +2403,6 @@ input {
 }
 .header .main-menu li ul li a:hover {
   transition: 0.2s;
-  background: url(../imgs/template/icons/icon-menu-hover.svg) no-repeat left 20px center;
 }
 .header .main-menu li ul li a.closer {
   padding: 8px 22px 8px 22px;
