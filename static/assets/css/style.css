@@ -175,6 +175,13 @@ color: #ffffff !important;
 }
 
 
+.theme-day .hoverr:hover{
+color:#eb2810 !important;
+}
+
+.theme-night .hoverr:hover{
+color:#eb2810 !important;
+}
 
 .theme-night .sub-menu {
 background: #27292d !important;
@@ -1083,7 +1090,7 @@ h4 {
 /*TYPOGRAPHY*/
 body {
   color: #94A9C9;
-  background-color: #27292d;
+  background-color: #000;
   font-family: 'Montserrat';
   font-size: 14px;
   line-height: 18px;
@@ -2312,6 +2319,8 @@ input {
 .header .main-header .header-right .block-signin {
   text-align: right;
 }
+
+
 .header .nav-main-menu {
   width: auto;
   padding: 0px;
