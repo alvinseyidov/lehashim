@@ -214,14 +214,14 @@ color:#eb2810 !important;
                   </div>
 
                   <div style=" width: 35%; ">
-                     <div class="box-sidebar bg-gray-850 border-gray-800" style="    padding-bottom: 25px;border-width: 0px;border-radius: 1px;background-color: #00000040 !important;">
+                     <div class="box-sidebar   border-gray-800 backk" style="    padding-bottom: 25px;border-width: 0px;border-radius: 1px;background-color: #00000040;">
 
                       <div class="content-sidebar">
                         <div class="list-posts">
                           {% for b in blogsf %}
                           <div class="item-post wow animate__animated animate__fadeIn">
                             <div class="image-post" style="background-image: url({{b.main_image.url}}); width: 100px; height: 100px; background-size: cover;    max-width: unset;background-position: center;"> </div>
-                            <div class="info-post border-gray-800"><a href="{% url 'blog' b.id %}">
+                            <div class="info-post border-gray-800" style=" width: 217px; "><a href="{% url 'blog' b.id %}">
                                 <h6 class="color-white" style=" color: #fff !important; ">{{b.title}}</h6></a><span class="color-gray-700" style=" color: #fff !important; ">{{b.category.name}}</span>
                               <ul class="d-inline-block">
                                 <li class="color-gray-700" style=" color: #fff !important; ">{{b.date | date:'d.m.Y'}}</li>
@@ -273,7 +273,7 @@ color:#eb2810 !important;
                 </div>
                 <div class="col-lg-4">
                   <div class="sidebar">
-                    <div class="box-sidebar bg-gray-850 border-gray-800">
+                    <div class="box-sidebar bg-gray-850 border-gray-800 ">
                       <div class="head-sidebar wow animate__animated animate__fadeIn">
                         <h5 class="line-bottom">Çox Oxunanlar</h5>
                       </div>
