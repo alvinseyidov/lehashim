@@ -2169,7 +2169,7 @@ input {
 
 .header {
   padding: 10px 0px;
-  margin-top: 15px;
+  margin-top: 0px;
   float: left;
   width: 100%;
   position: relative;
@@ -2393,7 +2393,6 @@ input {
   line-height: 16px;
   position: relative;
   padding: 10px 22px 10px 38px;
-  background: url(../imgs/template/icons/icon-menu.svg) no-repeat left 20px center;
   transition: 0.2s;
 }
 .header .main-menu li ul li a:hover {
@@ -6866,7 +6865,7 @@ iframe.google-map {
   box-shadow: none;
 }
 .theme-day .header .main-menu li ul a {
-  color: #344161 !important;
+  color: #000 !important;
 }
 .theme-day .sticky-bar.stick {
   border-bottom: 1px solid #E9EEF5;
