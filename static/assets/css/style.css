@@ -2168,7 +2168,7 @@ input {
   padding: 5px 0px;
 }
 .header .main-header .header-logo {
-  max-width: 150px;
+  max-width: 50px;
   width: 100%;
 }
 .header .main-header .header-logo a {
@@ -2179,7 +2179,7 @@ input {
 }
 .header .main-header .header-nav {
   display: inline-block;
-  width: 65%;
+  width: 85%;
   text-align: center;
 }
 .header .main-header .header-search {
@@ -2282,7 +2282,7 @@ input {
   display: inline-block;
 }
 .header .main-header .header-right {
-  max-width: 225px;
+  max-width: 135px;
   width: 100%;
 }
 .header .main-header .header-right .block-signin {
