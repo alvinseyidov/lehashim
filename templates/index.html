@@ -218,7 +218,7 @@ color:#eb2810 !important;
 
                       <div class="content-sidebar">
                         <div class="list-posts">
-                          {% for b in c %}
+                          {% for b in blogsf %}
                           <div class="item-post wow animate__animated animate__fadeIn">
                             <div class="image-post" style="background-image: url({{b.main_image.url}}); width: 100px; height: 100px; background-size: cover;    max-width: unset;background-position: center;"> </div>
                             <div class="info-post border-gray-800"><a href="{% url 'blog' b.id %}">
