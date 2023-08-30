@@ -54,10 +54,21 @@
           <div class="header-nav">
             <nav class="nav-main-menu d-none d-xl-block">
               <ul class="main-menu">
+                 <li class=""><a class="active" >Haqqımda</a>
+                  <ul class="sub-menu">
+                    <li><a class="color-gray-500" href="{% url 'about'  %}">Haqqımda</a></li>
+                    <li><a class="color-gray-500" href="{% url 'about'  %}">Portfolio</a></li>
+                    <li><a class="color-gray-500" href="{% url 'about'  %}">Rəylər</a></li>
+                  </ul>
+                </li>
                 {% for c in categories%}
                 {% if c.categories.count > 0 %}
-                <li class=""><a class="active" href="{% url 'category' c.id %}">{{c.name}}</a>
-                  
+                <li class=""><a class="active" >{{c.name}}</a>
+                  <ul class="sub-menu">
+                    {% for s in c.categories.all %}
+                    <li><a class="color-gray-500" href="{% url 'category' s.id %}">{{s.name}}</a></li>
+                    {% endfor %}
+                  </ul>
                 </li>
                 {% else %}
                 <li><a class="active" href="{% url 'category' c.id %}">{{c.name}}</a>
@@ -65,13 +76,7 @@
                 </li>
                 {% endif %}
                 {% endfor %}
-                <li class="has-children"><a class="active" >Haqqımda</a>
-                  <ul class="sub-menu">
-                    <li><a class="color-gray-500" href="{% url 'about'  %}">Haqqımda</a></li>
-                    <li><a class="color-gray-500" href="{% url 'about'  %}">Portfolio</a></li>
-                    <li><a class="color-gray-500" href="{% url 'about'  %}">Rəylər</a></li>
-                  </ul>
-                </li>
+
               </ul>
             </nav>
             <div class="burger-icon burger-icon-white"><span class="burger-icon-top"></span><span class="burger-icon-mid"></span><span class="burger-icon-bottom"></span></div>
