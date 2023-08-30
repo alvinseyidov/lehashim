@@ -38,7 +38,15 @@
 
 
 
+<style>
+  .theme-day .hoverr:hover{
+color:#eb2810 !important;
+}
 
+.theme-night .hoverr:hover{
+color:#eb2810 !important;
+}
+</style>
     <title>Le Hashim</title>
   </head>
   <body>
@@ -56,9 +64,9 @@
               <ul class="main-menu">
                  <li class=""><a class="active hoverr"style=" cursor: pointer; " >Haqqımda</a>
                   <ul class="sub-menu" style=" background: #f9fbff; border: 0px solid #E9EEF5; box-shadow: none; margin-top: 11px; min-width: 268px; ">
-                    <li><a class="color-gray-500 cccc" style=" cursor: pointer; " href="{% url 'about'  %}">Haqqımda</a></li>
-                    <li><a class="color-gray-500 cccc" style=" cursor: pointer; " href="{% url 'about'  %}">Portfolio</a></li>
-                    <li><a class="color-gray-500 cccc"style=" cursor: pointer; " href="{% url 'about'  %}">Rəylər</a></li>
+                    <li><a class="color-gray-500 cccc hoverr" style=" cursor: pointer; " href="{% url 'about'  %}">Haqqımda</a></li>
+                    <li><a class="color-gray-500 cccc hoverr" style=" cursor: pointer; " href="{% url 'about'  %}">Portfolio</a></li>
+                    <li><a class="color-gray-500 cccc hoverr"style=" cursor: pointer; " href="{% url 'about'  %}">Rəylər</a></li>
                   </ul>
                 </li>
                 {% for c in categories%}
@@ -73,13 +81,13 @@
 
                      <ul class="sub-menu" style=" background: #f9fbff; border: 1px solid #E9EEF5; box-shadow: none; margin-top: 11px; width: 192px; left: 8px; ">
                     {% for t in s.categories.all %}
-                       <li><a class="color-gray-500 cccc" style=" cursor: pointer; " href="{% url 'category' s.id %}" style="font-size: 14px !important;line-height: 1px;">{{t.name}}</a></li>
+                       <li><a class="color-gray-500 cccc hoverr" style=" cursor: pointer; " href="{% url 'category' s.id %}" style="font-size: 14px !important;line-height: 1px;">{{t.name}}</a></li>
                        {% endfor%}
                        </ul>
 
                     </li>
                     {% else %}
-                    <li><a class="color-gray-500 cccc" style=" cursor: pointer; " href="{% url 'category' s.id %}">{{s.name}}</a></li>
+                    <li><a class="color-gray-500 cccc hoverr" style=" cursor: pointer; " href="{% url 'category' s.id %}">{{s.name}}</a></li>
                     {% endif %}
                     {% endfor %}
                   </ul>
@@ -177,15 +185,23 @@
     </div>
     <main class="main">
       <div class="banner banner-home4 bg-gray-850 patt" style="  background-size: contain; background-blend-mode: screen;">
-        <div class="container">
+         <div style="height: 400px !important;margin-top: -52px;z-index: 0;width: 100%;position: absolute;">
+          <video   autoplay muted loop style="width: 100%;height: 100%;object-fit: cover;position: absolute;">
+      <source src="{% static 'video.mp4'%}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+           </div>
+
+        <div class="container" style="z-index: 100; position: relative;">
           <div class="row align-items-start">
             <div class="col-xl-1"></div>
             <div class="col-xl-10 col-lg-12">
               <div class="pt-20">
                 <div class="box-banner-4">
-                  <div class="banner-image"><img src="{% static 'assets/imgs/profile.png'%}" alt="Genz"></div>
+
                   <div class="banner-info"><span class="text-sm-bold color-gray-600">Salam!</span>
-                    <h3 class="maintext d-inline-block mt-10 mb-15 " style=" ">Mən Həşim, rəqəmsal dünyadakı yeniliklər, marketinqlə əlaqəli məlumatlar və çoxşaxəli söhbətlər sizə maraqlıdırsa, rahat yer seçib əyləşin</h3>
+                    <h3 class="maintext d-inline-block mt-10 mb-15 " style="color:#fff !important; ">Mən Həşim, rəqəmsal dünyadakı yeniliklər, marketinqlə əlaqəli məlumatlar və çoxşaxəli söhbətlər sizə maraqlıdırsa, rahat yer seçib əyləşin</h3>
                     <div class="box-socials">
                       {% for s in socials%}
                       <a class="bg-gray-800 hover-up" target="_blank" href="{{s.link}}" style=" background-color: #fff !important; ">
