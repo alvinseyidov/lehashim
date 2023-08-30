@@ -55,7 +55,7 @@
             <nav class="nav-main-menu d-none d-xl-block">
               <ul class="main-menu">
                  <li class=""><a class="active" >Haqqımda</a>
-                  <ul class="sub-menu">
+                  <ul class="sub-menu" style=" background: #f9fbff; border: 0px solid #E9EEF5; box-shadow: none; margin-top: 11px; min-width: 268px; ">
                     <li><a class="color-gray-500" href="{% url 'about'  %}">Haqqımda</a></li>
                     <li><a class="color-gray-500" href="{% url 'about'  %}">Portfolio</a></li>
                     <li><a class="color-gray-500" href="{% url 'about'  %}">Rəylər</a></li>
@@ -64,7 +64,7 @@
                 {% for c in categories%}
                 {% if c.categories.count > 0 %}
                 <li class=""><a class="active" >{{c.name}}</a>
-                  <ul class="sub-menu">
+                  <ul class="sub-menu" style=" background: #f9fbff; border: 0px solid #E9EEF5; box-shadow: none; margin-top: 11px; min-width: 268px; ">
                     {% for s in c.categories.all %}
                     <li><a class="color-gray-500" href="{% url 'category' s.id %}">{{s.name}}</a></li>
                     {% endfor %}
