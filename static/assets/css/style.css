@@ -1164,6 +1164,14 @@ a.text-brand-3:hover {
   width: 42px;
   background: url(../dearch.svg) no-repeat center;
 }
+
+.theme-night .btn.btn-search {
+  height: 42px;
+  width: 42px;
+  background: url(../dearchl.svg) no-repeat center !important;
+}
+
+
 .btn.btn-load-more {
   border-radius: 80px;
   padding: 18px 30px;

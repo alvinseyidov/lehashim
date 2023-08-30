@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 258 164" width="258" height="164">
+	<title>logo2-svg</title>
+	<defs>
+		<image width="219" height="131" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANsAAACDCAMAAAAzgJ7oAAAAAXNSR0IB2cksfwAAAE5QTFRF6ygQ6ygQ6ygQAAAA6ygQ6ygQ6ygQ6ygQ6ygQ6ygQ6ygQ6ygQ6ygQ6ygQ6ygQ6ygQ6ygQ6ygQ6ygQ6ygQ6ygQ6ygQ6ygQ6ygQ6ygQ6ygQ9X/vUgAAABp0Uk5TDz4mAC4Z/5++a8300n6b7bpwszYpwtx7ZtbG8tiPAAABAklEQVR4nO3ZyVUDQRBEwREjGiH2TUL+O4oJFFN56CfiO5Avzrksu0I3a7B9ZbHd7bouu1HoLmk7VBbb3bOxsbEFYhtsbGyB2AYbG1sgtsHGxhaIbbCxsQViG2xR2/GKv45DYoiNrRhbIDa2YmyB2NiKsQViYyvGFoiNrRhboEltD49be5retr1nNjY2NjY2NjY2NjY2NjY2NjY2Nja2f2h7ed3a2/S2a/462H6Jja0YWyA2tmJsgdjYirEFYmMrxhaIja3YZLb3j06fU9t6ff3ddjr3+57UlujC1ostHlsztnhszdjisTVji8fWjC0eWzO2eGzN2OKxNWOLx9aMLd7lB3OUJjZx9EfIAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+	</style>
+	<use id="img1" href="#img1" transform="matrix(1,0,0,1,26,17)"/>
+</svg>
