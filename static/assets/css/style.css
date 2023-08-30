@@ -128,7 +128,7 @@ video {
 
 
 .theme-day .maintext {
-    color: #EB2810 !important;
+    color: #000 !important;
     background: linear-gradient(90deg, #EB2810, #a00000 51%, #F52910) var(--x, 0)/200% !important;
     -webkit-background-clip: text !important;
 }
@@ -6868,7 +6868,7 @@ iframe.google-map {
   border-color: #F9FBFF;
 }
 .theme-day .main-menu a.color-gray-500 {
-  color: #000 !important;
+  color: #66768F !important;
 }
 .theme-day .logo-day {
   display: block !important;
