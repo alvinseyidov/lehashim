@@ -24,10 +24,10 @@
         </div>
       </div>
     </div>
-   <header class="header sticky-bar bg-gray-900">
+  <header class="header sticky-bar bg-gray-900">
       <div class="container">
         <div class="main-header">
-          <div class="header-logo"><a class="d-flex" href="{% url 'index'%}"><img class="logo-night" alt="GenZ" src="{% static 'assets/imgs/template/logo.svg'%}"><img class="d-none logo-day" alt="GenZ" src="{% static 'assets/imgs/template/logo-day.svg'%}"></a></div>
+          <div class="header-logo"><a class="d-flex" href="{% url 'index'%}"><img class="logo-night" alt="GenZ" src="{% static 'assets/imgs/logo.svg'%}"><img class="d-none logo-day" alt="GenZ" src="{% static 'assets/imgs/logo.svg'%}"></a></div>
           <div class="header-nav">
             <nav class="nav-main-menu d-none d-xl-block">
               <ul class="main-menu">
@@ -137,9 +137,9 @@
               <div class="row align-items-end mt-50">
                 <div class="col-lg-7 mb-20">
                   <div class="d-inline-block position-relative">
-                    <h1 class="color-white mb-20 color-linear wow animate__animated animate__fadeIn">Healthy</h1><span class="btn btn-linear-small btn-number-arts">36 articles</span>
+                    <h1 class="color-white mb-20 color-linear wow animate__animated animate__fadeIn">{{category.name}}</h1><span class="btn btn-linear-small btn-number-arts">{{category.blogs.count}} məqalə</span>
                   </div>
-                  <p class="color-gray-500 text-base wow animate__animated animate__fadeIn">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis nisi sed turpis vulputate viverra. Morbi ligula elit, hendrerit non nisl tincidunt, sodales consequat magna.</p>
+                  <p class="color-gray-500 text-base wow animate__animated animate__fadeIn">{{category.description}}</p>
                 </div>
                 <div class="col-lg-5 mb-20 text-start text-lg-end">
                   <div class="box-breadcrumbs wow animate__animated animate__fadeIn">
@@ -461,54 +461,48 @@
         </div>
       </div>
     </main>
-    <footer class="footer">
+     <footer class="footer">
       <div class="container">
         <div class="footer-1 bg-gray-850 border-gray-800">
           <div class="row">
-            <div class="col-lg-4 mb-30"><a class="wow animate__animated animate__fadeInUp" href="{% url 'index'%}"><img class="logo-night" src="{% static 'assets/imgs/template/logo.svg'%}" alt="Genz"><img class="d-none logo-day" alt="GenZ" src="{% static 'assets/imgs/template/logo-day.svg'%}"></a>
-              <p class="mb-20 mt-20 text-sm color-gray-500 wow animate__animated animate__fadeInUp">When an unknown prnoto sans took a galley and scrambled it to make specimen book not only five When an unknown prnoto sans took a galley and scrambled it to five centurie.</p>
-              <h6 class="color-white mb-5 wow animate__animated animate__fadeInUp">Address</h6>
-              <p class="text-sm color-gray-500 wow animate__animated animate__fadeInUp">123 Main Street<br>New York, NY 10001</p>
+            <div class="col-lg-4 mb-30"><a class="wow animate__animated animate__fadeInUp" href="{% url 'index'%}"><img class="logo-night" src="{% static 'assets/imgs/logo.svg'%}" alt="Genz"><img class="d-none logo-day" alt="GenZ" src="{% static 'assets/imgs/logo.svg'%}"></a>
+              <p class="mb-20 mt-20 text-sm color-gray-500 wow animate__animated animate__fadeInUp">Mən Həşim, rəqəmsal dünyadakı yeniliklər, marketinqlə əlaqəli məlumatlar və çoxşaxəli söhbətlər sizə maraqlıdırsa, rahat yer seçib əyləşin.</p>
+              <h6 class="color-white mb-5 wow animate__animated animate__fadeInUp">Ünvan</h6>
+              <p class="text-sm color-gray-500 wow animate__animated animate__fadeInUp">123 Main Street<br>Bakı, Azərbaycan</p>
             </div>
             <div class="col-lg-4 mb-30">
-              <h6 class="text-lg mb-30 color-white wow animate__animated animate__fadeInUp">Categories</h6>
+              <h6 class="text-lg mb-30 color-white wow animate__animated animate__fadeInUp">Keçidlər</h6>
               <div class="row">
                 <div class="col-6">
                   <ul class="menu-footer">
-                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Action</a></li>
-                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Business</a></li>
-                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Adventure</a></li>
-                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Canada</a></li>
-                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">America</a></li>
-                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Curiosity</a></li>
+                    {% for c in categories%}
+                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="{% url 'category' c.id%}">{{c.name}}</a></li>
+                    {% endfor %}
                   </ul>
                 </div>
                 <div class="col-6">
                   <ul class="menu-footer">
-                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Animal</a></li>
-                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Dental</a></li>
-                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Biology</a></li>
-                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Design</a></li>
-                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Breakfast</a></li>
-                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Dessert</a></li>
+                    {% for t in tags%}
+                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="{% url 'tag' t.slug%}">{{t.name}}</a></li>
+                    {% endfor%}
                   </ul>
                 </div>
               </div>
             </div>
             <div class="col-lg-4 mb-30">
-              <h4 class="text-lg mb-30 color-white wow animate__animated animate__fadeInUp">Newsletter</h4>
-              <p class="text-base color-gray-500 wow animate__animated animate__fadeInUp">Sign up to be first to receive the latest stories inspiring us, case studies, and industry news.</p>
+              <h4 class="text-lg mb-30 color-white wow animate__animated animate__fadeInUp">Abunəlik</h4>
+              <p class="text-base color-gray-500 wow animate__animated animate__fadeInUp">Abunə olmaqla xəbərlərdən, yeniliklərdən dərhal xəbərdar olacaqsınız.</p>
               <div class="form-newsletters mt-15 wow animate__animated animate__fadeInUp">
                 <form action="#">
                   <div class="form-group">
-                    <input class="input-name border-gray-500" type="text" placeholder="Your name">
+                    <input class="input-name border-gray-500" type="text" placeholder="Ad Soyad">
                   </div>
                   <div class="form-group">
-                    <input class="input-email border-gray-500" type="email" placeholder="Emaill address">
+                    <input class="input-email border-gray-500" type="email" placeholder="Emaill ünvaı">
                   </div>
                   <div class="form-group mt-20">
                     <button class="btn btn-linear hover-up">
-                      Subscribe
+                      Abunə Ol
                       <i class="fi-rr-arrow-small-right"></i>
                     </button>
                   </div>
@@ -519,7 +513,7 @@
           <div class="footer-bottom border-gray-800">
             <div class="row">
               <div class="col-lg-5 text-center text-lg-start">
-                <p class="text-base color-white wow animate__animated animate__fadeIn">© Created by<a class="copyright" href="http://alithemes.com" target="_blank"> AliThemes.com</a></p>
+                <p class="text-base color-white wow animate__animated animate__fadeIn">© Created with<a class="copyright" href="http://elvinseyidov.com" target="_blank"> Elvin</a></p>
               </div>
               <div class="col-lg-7 text-center text-lg-end">
                 <div class="box-socials">

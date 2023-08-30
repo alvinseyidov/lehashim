@@ -15,6 +15,7 @@ class BlogCategory(models.Model):
     image = models.ImageField(null=True, blank=True)
     icon = models.ImageField(null=True, blank=True)
     sort = models.IntegerField(default=0)
+    description = models.TextField(null=True, blank=True)
 
     class Meta:
         ordering = ('sort',)

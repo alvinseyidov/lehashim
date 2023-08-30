@@ -5,10 +5,12 @@ from blog.models import BlogCategory as Category, Tag
 
 def category(request, id):
     categories = Category.objects.filter(parent__isnull=True)
+    category = Category.objects.get(pk=id)
     general = General.objects.all()
     socials = Social.objects.all()
     context = {
         "general": general,
+        "category": category,
         "socials": socials,
         "categories": categories
     }
