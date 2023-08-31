@@ -211,8 +211,13 @@ background: #1c1c1c !important;
 background: #000 !important;
 }
 
+.theme-night .blackbg {
+display: block !important;
+}
 
-
+.theme-day .whitebg {
+display: block !important;
+}
 
 
 main {

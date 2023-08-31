@@ -207,8 +207,13 @@ color:#eb2810 !important;
                     <h3 class="maintext d-inline-block mt-10 mb-15 " style="color:#fff !important; ">Mən Həşim, rəqəmsal dünyadakı yeniliklər, marketinqlə əlaqəli məlumatlar və çoxşaxəli söhbətlər sizə maraqlıdırsa, rahat yer seçib əyləşin</h3>
                     <div class="box-socials">
                       {% for s in socials%}
-                      <a class="bg-gray-800 hover-up" target="_blank" href="{{s.link}}" style=" background-color: #fff !important; ">
-                        <img src="{{s.icon.url}}"> </a>
+                      {% if s.video_uzerinde_olsun %}
+                      <a class="bg-gray-800 hover-up whitebg" target="_blank" href="{{s.link}}" style="display:none; background-color: #fff !important; ">
+                        <img src="{{s.icon_white_backround.url}}"> </a>
+
+                      <a class="bg-gray-800 hover-up blackbg" target="_blank" href="{{s.link}}" style=" display:none;background-color: #fff !important; ">
+                        <img src="{{s.icon_black_backround.url}}"> </a>
+                      {% endif%}
                       {% endfor %}
                     </div>
                   </div>

@@ -16,7 +16,9 @@ class General(models.Model):
 class Social(models.Model):
     name = models.CharField(max_length=256)
     link = models.CharField(max_length=256)
-    icon = models.ImageField()
+    icon_white_backround = models.ImageField(null=True, blank=True)
+    icon_black_backround = models.ImageField(null=True, blank=True)
+    video_uzerinde_olsun = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name
