@@ -5405,7 +5405,6 @@ input {
   background-size: auto 14px;
 }
 .box-banner-4 .box-socials a:hover {
-  background: linear-gradient(90deg, rgb(14, 165, 234), rgb(11, 209, 209) 51%, rgb(14, 165, 234)) var(--x, 0)/200%;
 }
 
 .calendar-icon {
