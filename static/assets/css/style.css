@@ -148,7 +148,7 @@ color: #ffffff !important;
 }
 
 .theme-day li a {
-  color: #556281 !important;
+
   font-size: 17px !important;
 }
 .cover-home1::before {
@@ -6892,7 +6892,7 @@ iframe.google-map {
   box-shadow: none;
 }
 .theme-day .header .main-menu li ul a {
-  color: #000 !important;
+  color: #000;
 }
 .theme-day .sticky-bar.stick {
   border-bottom: 1px solid #E9EEF5;
