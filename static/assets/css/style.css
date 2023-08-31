@@ -194,9 +194,25 @@ color:#eb2810 !important;
 
 
 .theme-night .sub-menu {
-background: #27292d !important;
+background: #000 !important;
     border: 0px solid #27292d !important;
 }
+
+
+.theme-night .sticky-bar.stick{
+background: #000 !important;
+}
+
+.theme-night body{
+background: #1c1c1c !important;
+}
+
+.theme-night .header{
+background: #000 !important;
+}
+
+
+
 
 
 main {
