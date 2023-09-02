@@ -122,6 +122,12 @@ video {
   vertical-align: baseline;
 }
 
+.theme-day .csdsdc {
+color:#000 !important;
+}
+.theme-night .csdsdc {
+color:#fff !important;
+}
 
 .hoverunder {
   display: inline-block;
@@ -710,7 +716,7 @@ h6 {
 }
 
 .color-white {
-  color: #b9e0f2 !important;
+  color: #fff !important;
 }
 
 .border-gray-800 {
@@ -752,8 +758,13 @@ h6 {
   color: #7F92B0;
 }
 
-.timeread {
-  background: url(../imgs/page/homepage1/clock.svg) no-repeat left center;
+.theme-day .timeread {
+  background: url(../../clockblack.svg) no-repeat left center;
+  display: inline-block;
+  padding: 0px 0px 0px 23px;
+}
+.theme-night .timeread {
+  background: url(../../clockwhite.svg) no-repeat left center;
   display: inline-block;
   padding: 0px 0px 0px 23px;
 }

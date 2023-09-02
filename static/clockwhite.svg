@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
+	<title>clock-svg</title>
+	<defs>
+		<image  width="16" height="16" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAAXNSR0IB2cksfwAAAP9QTFRF////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////fb62zwAAAFV0Uk5TAA8+agWP/v+LIM+jVBilzR8Ey+dCRejKAoA7dl5DfPOZwPQOnu0tR29MKWfbARpidAt5SgxyUzKKtzdP95eJmvUJg/s2OX/V5i/TCCPfUhyd3hWhFMafEYYAAADDSURBVHicPY/ZVsJAEEQrgClBgtGwBRUVFFmiRAjgHiEqe0Tw/7+FmcyBerh9quqhuwEpLRaPxzTslDjQKaQfJpRPpniUNox0hsem9CenVlY1uXyhKIbNkuDZucAFy0Dx8kq215Wq4M0tUONdFLAu2GATLWoqcO6BB7bh8lEGHbILeOyhz0G04onPwAtf4b29q6UfDuB/DoFR8LU7+Zs/gsPxpKb81JrN5VwsAz80fsNV8LdQzXrDSJv//b+ma9tu9Bm2QUESf/PuMYYAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+	</style>
+	<use id="Layer" href="#img1" x="0" y="0"/>
+</svg>

@@ -264,11 +264,11 @@ color:#eb2810 !important;
                         <p class="color-gray-500">{{b.short_description}}</p>
                         <div class="row mt-20">
                           <div class="col-7">
-                            {% for t in b.tags.all %}
-                            <a class="color-gray-700 text-sm mr-15" href="{% url 'tag' t.slug %}">#{{t.name}}</a>
-                            {% endfor%}
+
+                            <div class="text-sm mr-15 csdsdc">{{b.date | date:'d.m.y'}}</div>
+
                           </div>
-                          <div class="col-5 text-end"><span class="color-gray-700 text-sm timeread">3 dəq</span></div>
+                          <div class="col-5 text-end"><span class="csdsdc text-sm timeread">{{b.reading_time}}</span></div>
                         </div>
                       </div>
                     </div>
