@@ -123,6 +123,30 @@ video {
 }
 
 
+.hoverunder {
+  display: inline-block;
+  position: relative;
+  color: #eb2810;
+}
+
+.hoverunder:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color:#eb2810;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hoverunder:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
 
 .theme-night .fontcolor {
 color: #ffffff !important;
@@ -1240,7 +1264,7 @@ a.text-brand-3:hover {
   color: #ffffff;
 }
 .btn.btn-tag:hover {
-  background-color: #0EA5EA !important;
+  background-color: #eb2810 !important;
   color: #ffffff !important;
 }
 .btn.btn-small {
@@ -1798,9 +1822,7 @@ input {
 .card-list-posts .card-info {
   width: 100%;
 }
-.card-list-posts .card-info a:hover h3, .card-list-posts .card-info a:hover h4, .card-list-posts .card-info a:hover h5 {
-  color: #1CC2E7 !important;
-}
+
 .card-list-posts .card-info .col-7 a:hover {
   color: #0EA5EA !important;
 }
@@ -6818,7 +6840,7 @@ iframe.google-map {
   color: #7E9CC7;
 }
 .theme-day .color-white {
-  color: #344161 !important;
+  color: #000 !important;
 }
 .theme-day .color-gray-50 {
   color: #344161;
