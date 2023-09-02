@@ -124,8 +124,13 @@ video {
 
 
 
+.theme-night .fontcolor {
+color: #ffffff !important;
+}
 
-
+.theme-day .fontcolor {
+color: #000 !important;
+}
 
 .theme-day .maintext {
     color: #000 !important;
@@ -605,7 +610,7 @@ h6 {
 }
 
 .color-gray-500 {
-  color: #94A9C9;
+  color: #6a6a6a;
 }
 
 .color-gray-600 {
@@ -6831,7 +6836,7 @@ iframe.google-map {
   color: #6F92B0;
 }
 .theme-day .color-gray-500 {
-  color: #708ab0 !important;
+  color: #6a6a6a !important;
 }
 .theme-day .color-gray-600 {
   color: #7E9CC7;
