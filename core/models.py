@@ -19,6 +19,10 @@ class Social(models.Model):
     icon_white_backround = models.ImageField(null=True, blank=True)
     icon_black_backround = models.ImageField(null=True, blank=True)
     video_uzerinde_olsun = models.BooleanField(default=False)
+    sort = models.IntegerField(default=0)
+
+    class Meta:
+        ordering = ('sort',)
 
     def __str__(self):
         return self.name
