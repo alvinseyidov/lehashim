@@ -122,9 +122,19 @@ video {
   vertical-align: baseline;
 }
 
+
 .theme-day .csdsdc {
-color:#000 !important;
+color:#000;
 }
+
+.theme-day .csdsdc:hover{
+    color: #eb2810 !important;
+}
+
+.theme-night .csdsdc:hover{
+    color: #eb2810 !important;
+}
+
 .theme-night .csdsdc {
 color:#fff !important;
 }
@@ -167,6 +177,8 @@ color: #000 !important;
     background: linear-gradient(90deg, #EB2810, #a00000 51%, #F52910) var(--x, 0)/200% !important;
     -webkit-background-clip: text !important;
 }
+
+
 
 
 .maintext {

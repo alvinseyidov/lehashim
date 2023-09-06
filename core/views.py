@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from core.models import *
 from blog.models import BlogCategory as Category, Blog, Tag
-
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 def index(request):
     categories = Category.objects.filter(parent__isnull=True)
@@ -13,9 +13,18 @@ def index(request):
     tags = Tag.objects.all()[:6]
     socials = Social.objects.all()
 
+    page = request.GET.get('page', 1)
+    paginator = Paginator(blogs, 4)
+    try:
+        blgs = paginator.page(page)
+    except PageNotAnInteger:
+        blgs = paginator.page(1)
+    except EmptyPage:
+        blgs = paginator.page(paginator.num_pages)
+
     context = {
         "tags": tags,
-        "blogs": blogs,
+        "blogs": blgs,
         "blogsf": blogsf,
         "topics": topics,
         "general": general,

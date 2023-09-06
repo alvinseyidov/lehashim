@@ -254,9 +254,9 @@ color:#eb2810 !important;
                 <div class="col-lg-8">
                   <h2 class="  d-inline-block mb-10 fontcolor">Ən son paylaşdıqlarım</h2>
                   <p class="text-lg color-gray-500 ">İzləmədə qalın yeniliklərdən xəbərdar olun – Yeniliklərdən <span style="color:#eb2810 !important;">agah olun</span>.</p>
-                  <div class="box-list-posts "style=" margin-top: 25px; ">
+                  <div class="box-list-posts infinite-container"style=" margin-top: 25px; ">
                     {% for b in blogs %}
-                    <div class="card-list-posts wow animate__animated animate__fadeIn" style="margin-bottom: 27px;">
+                    <div class="card-list-posts wow animate__animated animate__fadeIn infinite-item" style="margin-bottom: 27px;">
                       <a href="{% url 'blog' b.id%}"style="background-image:url({{b.main_image.url}});border-radius:14px;" class="card-image hover-up"></a>
                       <div class="card-info"><a class="btn btn-tag bg-gray-800 hover-up" href="{% url 'category' b.category.id %}">{{b.category.name}}</a>
                         <a href="single-sidebar.html">
@@ -269,12 +269,23 @@ color:#eb2810 !important;
                             <span class="csdsdc text-sm timeread">{{b.reading_time}}</span>
 
                           </div>
-                          <div class="col-5 text-end"><span class="csdsdc text-sm ">Davamını oxu</span></div>
+                          <div class="col-5 text-end"><a href="{% url 'blog' b.id %}" class="linkhover"> <span class="csdsdc text-sm ">Davamını oxu</span></a></div>
                         </div>
                       </div>
                     </div>
                     {% endfor %}
                   </div>
+
+                  {% if page_obj.has_next %}
+                <a class="infinite-more-link" href="?page={{ page_obj.next_page_number }}"></a>
+                {% endif %}
+                <div class="d-flex justify-content-center" style="display:none;">
+                    <div class="spinner-border" role="status">
+                        <span class="sr-only">Yüklənir...</span>
+                    </div>
+                </div>
+
+
 
                 </div>
                 <div class="col-lg-4">
@@ -465,7 +476,7 @@ color:#eb2810 !important;
       </div>
     </div>
     <script src="{% static 'assets/js/vendors/modernizr-3.6.0.min.js'%}"></script>
-    <script src="{% static 'assets/js/vendors/jquery-3.6.0.min.js'%}"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="{% static 'assets/js/vendors/jquery-migrate-3.3.0.min.js'%}"></script>
     <script src="{% static 'assets/js/vendors/bootstrap.bundle.min.js'%}"></script>
     <script src="{% static 'assets/js/vendors/waypoints.js'%}"></script>
@@ -474,6 +485,30 @@ color:#eb2810 !important;
     <script src="{% static 'assets/js/vendors/swiper-bundle.min.js'%}"></script>
     <script src="{% static 'assets/js/vendors/jquery.progressScroll.min.js'%}"></script>
     <script src="{% static 'assets/js/main.js'%}?v=2.0"></script>
+
+
+    <script src="/static/jquery.waypoints.min.js"></script>
+    <script src="/static/infinite.min.js"></script>
+    <script>
+    var infinite = new Waypoint.Infinite({
+        element: $('.infinite-container')[0],
+        handler: function(direction) {
+
+    },
+    offset: 'bottom-in-view',
+
+    onBeforePageLoad: function () {
+    $('.spinner-border').show();
+    },
+    onAfterPageLoad: function () {
+    $('.spinner-border').hide();
+    }
+
+    });
+
+    </script>
+
+
 
   <script>
     $(".limitt").text(function(index, currentText) {
