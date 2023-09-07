@@ -217,6 +217,14 @@ color: #ffffff !important;
 }
 
 
+.theme-night ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #000;
+}
+
+.theme-night .sdcsdcsd {
+box-shadow: 2px 2px 7px 1px #2c2c2c !important;
+    border: unset !important;
+}
 .theme-night .cccc {
   color: #fff !important;
   font-weight: 400 !important;
@@ -718,7 +726,7 @@ h6 {
 }
 
 .bg-gray-850 {
-  background-color: #1f2024;
+  background-color: #000;
 }
 
 .bg-gray-900 {
