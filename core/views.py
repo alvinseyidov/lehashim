@@ -13,8 +13,10 @@ def index(request):
     tags = Tag.objects.all()[:6]
     socials = Social.objects.all()
 
+
+
     page = request.GET.get('page', 1)
-    paginator = Paginator(blogs, 4)
+    paginator = Paginator(blogs, 2)
     try:
         blgs = paginator.page(page)
     except PageNotAnInteger:

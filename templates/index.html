@@ -254,11 +254,11 @@ color:#eb2810 !important;
                 <div class="col-lg-8">
                   <h2 class="  d-inline-block mb-10 fontcolor">Ən son paylaşdıqlarım</h2>
                   <p class="text-lg color-gray-500 ">İzləmədə qalın yeniliklərdən xəbərdar olun – Yeniliklərdən <span style="color:#eb2810 !important;">agah olun</span>.</p>
-                  <div class="box-list-posts infinite-container"style=" margin-top: 25px; ">
+                  <div class="box-list-posts infinite-container" style=" margin-top: 25px; ">
                     {% for b in blogs %}
                     <div class="card-list-posts wow animate__animated animate__fadeIn infinite-item" style="margin-bottom: 27px;">
-                      <a href="{% url 'blog' b.id%}"style="background-image:url({{b.main_image.url}});border-radius:14px;" class="card-image hover-up"></a>
-                      <div class="card-info"><a class="btn btn-tag bg-gray-800 hover-up" href="{% url 'category' b.category.id %}">{{b.category.name}}</a>
+                      <a href="{% url 'blog' b.id%}"style="background-size: cover;background-image:url({{b.main_image.url}});border-radius:14px;" class="card-image hover-up"></a>
+                      <div class="card-info"><a class="btn btn-tag bg-gray-800 hover-up" href="{% url 'category' 1 %}">{{b.category.name}}</a>
                         <a href="single-sidebar.html">
                           <h4 class="mt-15 mb-20 color-white hoverunder">{{b.title}}</h4></a>
                         <p class="color-gray-500">{{b.short_description}}</p>
@@ -276,8 +276,8 @@ color:#eb2810 !important;
                     {% endfor %}
                   </div>
 
-                  {% if page_obj.has_next %}
-                <a class="infinite-more-link" href="?page={{ page_obj.next_page_number }}"></a>
+                  {% if blogs.has_next %}
+                <a class="infinite-more-link" href="?page={{ blogs.next_page_number }}"></a>
                 {% endif %}
                 <div class="d-flex justify-content-center" style="display:none;">
                     <div class="spinner-border" role="status">
@@ -476,8 +476,8 @@ color:#eb2810 !important;
       </div>
     </div>
     <script src="{% static 'assets/js/vendors/modernizr-3.6.0.min.js'%}"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="{% static 'assets/js/vendors/jquery-migrate-3.3.0.min.js'%}"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
     <script src="{% static 'assets/js/vendors/bootstrap.bundle.min.js'%}"></script>
     <script src="{% static 'assets/js/vendors/waypoints.js'%}"></script>
     <script src="{% static 'assets/js/vendors/wow.js'%}"></script>
