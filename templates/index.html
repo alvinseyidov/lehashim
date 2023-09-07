@@ -439,64 +439,75 @@ color:#eb2810 !important;
       </div>
     </main>
     <footer class="footer">
-      <div class="container">
-        <div class="footer-1 bg-gray-850 border-gray-800">
+      <div class="container" style=" width: 100%; max-width: 100%;     padding: 0;">
+        <div class="footer-1 bg-gray-850 border-gray-800" style=" border: none; margin: 0;     border-radius: 0;padding-top: 56px;">
           <div class="row">
-            <div class="col-lg-4 mb-30"><a class="wow animate__animated animate__fadeInUp" href="{% url 'index'%}"><img class="logo-night" src="{% static 'assets/imgs/logo.svg'%}" alt="Genz"><img class="d-none logo-day" alt="GenZ" src="{% static 'assets/imgs/logo.svg'%}"></a>
+            <div class="col-lg-3 mb-30"><a class="wow animate__animated animate__fadeInUp" href="{% url 'index'%}"><img class="logo-night" src="{% static 'assets/imgs/logo2.svg'%}" style=" width: 100px; " alt="Genz"><img style=" width: 100px; " class="d-none logo-day" alt="GenZ" src="{% static 'assets/imgs/logo.svg'%}"></a>
               <p class="mb-20 mt-20 text-sm color-gray-500 wow animate__animated animate__fadeInUp">Mən Həşim, rəqəmsal dünyadakı yeniliklər, marketinqlə əlaqəli məlumatlar və çoxşaxəli söhbətlər sizə maraqlıdırsa, rahat yer seçib əyləşin.</p>
-              <h6 class="color-white mb-5 wow animate__animated animate__fadeInUp">Ünvan</h6>
-              <p class="text-sm color-gray-500 wow animate__animated animate__fadeInUp">123 Main Street<br>Bakı, Azərbaycan</p>
+
             </div>
-            <div class="col-lg-4 mb-30">
-              <h6 class="text-lg mb-30 color-white wow animate__animated animate__fadeInUp">Keçidlər</h6>
+            <div class="col-lg-3 mb-30" style=" padding-left: 70px; ">
+              <h6 class="text-lg mb-30 color-white wow animate__animated animate__fadeInUp" style="font-weight: bold;">Kateqoriyalar</h6>
               <div class="row">
                 <div class="col-6">
                   <ul class="menu-footer">
                     {% for c in categories%}
-                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="{% url 'category' c.id%}">{{c.name}}</a></li>
+                    <li class="wow animate__animated animate__fadeInUp"><a class="fontcolor cvccn" href="{% url 'category' c.id%}">{{c.name}}</a></li>
                     {% endfor %}
                   </ul>
                 </div>
+
+              </div>
+            </div>
+            <div class="col-lg-3 mb-30" style=" padding-left: 70px; ">
+              <h6 class="text-lg mb-30 color-white wow animate__animated animate__fadeInUp" style="font-weight: bold;">Taglar</h6>
+              <div class="row">
+
                 <div class="col-6">
                   <ul class="menu-footer">
                     {% for t in tags%}
-                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="{% url 'tag' t.slug%}">{{t.name}}</a></li>
+                    <li class="wow animate__animated animate__fadeInUp"><a class="fontcolor cvccn" href="{% url 'tag' t.slug%}">{{t.name}}</a></li>
                     {% endfor%}
                   </ul>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 mb-30">
-              <h4 class="text-lg mb-30 color-white wow animate__animated animate__fadeInUp">Abunəlik</h4>
-              <p class="text-base color-gray-500 wow animate__animated animate__fadeInUp">Abunə olmaqla xəbərlərdən, yeniliklərdən dərhal xəbərdar olacaqsınız.</p>
-              <div class="form-newsletters mt-15 wow animate__animated animate__fadeInUp">
-                <form action="#">
-                  <div class="form-group">
-                    <input class="input-name border-gray-500" type="text" placeholder="Ad Soyad">
-                  </div>
-                  <div class="form-group">
-                    <input class="input-email border-gray-500" type="email" placeholder="Emaill ünvaı">
-                  </div>
-                  <div class="form-group mt-20">
-                    <button class="btn btn-linear hover-up">
-                      Abunə Ol
-                      <i class="fi-rr-arrow-small-right"></i>
-                    </button>
-                  </div>
-                </form>
+            <div class="col-lg-3 mb-30" style=" padding-left: 70px; ">
+              <h6 class="text-lg mb-30 color-white wow animate__animated animate__fadeInUp" style="font-weight: bold;">Keçidlər</h6>
+              <div class="row">
+
+                <div class="col-6">
+                  <ul class="menu-footer">
+                    <li class="wow animate__animated animate__fadeInUp"><a class="fontcolor cvccn" href="#">Haqqımda </a></li>
+                    <li class="wow animate__animated animate__fadeInUp"><a class="fontcolor cvccn" href="#">Təlimlər </a></li>
+                    <li class="wow animate__animated animate__fadeInUp"><a class="fontcolor cvccn" href="#">Tədbirlər </a></li>
+                    <li class="wow animate__animated animate__fadeInUp"><a class="fontcolor cvccn" href="#">Xidmətlərim </a></li>
+                    <li class="wow animate__animated animate__fadeInUp"><a class="fontcolor cvccn" href="#">Rəylər </a></li>
+                  </ul>
+                </div>
               </div>
             </div>
+
           </div>
           <div class="footer-bottom border-gray-800">
             <div class="row">
-              <div class="col-lg-5 text-center text-lg-start">
-                <p class="text-base color-white wow animate__animated animate__fadeIn">© Created with<a class="copyright" href="http://elvinseyidov.com" target="_blank"> Elvin</a></p>
+              <div class="col-lg-3 text-center text-lg-start">
               </div>
-              <div class="col-lg-7 text-center text-lg-end">
-                <div class="box-socials">
-                  <div class="d-inline-block mr-30 wow animate__animated animate__fadeIn" data-wow-delay=".0s"><a class="icon-socials icon-twitter color-gray-500" href="https://twitter.com">Twitter</a></div>
-                  <div class="d-inline-block mr-30 wow animate__animated animate__fadeIn" data-wow-delay=".2s"><a class="icon-socials icon-linked color-gray-500" href="https://www.linkedin.com">LinkedIn</a></div>
-                  <div class="d-inline-block wow animate__animated animate__fadeIn" data-wow-delay=".4s"><a class="icon-socials icon-insta color-gray-500" href="https://www.instagram.com">Instagram</a></div>
+              <div style="text-align: center !important;" class="col-lg-6 text-center text-lg-start">
+                <p class="text-base color-white wow animate__animated animate__fadeIn">© Lehashim.com Bütün hüquqlar qorunur! <a class="copyright" href="http://elvinseyidov.com" target="_blank" style=" color: #eb2810;"> By Elvin</a></p>
+              </div>
+              <div class="col-lg-3 text-center text-lg-end">
+                <div class=" ">
+                  {% for s in socials%}
+                  <div class="d-inline-block  " data-wow-delay=".0s">
+                    <a class="  color-gray-500 whitebg" href="{{s.link}}" style="display:none;     margin-right: 8px;  " >
+                      <img src="{{s.icon_white_backround.url}}" style=" width: 40px; ">
+                    </a>
+                    <a class="   color-gray-500 blackbg" href="{{s.link}}" style="display:none;     margin-right: 8px;  ">
+                      <img src="{{s.icon_black_backround.url}}" style=" width: 40px; ">
+                    </a>
+                  </div>
+                {% endfor%}
                 </div>
               </div>
             </div>

@@ -122,7 +122,9 @@ video {
   vertical-align: baseline;
 }
 
-
+.cvccn:hover {
+color: #eb2810 !important;
+}
 .theme-day .csdsdc {
 color:#000;
 }
@@ -3509,7 +3511,7 @@ input {
   transition-duration: 0.2s;
 }
 .footer .menu-footer li a:hover {
-  color: #0EA5EA !important;
+  color: #eb2810 !important;
   transition-duration: 0.2s;
   padding-left: 3px;
 }
