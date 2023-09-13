@@ -514,9 +514,7 @@ a {
   color: #000000;
 }
 
-a:hover {
-  color: #000000;
-}
+
 
 *:hover {
   transition-duration: 0.2s;
@@ -2164,17 +2162,45 @@ background-color: #eb2810 !important;
 .head-sidebar .line-bottom {
   padding-bottom: 10px;
   margin-bottom: 40px;
-  background: linear-gradient(82.19deg, #0EA5EA 5.2%, #0BD1D1 100.36%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
 }
+
+.theme-day .head-sidebar .line-bottom {
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+  background: linear-gradient(82.19deg, #000 5.2%, #000 100.36%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.theme-night .head-sidebar .line-bottom {
+  padding-bottom: 10px;
+  margin-bottom: 40px;
+  background: linear-gradient(82.19deg, #fff 5.2%, #fff 100.36%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+
+.theme-night .head-sidebar .line-bottom::before {
+  background-color: #eb2810;
+}
+
+.theme-day .head-sidebar .line-bottom::before {
+  background-color: #eb2810;
+}
+
 .head-sidebar .line-bottom::before {
   height: 3px;
   width: 96px;
   content: "";
-  background-color: #0EA5EA;
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -2209,9 +2235,9 @@ background-color: #eb2810 !important;
   border-bottom-width: 1px;
   border-bottom-style: solid;
 }
-.list-posts .item-post .info-post a:hover h6 {
-  color: #0EA5EA !important;
-}
+
+
+
 .list-posts .item-post .info-post ul {
   padding-left: 25px;
   margin-bottom: 20px;

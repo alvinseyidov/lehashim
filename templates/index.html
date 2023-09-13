@@ -289,10 +289,10 @@ color:#eb2810 !important;
 
                 </div>
                 <div class="col-lg-4">
-                  <div class="sidebar">
+                  <div class="sidebar" style="position: -webkit-sticky; position: sticky; top: 0;">
                     <div class="box-sidebar bg-gray-850 border-gray-800 ">
                       <div class="head-sidebar wow animate__animated animate__fadeIn">
-                        <h5 class="line-bottom">Çox Oxunanlar</h5>
+                        <h5 class="line-bottom fontcolor">Çox Oxunanlar</h5>
                       </div>
                       <div class="content-sidebar">
                         <div class="list-posts">
@@ -300,9 +300,9 @@ color:#eb2810 !important;
                           <div class="item-post wow animate__animated animate__fadeIn">
                             <div class="image-post"><a href="{% url 'blog' b.id %}"><img src="{{b.main_image.url}}" alt="Genz"></a></div>
                             <div class="info-post border-gray-800"><a href="{% url 'blog' b.id %}">
-                                <h6 class="color-white">{{b.title}}</h6></a><span class="color-gray-700">15 dəq</span>
+                                <h6 class="fontcolor hoverunder">{{b.title}}</h6></a><br><span class="fontcolor ">15 dəq</span>
                               <ul class="d-inline-block">
-                                <li class="color-gray-700">{{b.date | date:'d.m.Y'}}</li>
+                                <li class="fontcolor">{{b.date | date:'d.m.Y'}}</li>
                               </ul>
                             </div>
                           </div>
@@ -311,24 +311,7 @@ color:#eb2810 !important;
                       </div>
                     </div>
 
-                    <div class="box-sidebar bg-gray-850 border-gray-800">
-                      <div class="head-sidebar"><a href="{% url 'index'%}"><img src="{% static 'assets/imgs/logo.svg'%}" alt="Genz"></a>
-                        <h6 class="color-gray-700">Follow us on instagram</h6>
-                      </div>
-                      <div class="content-sidebar">
-                        <div class="row mt-30 mb-10">
-                          <div class="col-sm-4 col-4 mb-20 wow animate__animated animate__fadeIn"><a href="#"><img class="bdrd-8" src="{% static 'assets/imgs/page/homepage1/gallery.png'%}" alt="Genz"></a></div>
-                          <div class="col-sm-4 col-4 mb-20 wow animate__animated animate__fadeIn"><a href="#"><img class="bdrd-8" src="{% static 'assets/imgs/page/homepage1/gallery2.png'%}" alt="Genz"></a></div>
-                          <div class="col-sm-4 col-4 mb-20 wow animate__animated animate__fadeIn"><a href="#"><img class="bdrd-8" src="{% static 'assets/imgs/page/homepage1/gallery3.png'%}" alt="Genz"></a></div>
-                          <div class="col-sm-4 col-4 mb-20 wow animate__animated animate__fadeIn"><a href="#"><img class="bdrd-8" src="{% static 'assets/imgs/page/homepage1/gallery4.png'%}" alt="Genz"></a></div>
-                          <div class="col-sm-4 col-4 mb-20 wow animate__animated animate__fadeIn"><a href="#"><img class="bdrd-8" src="{% static 'assets/imgs/page/homepage1/gallery5.png'%}" alt="Genz"></a></div>
-                          <div class="col-sm-4 col-4 mb-20 wow animate__animated animate__fadeIn"><a href="#"><img class="bdrd-8" src="{% static 'assets/imgs/page/homepage1/gallery6.png'%}" alt="Genz"></a></div>
-                          <div class="col-sm-4 col-4 mb-20 wow animate__animated animate__fadeIn"><a href="#"><img class="bdrd-8" src="{% static 'assets/imgs/page/homepage1/gallery7.png'%}" alt="Genz"></a></div>
-                          <div class="col-sm-4 col-4 mb-20 wow animate__animated animate__fadeIn"><a href="#"><img class="bdrd-8" src="{% static 'assets/imgs/page/homepage1/gallery8.png'%}" alt="Genz"></a></div>
-                          <div class="col-sm-4 col-4 mb-20 wow animate__animated animate__fadeIn"><a href="#"><img class="bdrd-8" src="{% static 'assets/imgs/page/homepage1/gallery9.png'%}" alt="Genz"></a></div>
-                        </div>
-                      </div>
-                    </div>
+
                   </div>
                 </div>
               </div>
