@@ -294,11 +294,16 @@ color:#eb2810 !important;
                       <div class="head-sidebar wow animate__animated animate__fadeIn">
                         <h5 class="line-bottom fontcolor">Çox Oxunanlar</h5>
                       </div>
-                      <div class="content-sidebar">
+                      <div class="content-sidebar" style=" margin-bottom: 19px; ">
                         <div class="list-posts">
                           {% for b in blogs %}
                           <div class="item-post wow animate__animated animate__fadeIn">
-                            <div class="image-post"><a href="{% url 'blog' b.id %}"><img src="{{b.main_image.url}}" alt="Genz"></a></div>
+                            <div class="image-post">
+                              <a href="{% url 'blog' b.id %}">
+                                <div style="background-image:url({{b.main_image.url}});width: 70px; height: 70px; border-radius: 50%; background-size: cover;    border: 1px solid #8d8d8d;">
+
+                                </div>
+                              </a></div>
                             <div class="info-post border-gray-800"><a href="{% url 'blog' b.id %}">
                                 <h6 class="fontcolor hoverunder">{{b.title}}</h6></a><br><span class="fontcolor ">15 dəq</span>
                               <ul class="d-inline-block">
