@@ -323,7 +323,7 @@
 
     // DARK / LIGHT MODE
     const toggleSwitch = document.querySelector('#flexSwitchCheckChecked');
-    const currentTheme = 'day';
+    const currentTheme = 'night';
     let currentSection = localStorage.getItem('section');
 
     if (currentTheme) {
