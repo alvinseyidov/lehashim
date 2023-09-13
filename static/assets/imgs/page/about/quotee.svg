@@ -9,7 +9,7 @@
 		.s0 { fill: #222f43 } 
 	</style>
 	<filter id="f0">
-		<feFlood flood-color="#000000" flood-opacity="1" />
+		<feFlood flood-color="#ffffff" flood-opacity="1" />
 		<feBlend mode="normal" in2="SourceGraphic"/>
 		<feComposite in2="SourceAlpha" operator="in" />
 	</filter>

@@ -1913,9 +1913,30 @@ input {
   margin-bottom: 30px;
 }
 
+.theme-night .borderwhite {
+    border-color: #fdfdfd !important;
+}
+
+.theme-day .borderwhite {
+    border-color: #292929 !important;
+}
+
+.theme-day .progressScroll-border{
+background-color: #eb2810 !important;
+}
+
 .card-testimonials {
   position: relative;
   background: url(../imgs/page/about/quote.svg) no-repeat bottom right 15px;
+  padding: 30px 24px 50px 24px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 16px;
+}
+
+.theme-night  .card-testimonials {
+  position: relative;
+  background: url(../imgs/page/about/quotee.svg) no-repeat bottom right 15px !important;
   padding: 30px 24px 50px 24px;
   border-width: 1px;
   border-style: solid;
@@ -5428,7 +5449,7 @@ input {
   background-position: center;
 }
 .box-socials a:hover {
-  background: linear-gradient(90deg, rgb(14, 165, 234), rgb(11, 209, 209) 51%, rgb(14, 165, 234)) var(--x, 0)/200%;
+  background: none;
   transition: all 0.2s;
 }
 
@@ -6975,7 +6996,7 @@ iframe.google-map {
   color: #66768F;
 }
 .theme-day .border-gray-800 {
-  border-color: #c2d4ee !important;
+  border-color: #000 !important;
 }
 .theme-day body {
   background-color: #F9FBFF;
