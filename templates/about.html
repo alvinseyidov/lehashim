@@ -3,61 +3,111 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <title>Le Hashim - Haqqımda</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="msapplication-TileColor" content="#0E0E0E">
     <meta name="template-color" content="#0E0E0E">
     <meta name="description" content="Index page">
     <meta name="keywords" content="index, page">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <meta name="author" content="">
-    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/imgs/template/favicon.svg'%}">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'favicon.svg'%}">
+    <link rel="mask-icon" href="{% static 'favicon.svg'%}" color="#fff">
+    <link rel="apple-touch-icon" href="{% static 'favicon.svg'%}">
     <link href="{% static 'assets/css/style.css'%}?v=2.0" rel="stylesheet">
+
+
+
+
+
+    <link rel="apple-touch-icon" sizes="57x57" href="{% static 'fav57.png'%}">
+        <link rel="apple-touch-icon" sizes="60x60" href="{% static 'fav60.png'%}">
+        <link rel="apple-touch-icon" sizes="72x72" href="{% static 'fav72.png'%}">
+        <link rel="apple-touch-icon" sizes="76x76" href="{% static 'fav76.png'%}">
+        <link rel="apple-touch-icon" sizes="114x114" href="{% static 'fav114.png'%}">
+        <link rel="apple-touch-icon" sizes="120x120" href="{% static 'fav120.png'%}">
+        <link rel="apple-touch-icon" sizes="144x144" href="{% static 'fav144.png'%}">
+        <link rel="apple-touch-icon" sizes="152x152" href="{% static 'fav152.png'%}">
+        <link rel="apple-touch-icon" sizes="180x180" href="{% static 'fav180.png'%}">
+        <link rel="icon" type="image/png" sizes="192x192" href="{% static 'fav192.png'%}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{% static 'fav32.png'%}">
+        <link rel="icon" type="image/png" sizes="96x96" href="{% static 'fav96.png'%}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{% static 'fav16.png'%}">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="{% static 'fav144.png'%}">
+
+
+
+<style>
+  .theme-day .hoverr:hover{
+color:#eb2810 !important;
+}
+
+.theme-night .hoverr:hover{
+color:#eb2810 !important;
+}
+.theme-day .color-gray-700 {
+    color: #ffffff !important;
+}
+</style>
     <title>Le Hashim</title>
   </head>
   <body>
-    <div id="preloader-active">
-      <div class="preloader d-flex align-items-center justify-content-center">
-        <div class="preloader-inner position-relative">
-          <div class="text-center"><img class="mb-10" src="{% static 'assets/imgs/template/favicon.svg'%}" alt="GenZ">
-            <div class="preloader-dots"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <header class="header sticky-bar bg-gray-900">
+
+    <header class="header sticky-bar ">
       <div class="container">
+      <div class="row align-items-start">
+        <div class="col-xl-1"></div>
+        <div class="col-xl-10 col-lg-12" style="   ">
+
         <div class="main-header">
-          <div class="header-logo"><a class="d-flex" href="{% url 'index'%}"><img class="logo-night" alt="GenZ" src="{% static 'assets/imgs/template/logo.svg'%}"><img class="d-none logo-day" alt="GenZ" src="{% static 'assets/imgs/template/logo-day.svg'%}"></a></div>
+          <div class="header-logo"><a class="d-flex" href="{% url 'index'%}"><img class="logo-night" alt="GenZ" src="{% static 'assets/imgs/logo2.svg'%}"><img class="d-none logo-day" alt="GenZ" src="{% static 'assets/imgs/logo.svg'%}"></a></div>
           <div class="header-nav">
             <nav class="nav-main-menu d-none d-xl-block">
               <ul class="main-menu">
+                 <li class=""><a class="active hoverr"style=" cursor: pointer; " >Haqqımda</a>
+                  <ul class="sub-menu" style=" background: #f9fbff; border: 0px solid #E9EEF5; box-shadow: none; margin-top: 11px; min-width: 268px; ">
+                    <li><a class=" cccc hoverr" style=" cursor: pointer; " href="{% url 'about'  %}">Haqqımda</a></li>
+                    <li><a class=" cccc hoverr" style=" cursor: pointer; " href="{% url 'about'  %}">Portfolio</a></li>
+                    <li><a class=" cccc hoverr"style=" cursor: pointer; " href="{% url 'about'  %}">Rəylər</a></li>
+                  </ul>
+                </li>
                 {% for c in categories%}
                 {% if c.categories.count > 0 %}
-                <li class="has-children"><a class="active" >{{c.name}}</a>
-                  <ul class="sub-menu">
+                <li class=""><a class="active hoverr "style=" cursor: pointer; " >{{c.name}}</a>
+                  <ul class="sub-menu" style=" background: #f9fbff; border: 0px solid #E9EEF5; box-shadow: none; margin-top: 11px; min-width: 268px; ">
                     {% for s in c.categories.all %}
-                    <li><a class="color-gray-500" href="{% url 'category' s.id %}">{{s.name}}</a></li>
+
+
+                    {% if s.categories.count > 0 %}
+                    <li><a class=" cccc hoverr" style=" cursor: pointer; "href="{% url 'category' s.id %}">{{s.name}}</a>
+
+                     <ul class="sub-menu" style=" background: #f9fbff; border: 1px solid #E9EEF5; box-shadow: none; margin-top: 11px; width: 192px; left: 8px; ">
+                    {% for t in s.categories.all %}
+                       <li><a class=" cccc hoverr" style=" cursor: pointer; " href="{% url 'category' s.id %}" style="font-size: 14px !important;line-height: 1px;">{{t.name}}</a></li>
+                       {% endfor%}
+                       </ul>
+
+                    </li>
+                    {% else %}
+                    <li><a class=" cccc hoverr" style=" cursor: pointer; " href="{% url 'category' s.id %}">{{s.name}}</a></li>
+                    {% endif %}
                     {% endfor %}
                   </ul>
                 </li>
                 {% else %}
-                <li><a class="active" href="{% url 'category' c.id %}">{{c.name}}</a>
+                <li><a class="active"style=" cursor: pointer; " href="{% url 'category' c.id %}">{{c.name}}</a>
 
                 </li>
                 {% endif %}
                 {% endfor %}
-                <li class="has-children"><a class="active" >Haqqımda</a>
-                  <ul class="sub-menu">
-                    <li><a class="color-gray-500" href="{% url 'about'  %}">Haqqımda</a></li>
-                    <li><a class="color-gray-500" href="{% url 'about'  %}">Portfolio</a></li>
-                    <li><a class="color-gray-500" href="{% url 'about'  %}">Rəylər</a></li>
-                  </ul>
-                </li>
+
               </ul>
             </nav>
             <div class="burger-icon burger-icon-white"><span class="burger-icon-top"></span><span class="burger-icon-mid"></span><span class="burger-icon-bottom"></span></div>
           </div>
-          <div class="header-right text-end"><a class="btn btn-search" href="#"></a>
+          <div class="header-right text-end"><a class="btn btn-search" href="#" style=" margin-top: 2px; "></a>
             <div class="form-search p-20">
               <form action="#">
                 <input class="form-control" type="text" placeholder="Search">
@@ -69,15 +119,24 @@
               <div class="form-check form-switch">
                 <input class="form-check-input" id="flexSwitchCheckChecked" type="checkbox" role="switch" checked="">
               </div>
-            </div><a class="btn btn-linear d-none d-sm-inline-block hover-up hover-shadow" href="{% url 'about'%}">Abunə Ol</a>
+            </div>
           </div>
         </div>
+
+
+
+
+
+
+
+          </div>
+      </div>
       </div>
     </header>
     <div class="mobile-header-active mobile-header-wrapper-style perfect-scrollbar bg-gray-900">
       <div class="mobile-header-wrapper-inner">
         <div class="mobile-header-content-area">
-          <div class="mobile-logo border-gray-800"><a class="d-flex" href="{% url 'index'%}"><img class="logo-night" alt="GenZ" src="{% static 'assets/imgs/logo.svg'%}"><img class="d-none logo-day" alt="GenZ" src="{% static 'assets/imgs/logo.svg'%}"></a></div>
+          <div class="mobile-logo border-gray-800"><a class="d-flex" href="{% url 'index'%}"><img class="logo-night" alt="GenZ" src="{% static 'assets/imgs/template/logo.svg'%}"><img class="d-none logo-day" alt="GenZ" src="{% static 'assets/imgs/template/logo-day.svg'%}"></a></div>
           <div class="perfect-scroll">
             <div class="mobile-menu-wrap mobile-header-border">
               <nav class="mt-15">
@@ -129,432 +188,110 @@
       </div>
     </div>
     <main class="main">
-      <div class="cover-home1">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-1"></div>
-            <div class="col-xl-10 col-lg-12">
-              <div class="text-center mt-70 mb-50">
-                <h2 class="color-linear d-inline-block mb-20 wow animate__animated animate__fadeInUp">My Latest Projects</h2>
-                <p class="text-lg color-gray-500 wow animate__animated animate__fadeInUp">The convention is the main event of the year for professionals in<br class="d-none d-lg-block">the world of design and architecture.</p>
-              </div>
-              <div class="row text-center filter-nav">
-                <div class="col-lg-12"><span class="wow animate__animated animate__fadeInUp" data-wow-delay=".0s"><span class="btn btn-border-linear btn-filter hover-up" data-filter="">All</span></span><span class="wow animate__animated animate__fadeInUp" data-wow-delay=".1s"><span class="btn btn-border-linear btn-filter hover-up" data-filter="web">Web Development</span></span><span class="wow animate__animated animate__fadeInUp" data-wow-delay=".2s"><span class="btn btn-border-linear btn-filter hover-up" data-filter="mobile">Mobile App</span></span><span class="wow animate__animated animate__fadeInUp" data-wow-delay=".3s"><span class="btn btn-border-linear btn-filter hover-up" data-filter="motion">Motion</span></span><span class="wow animate__animated animate__fadeInUp" data-wow-delay=".4s"><span class="btn btn-border-linear btn-filter hover-up" data-filter="graphic">Graphic Design</span></span></div>
-              </div>
-              <div class="mt-70">
-                <div class="row">
-                  <div class="col-lg-4">
-                    <div class="project" data-category="web motion">
-                      <div class="item-content">
-                        <div class="card-style-1 hover-up mb-30" data-wow-delay=".0s">
-                          <div class="card-image"><a class="link-post" href="portfolio-details.html"><img src="{% static 'assets/imgs/page/about/img1.png'%}" alt="Genz">
-                              <div class="card-info card-bg-2">
-                                <div class="info-bottom mb-15">
-                                  <h3 class="color-white mb-10">Flyer design</h3>
-                                  <p class="color-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat vitae risus eget maximus. Pellentesque suscipit</p>
-                                </div>
-                              </div></a></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="project" data-category="graphic web">
-                      <div class="item-content">
-                        <div class="card-style-1 hover-up mb-30" data-wow-delay=".1s">
-                          <div class="card-image"><a class="link-post" href="portfolio-details.html"><img src="{% static 'assets/imgs/page/about/img2.png'%}" alt="Genz">
-                              <div class="card-info card-bg-2">
-                                <div class="info-bottom mb-15">
-                                  <h3 class="color-white mb-10">Banner design</h3>
-                                  <p class="color-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat vitae risus eget maximus. Pellentesque suscipit</p>
-                                </div>
-                              </div></a></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="project" data-category="mobile motion graphic">
-                      <div class="item-content">
-                        <div class="card-style-1 hover-up mb-30" data-wow-delay=".2s">
-                          <div class="card-image"><a class="link-post" href="portfolio-details.html"><img src="{% static 'assets/imgs/page/about/img3.png'%}" alt="Genz">
-                              <div class="card-info card-bg-2">
-                                <div class="info-bottom mb-15">
-                                  <h3 class="color-white mb-10">Disk cover</h3>
-                                  <p class="color-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat vitae risus eget maximus. Pellentesque suscipit</p>
-                                </div>
-                              </div></a></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="project" data-category="motion mobile">
-                      <div class="item-content">
-                        <div class="card-style-1 hover-up mb-30" data-wow-delay=".0s">
-                          <div class="card-image"><a class="link-post" href="portfolio-details.html"><img src="{% static 'assets/imgs/page/about/img4.png'%}" alt="Genz">
-                              <div class="card-info card-bg-2">
-                                <div class="info-bottom mb-15">
-                                  <h3 class="color-white mb-10">Pattern design</h3>
-                                  <p class="color-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat vitae risus eget maximus. Pellentesque suscipit</p>
-                                </div>
-                              </div></a></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="project" data-category="web graphic">
-                      <div class="item-content">
-                        <div class="card-style-1 hover-up mb-30" data-wow-delay=".1s">
-                          <div class="card-image"><a class="link-post" href="portfolio-details.html"><img src="{% static 'assets/imgs/page/about/img5.png'%}" alt="Genz">
-                              <div class="card-info card-bg-2">
-                                <div class="info-bottom mb-15">
-                                  <h3 class="color-white mb-10">Logo design</h3>
-                                  <p class="color-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat vitae risus eget maximus. Pellentesque suscipit</p>
-                                </div>
-                              </div></a></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="project" data-category="mobile">
-                      <div class="item-content">
-                        <div class="card-style-1 hover-up mb-30" data-wow-delay=".2s">
-                          <div class="card-image"><a class="link-post" href="portfolio-details.html"><img src="{% static 'assets/imgs/page/about/img6.png'%}" alt="Genz">
-                              <div class="card-info card-bg-2">
-                                <div class="info-bottom mb-15">
-                                  <h3 class="color-white mb-10">Animal pattern</h3>
-                                  <p class="color-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat vitae risus eget maximus. Pellentesque suscipit</p>
-                                </div>
-                              </div></a></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="project" data-category="web motion">
-                      <div class="item-content">
-                        <div class="card-style-1 hover-up mb-30" data-wow-delay=".0s">
-                          <div class="card-image"><a class="link-post" href="portfolio-details.html"><img src="{% static 'assets/imgs/page/about/img7.png'%}" alt="Genz">
-                              <div class="card-info card-bg-2">
-                                <div class="info-bottom mb-15">
-                                  <h3 class="color-white mb-10">Flyer design</h3>
-                                  <p class="color-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat vitae risus eget maximus. Pellentesque suscipit</p>
-                                </div>
-                              </div></a></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="project" data-category="graphic web">
-                      <div class="item-content">
-                        <div class="card-style-1 hover-up mb-30" data-wow-delay=".1s">
-                          <div class="card-image"><a class="link-post" href="portfolio-details.html"><img src="{% static 'assets/imgs/page/about/img8.png'%}" alt="Genz">
-                              <div class="card-info card-bg-2">
-                                <div class="info-bottom mb-15">
-                                  <h3 class="color-white mb-10">Banner design</h3>
-                                  <p class="color-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat vitae risus eget maximus. Pellentesque suscipit</p>
-                                </div>
-                              </div></a></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="project" data-category="mobile motion graphic">
-                      <div class="item-content">
-                        <div class="card-style-1 hover-up mb-30" data-wow-delay=".2s">
-                          <div class="card-image"><a class="link-post" href="portfolio-details.html"><img src="{% static 'assets/imgs/page/about/img9.png'%}" alt="Genz">
-                              <div class="card-info card-bg-2">
-                                <div class="info-bottom mb-15">
-                                  <h3 class="color-white mb-10">Disk cover</h3>
-                                  <p class="color-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat vitae risus eget maximus. Pellentesque suscipit</p>
-                                </div>
-                              </div></a></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="project" data-category="motion mobile">
-                      <div class="item-content">
-                        <div class="card-style-1 hover-up mb-30" data-wow-delay=".0s">
-                          <div class="card-image"><a class="link-post" href="portfolio-details.html"><img src="{% static 'assets/imgs/page/about/img10.png'%}" alt="Genz">
-                              <div class="card-info card-bg-2">
-                                <div class="info-bottom mb-15">
-                                  <h3 class="color-white mb-10">Pattern design</h3>
-                                  <p class="color-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat vitae risus eget maximus. Pellentesque suscipit</p>
-                                </div>
-                              </div></a></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="project" data-category="web graphic">
-                      <div class="item-content">
-                        <div class="card-style-1 hover-up mb-30" data-wow-delay=".1s">
-                          <div class="card-image"><a class="link-post" href="portfolio-details.html"><img src="{% static 'assets/imgs/page/about/img11.png'%}" alt="Genz">
-                              <div class="card-info card-bg-2">
-                                <div class="info-bottom mb-15">
-                                  <h3 class="color-white mb-10">Logo design</h3>
-                                  <p class="color-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat vitae risus eget maximus. Pellentesque suscipit</p>
-                                </div>
-                              </div></a></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="project" data-category="mobile">
-                      <div class="item-content">
-                        <div class="card-style-1 hover-up mb-30" data-wow-delay=".2s">
-                          <div class="card-image"><a class="link-post" href="portfolio-details.html"><img src="{% static 'assets/imgs/page/about/img12.png'%}" alt="Genz">
-                              <div class="card-info card-bg-2">
-                                <div class="info-bottom mb-15">
-                                  <h3 class="color-white mb-10">Animal pattern</h3>
-                                  <p class="color-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat vitae risus eget maximus. Pellentesque suscipit</p>
-                                </div>
-                              </div></a></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="project" data-category="motion mobile">
-                      <div class="item-content">
-                        <div class="card-style-1 hover-up mb-30" data-wow-delay=".0s">
-                          <div class="card-image"><a class="link-post" href="portfolio-details.html"><img src="{% static 'assets/imgs/page/about/img13.png'%}" alt="Genz">
-                              <div class="card-info card-bg-2">
-                                <div class="info-bottom mb-15">
-                                  <h3 class="color-white mb-10">Pattern design</h3>
-                                  <p class="color-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat vitae risus eget maximus. Pellentesque suscipit</p>
-                                </div>
-                              </div></a></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="project" data-category="web graphic">
-                      <div class="item-content">
-                        <div class="card-style-1 hover-up mb-30" data-wow-delay=".1s">
-                          <div class="card-image"><a class="link-post" href="portfolio-details.html"><img src="{% static 'assets/imgs/page/about/img14.png'%}" alt="Genz">
-                              <div class="card-info card-bg-2">
-                                <div class="info-bottom mb-15">
-                                  <h3 class="color-white mb-10">Logo design</h3>
-                                  <p class="color-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat vitae risus eget maximus. Pellentesque suscipit</p>
-                                </div>
-                              </div></a></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="project" data-category="mobile">
-                      <div class="item-content">
-                        <div class="card-style-1 hover-up mb-30" data-wow-delay=".2s">
-                          <div class="card-image"><a class="link-post" href="portfolio-details.html"><img src="{% static 'assets/imgs/page/about/img15.png'%}" alt="Genz">
-                              <div class="card-info card-bg-2">
-                                <div class="info-bottom mb-15">
-                                  <h3 class="color-white mb-10">Animal pattern</h3>
-                                  <p class="color-gray-500 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat vitae risus eget maximus. Pellentesque suscipit</p>
-                                </div>
-                              </div></a></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <nav class="mb-50">
-                <ul class="pagination">
-                  <li class="page-item wow animate__animated animate__fadeIn" data-wow-delay=".0s"><a class="page-link page-prev" href="#"><i class="fi-rr-arrow-small-left"></i></a></li>
-                  <li class="page-item wow animate__animated animate__fadeIn" data-wow-delay=".1s"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item wow animate__animated animate__fadeIn" data-wow-delay=".2s"><a class="page-link active" href="#">2</a></li>
-                  <li class="page-item wow animate__animated animate__fadeIn" data-wow-delay=".3s"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item wow animate__animated animate__fadeIn" data-wow-delay=".4s"><a class="page-link" href="#">...</a></li>
-                  <li class="page-item wow animate__animated animate__fadeIn" data-wow-delay=".5s"><a class="page-link page-next" href="#"><i class="fi-rr-arrow-small-right"></i></a></li>
-                </ul>
-              </nav>
-              <div class="text-center mt-70 mb-50">
-                <h2 class="color-linear d-inline-block mb-20 wow animate__animated animate__fadeInUp">My Services</h2>
-                <p class="text-lg color-gray-500 wow animate__animated animate__fadeInUp">With many years of experience in the field of Digital Marketing,<br class="d-none d-lg-block">I am confident to bring you many outstanding values.</p>
-              </div>
-              <div class="box-features bg-gray-850 border-gray-800">
-                <div class="row">
-                  <div class="col-lg-4 col-md-6 mb-50 wow animate__animated animate__fadeIn" data-wow-delay="0s"><span class="item-icon bg-gray-950 icon-motion"></span>
-                    <h5 class="color-white mb-15">Motion &<br>Web Graphy</h5>
-                    <p class="text-base color-gray-700">NetTracking" is a very powerful Web 2.0 site search engine allows you to find  email allerts</p>
-                  </div>
-                  <div class="col-lg-4 col-md-6 mb-50 wow animate__animated animate__fadeIn" data-wow-delay="0.1s"><span class="item-icon bg-gray-950 icon-ui"></span>
-                    <h5 class="color-white mb-15">UI/Ux<br>Consultancy</h5>
-                    <p class="text-base color-gray-700">NetTracking" is a very powerful Web 2.0 site search engine allows you to find  email allerts</p>
-                  </div>
-                  <div class="col-lg-4 col-md-6 mb-50 wow animate__animated animate__fadeIn" data-wow-delay="0.2s"><span class="item-icon bg-gray-950 icon-branding"></span>
-                    <h5 class="color-white mb-15">Branding<br>& Design</h5>
-                    <p class="text-base color-gray-700">NetTracking" is a very powerful Web 2.0 site search engine allows you to find  email allerts</p>
-                  </div>
-                  <div class="col-lg-4 col-md-6 mb-50 wow animate__animated animate__fadeIn" data-wow-delay="0s"><span class="item-icon bg-gray-950 icon-product"></span>
-                    <h5 class="color-white mb-15">Product<br>Photography</h5>
-                    <p class="text-base color-gray-700">NetTracking" is a very powerful Web 2.0 site search engine allows you to find  email allerts</p>
-                  </div>
-                  <div class="col-lg-4 col-md-6 mb-50 wow animate__animated animate__fadeIn" data-wow-delay="0.1s"><span class="item-icon bg-gray-950 icon-key"></span>
-                    <h5 class="color-white mb-15">Key Seo<br>Optimization</h5>
-                    <p class="text-base color-gray-700">NetTracking" is a very powerful Web 2.0 site search engine allows you to find  email allerts</p>
-                  </div>
-                  <div class="col-lg-4 col-md-6 mb-50 wow animate__animated animate__fadeIn" data-wow-delay="0.2s"><span class="item-icon bg-gray-950 icon-social"></span>
-                    <h5 class="color-white mb-15">Social<br>Management</h5>
-                    <p class="text-base color-gray-700">NetTracking" is a very powerful Web 2.0 site search engine allows you to find  email allerts</p>
-                  </div>
-                </div>
-              </div>
-              <div class="text-center mt-70 mb-50">
-                <h2 class="color-linear d-inline-block mb-10 wow animate__animated animate__fadeInUp">Testimonials</h2>
-                <p class="text-lg color-gray-500 wow animate__animated animate__fadeInUp">Nettracking is a B2B marketing software for telecommunications industry.</p>
-              </div>
-              <div class="box-testimonials mb-150animate__fadeIn mb-100">
-                <div class="box-swiper">
-                  <div class="swiper-container swiper-group-3">
-                    <div class="swiper-wrapper pt-5">
-                      <div class="swiper-slide">
-                        <div class="card-testimonials bg-gray-850 border-gray-800 hover-up">
-                          <div class="box-author mb-20"><img src="{% static 'assets/imgs/page/about/author.png'%}" alt="Genz">
-                            <div class="author-info">
-                              <h6 class="color-gray-700">Karen Adderiy</h6><span class="color-gray-700 text-sm">Alithemes Co</span>
-                            </div>
-                          </div>
-                          <div class="card-info">
-                            <p class="color-gray-500">Dignissim quis turpis quis, semper vehicula dolor. Suspendisse tincidunt consequat quam, ac posuere leo dapibus id.</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="card-testimonials bg-gray-850 border-gray-800 hover-up">
-                          <div class="box-author mb-20"><img src="{% static 'assets/imgs/page/about/author2.png'%}" alt="Genz">
-                            <div class="author-info">
-                              <h6 class="color-gray-700">Miriam Martinez</h6><span class="color-gray-700 text-sm">Alithemes Co</span>
-                            </div>
-                          </div>
-                          <div class="card-info">
-                            <p class="color-gray-500">Dignissim quis turpis quis, semper vehicula dolor. Suspendisse tincidunt consequat quam, ac posuere leo dapibus id.</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="card-testimonials bg-gray-850 border-gray-800 hover-up">
-                          <div class="box-author mb-20"><img src="{% static 'assets/imgs/page/about/author3.png'%}" alt="Genz">
-                            <div class="author-info">
-                              <h6 class="color-gray-700">Shelley Clifford</h6><span class="color-gray-700 text-sm">Alithemes Co</span>
-                            </div>
-                          </div>
-                          <div class="card-info">
-                            <p class="color-gray-500">Dignissim quis turpis quis, semper vehicula dolor. Suspendisse tincidunt consequat quam, ac posuere leo dapibus id.</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-buttons">
-                    <div class="swiper-button-prev swiper-button-prev-style-3"></div>
-                    <div class="swiper-button-next swiper-button-next-style-3"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="row align-items-end mt-30">
-                <div class="col-lg-9 wow animate__animated animate__fadeIn">
-                  <h3 class="color-linear">Content publishing cooperation<br class="d-none d-lg-block">with my partners</h3>
-                </div>
-                <div class="col-lg-3 text-lg-end mt-15 hover-up wow animate__animated animate__fadeIn" data-wow-delay="0.2s"><a class="link-brand-1" href="#">Learn More</a></div>
-              </div>
-              <div class="list-logos mt-50 mb-30">
-                <div class="container">
-                  <div class="row">
-                    <div class="swiper-container swiper-group-1">
-                      <div class="swiper-wrapper wow animate__animated animate__fadeIn">
-                        <div class="swiper-slide"><a href="#"><img src="{% static 'assets/imgs/page/homepage3/agon.svg'%}" alt="Genz"></a></div>
-                        <div class="swiper-slide"><a href="#"><img src="{% static 'assets/imgs/page/homepage3/mon.svg'%}" alt="Genz"></a></div>
-                        <div class="swiper-slide"><a href="#"><img src="{% static 'assets/imgs/page/homepage3/fig.svg'%}" alt="Genz"></a></div>
-                        <div class="swiper-slide"><a href="#"><img src="{% static 'assets/imgs/page/homepage3/flow.svg'%}" alt="Genz"></a></div>
-                        <div class="swiper-slide"><a href="#"><img src="{% static 'assets/imgs/page/homepage3/evara.svg'%}" alt="Genz"></a></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </main>
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-1 bg-gray-850 border-gray-800">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <footer class="footer" style=" z-index: 0; ">
+      <div class="container" style=" width: 100%; max-width: 100%;     padding: 0;">
+        <div class="footer-1 bg-gray-850 border-gray-800" style=" border: none; margin: 0;     border-radius: 0;padding-top: 140px;">
           <div class="row">
-            <div class="col-lg-4 mb-30"><a class="wow animate__animated animate__fadeInUp" href="{% url 'index'%}"><img class="logo-night" src="{% static 'assets/imgs/template/logo.svg'%}" alt="Genz"><img class="d-none logo-day" alt="GenZ" src="{% static 'assets/imgs/template/logo-day.svg'%}"></a>
-              <p class="mb-20 mt-20 text-sm color-gray-500 wow animate__animated animate__fadeInUp">When an unknown prnoto sans took a galley and scrambled it to make specimen book not only five When an unknown prnoto sans took a galley and scrambled it to five centurie.</p>
-              <h6 class="color-white mb-5 wow animate__animated animate__fadeInUp">Address</h6>
-              <p class="text-sm color-gray-500 wow animate__animated animate__fadeInUp">123 Main Street<br>New York, NY 10001</p>
+            <div class="col-lg-3 mb-30"><a class="wow animate__animated animate__fadeInUp" href="{% url 'index'%}"><img class="logo-night" src="{% static 'assets/imgs/logo2.svg'%}" style=" width: 100px; " alt="Genz"><img style=" width: 100px; " class="d-none logo-day" alt="GenZ" src="{% static 'assets/imgs/logo.svg'%}"></a>
+              <p class="mb-20 mt-20 text-sm color-gray-500 wow animate__animated animate__fadeInUp">Mən Həşim, rəqəmsal dünyadakı yeniliklər, marketinqlə əlaqəli məlumatlar və çoxşaxəli söhbətlər sizə maraqlıdırsa, rahat yer seçib əyləşin.</p>
+
             </div>
-            <div class="col-lg-4 mb-30">
-              <h6 class="text-lg mb-30 color-white wow animate__animated animate__fadeInUp">Categories</h6>
+            <div class="col-lg-3 mb-30" style=" padding-left: 70px; ">
+              <h6 class="text-lg mb-30 color-white wow animate__animated animate__fadeInUp" style="font-weight: bold;">Kateqoriyalar</h6>
               <div class="row">
                 <div class="col-6">
                   <ul class="menu-footer">
-                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Action</a></li>
-                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Business</a></li>
-                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Adventure</a></li>
-                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Canada</a></li>
-                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">America</a></li>
-                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Curiosity</a></li>
+                    {% for c in categories%}
+                    <li class="wow animate__animated animate__fadeInUp"><a class="fontcolor cvccn" href="{% url 'category' c.id%}">{{c.name}}</a></li>
+                    {% endfor %}
                   </ul>
                 </div>
+
+              </div>
+            </div>
+            <div class="col-lg-3 mb-30" style=" padding-left: 70px; ">
+              <h6 class="text-lg mb-30 color-white wow animate__animated animate__fadeInUp" style="font-weight: bold;">Taglar</h6>
+              <div class="row">
+
                 <div class="col-6">
                   <ul class="menu-footer">
-                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Animal</a></li>
-                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Dental</a></li>
-                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Biology</a></li>
-                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Design</a></li>
-                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Breakfast</a></li>
-                    <li class="wow animate__animated animate__fadeInUp"><a class="color-gray-500" href="blog-archive.html">Dessert</a></li>
+                    {% for t in tags%}
+                    <li class="wow animate__animated animate__fadeInUp"><a class="fontcolor cvccn" href="{% url 'tag' t.slug%}">{{t.name}}</a></li>
+                    {% endfor%}
                   </ul>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4 mb-30">
-              <h4 class="text-lg mb-30 color-white wow animate__animated animate__fadeInUp">Newsletter</h4>
-              <p class="text-base color-gray-500 wow animate__animated animate__fadeInUp">Sign up to be first to receive the latest stories inspiring us, case studies, and industry news.</p>
-              <div class="form-newsletters mt-15 wow animate__animated animate__fadeInUp">
-                <form action="#">
-                  <div class="form-group">
-                    <input class="input-name border-gray-500" type="text" placeholder="Your name">
-                  </div>
-                  <div class="form-group">
-                    <input class="input-email border-gray-500" type="email" placeholder="Emaill address">
-                  </div>
-                  <div class="form-group mt-20">
-                    <button class="btn btn-linear hover-up">
-                      Subscribe
-                      <i class="fi-rr-arrow-small-right"></i>
-                    </button>
-                  </div>
-                </form>
+            <div class="col-lg-3 mb-30" style=" padding-left: 70px; ">
+              <h6 class="text-lg mb-30 color-white wow animate__animated animate__fadeInUp" style="font-weight: bold;">Keçidlər</h6>
+              <div class="row">
+
+                <div class="col-6">
+                  <ul class="menu-footer">
+                    <li class="wow animate__animated animate__fadeInUp"><a class="fontcolor cvccn" href="#">Haqqımda </a></li>
+                    <li class="wow animate__animated animate__fadeInUp"><a class="fontcolor cvccn" href="#">Təlimlər </a></li>
+                    <li class="wow animate__animated animate__fadeInUp"><a class="fontcolor cvccn" href="#">Tədbirlər </a></li>
+                    <li class="wow animate__animated animate__fadeInUp"><a class="fontcolor cvccn" href="#">Xidmətlərim </a></li>
+                    <li class="wow animate__animated animate__fadeInUp"><a class="fontcolor cvccn" href="#">Rəylər </a></li>
+                  </ul>
+                </div>
               </div>
             </div>
+
           </div>
           <div class="footer-bottom border-gray-800">
             <div class="row">
-              <div class="col-lg-5 text-center text-lg-start">
-                <p class="text-base color-white wow animate__animated animate__fadeIn">© Created by<a class="copyright" href="http://alithemes.com" target="_blank"> AliThemes.com</a></p>
+              <div class="col-lg-3 text-center text-lg-start">
               </div>
-              <div class="col-lg-7 text-center text-lg-end">
-                <div class="box-socials">
-                  <div class="d-inline-block mr-30 wow animate__animated animate__fadeIn" data-wow-delay=".0s"><a class="icon-socials icon-twitter color-gray-500" href="https://twitter.com">Twitter</a></div>
-                  <div class="d-inline-block mr-30 wow animate__animated animate__fadeIn" data-wow-delay=".2s"><a class="icon-socials icon-linked color-gray-500" href="https://www.linkedin.com">LinkedIn</a></div>
-                  <div class="d-inline-block wow animate__animated animate__fadeIn" data-wow-delay=".4s"><a class="icon-socials icon-insta color-gray-500" href="https://www.instagram.com">Instagram</a></div>
+              <div style="text-align: center !important;" class="col-lg-6 text-center text-lg-start">
+                <p class="text-base color-white wow animate__animated animate__fadeIn">© Lehashim.com Bütün hüquqlar qorunur!  </p>
+              </div>
+              <div class="col-lg-3 text-center text-lg-end">
+                <div class=" ">
+                  {% for s in socials%}
+                  <div class="d-inline-block  " data-wow-delay=".0s">
+                    <a class="  color-gray-500 whitebg" href="{{s.link}}" style="display:none;     margin-right: 8px;  " >
+                      <img src="{{s.icon_white_backround.url}}" style=" width: 40px; ">
+                    </a>
+                    <a class="   color-gray-500 blackbg" href="{{s.link}}" style="display:none;     margin-right: 8px;  ">
+                      <img src="{{s.icon_black_backround.url}}" style=" width: 40px; ">
+                    </a>
+                  </div>
+                {% endfor%}
                 </div>
               </div>
             </div>
@@ -568,8 +305,8 @@
       </div>
     </div>
     <script src="{% static 'assets/js/vendors/modernizr-3.6.0.min.js'%}"></script>
-    <script src="{% static 'assets/js/vendors/jquery-3.6.0.min.js'%}"></script>
-    <script src="{% static 'assets/js/vendors/jquery-migrate-3.3.0.min.js'%}"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
     <script src="{% static 'assets/js/vendors/bootstrap.bundle.min.js'%}"></script>
     <script src="{% static 'assets/js/vendors/waypoints.js'%}"></script>
     <script src="{% static 'assets/js/vendors/wow.js'%}"></script>
@@ -577,5 +314,35 @@
     <script src="{% static 'assets/js/vendors/swiper-bundle.min.js'%}"></script>
     <script src="{% static 'assets/js/vendors/jquery.progressScroll.min.js'%}"></script>
     <script src="{% static 'assets/js/main.js'%}?v=2.0"></script>
+
+
+    <script src="/static/jquery.waypoints.min.js"></script>
+    <script src="/static/infinite.min.js"></script>
+    <script>
+    var infinite = new Waypoint.Infinite({
+        element: $('.infinite-container')[0],
+        handler: function(direction) {
+
+    },
+    offset: 'bottom-in-view',
+
+    onBeforePageLoad: function () {
+    $('.spinner-border').show();
+    },
+    onAfterPageLoad: function () {
+    $('.spinner-border').hide();
+    }
+
+    });
+
+    </script>
+
+
+
+  <script>
+    $(".limitt").text(function(index, currentText) {
+    return currentText.substr(0, 115)+'...';
+});
+  </script>
   </body>
 </html>

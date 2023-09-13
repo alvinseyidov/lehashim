@@ -203,6 +203,48 @@
         });
     });
 
+  $(".swiper-group-33").each(function () {
+        var swiper_5_items = new Swiper(this, {
+            spaceBetween: 20,
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next-style-3",
+                prevEl: ".swiper-button-prev-style-3"
+            },
+
+            autoplay: {
+                delay: 10000
+            },
+            breakpoints: {
+                1299: {
+                    slidesPerView: 1
+                },
+                1150: {
+                    slidesPerView: 1
+                },
+                750: {
+                    slidesPerView: 1
+                },
+                600: {
+                    slidesPerView: 1
+                },
+                550: {
+                    slidesPerView: 1
+                },
+                300: {
+                    slidesPerView: 1
+                },
+                200: {
+                    slidesPerView: 1
+                }
+            }
+        });
+    });
+
+
+
     $(".swiper-group-1").each(function () {
         var swiper_1_items = new Swiper(this, {
             spaceBetween: 20,
