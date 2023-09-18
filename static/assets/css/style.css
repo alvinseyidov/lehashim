@@ -757,6 +757,11 @@ h6 {
   border-color: #222F43 !important;
 }
 
+.theme-night .border-gray-800 {
+    border-color: #d7d7d7 !important;
+}
+
+
 .border-gray-850 {
   border-color: #131C31 !important;
 }
@@ -1917,6 +1922,14 @@ input {
 
 .theme-day .borderwhite {
     border-color: #292929 !important;
+}
+
+.theme-day .borderwhitee {
+    border-color: #b7b7b7 !important;
+}
+
+.theme-night .borderwhitee {
+    border-color: #d7d7d7 !important;
 }
 
 .theme-day .progressScroll-border{
@@ -7000,7 +7013,7 @@ iframe.google-map {
   background-color: #E9EEF5 !important;
 }
 .theme-day .bg-gray-850 {
-  background-color: #E8EDF5 !important;
+  background-color: #ffffff !important;
 }
 .theme-day .bg-gray-900 {
   background-color: #F9FBFF !important;
@@ -7022,7 +7035,7 @@ iframe.google-map {
   color: #66768F;
 }
 .theme-day .border-gray-800 {
-  border-color: #000 !important;
+  border-color: #d4d4d4 !important;
 }
 .theme-day body {
   background-color: #F9FBFF;
