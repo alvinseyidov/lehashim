@@ -153,25 +153,18 @@ color:#eb2810 !important;
                   <li><a href="{% url 'category' c.id %}">{{c.name}}</a></li>
                   {% endif %}
                   {% endfor%}
-                  <li class="has-children"><a class="active" >Haqqımda</a>
-                  <ul class="sub-menu">
-                    <li><a class="color-gray-500" href="{% url 'about'  %}">Haqqımda</a></li>
-                    <li><a class="color-gray-500" href="{% url 'about'  %}">Portfolio</a></li>
-                    <li><a class="color-gray-500" href="{% url 'about'  %}">Rəylər</a></li>
-                  </ul>
-                </li>
+                  
                 </ul>
               </nav>
             </div>
             <div class="mobile-account border-gray-800">
 
               <ul class="mobile-menu">
-                <li><a href="{% url 'about'%}">Profile</a></li>
-                <li><a href="{% url 'about'%}">Articles Saved</a></li>
-                <li><a href="{% url 'about'%}">Add new post</a></li>
-                <li><a href="{% url 'about'%}">My Likes</a></li>
-                <li><a href="{% url 'about'%}">Account Setting</a></li>
-                <li><a href="{% url 'about'%}">Sign out</a></li>
+                <li><a href="{% url 'about'%}">Haqqımda</a></li>
+                <li><a href="{% url 'about'%}">Portfolio</a></li>
+                <li><a href="{% url 'about'%}">Rəylər</a></li>
+
+                <li><a href="{% url 'about'%}"></a></li>
               </ul>
             </div>
              {% for s in socials%}
