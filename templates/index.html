@@ -137,9 +137,16 @@ color:#eb2810 !important;
         <div class="mobile-header-content-area">
           <div class="mobile-logo border-gray-800"><a class="d-flex" href="{% url 'index'%}"><img style=" width: 40px; " class="logo-night" alt="GenZ" src="{% static 'assets/imgs/logo2.svg'%}"><img style=" width: 40px; " class="d-none logo-day" alt="GenZ" src="{% static 'assets/imgs/logo.svg'%}"></a></div>
           <div class="perfect-scroll">
-            <div class="mobile-menu-wrap mobile-header-border">
+            <div class="mobile-menu-wrap mobile-header-border" style="margin-bottom:15px;">
               <nav class="mt-15">
                 <ul class="mobile-menu font-heading">
+                   <li class="has-children"><a class="active" >Haqqımda</a>
+                  <ul class="sub-menu">
+                    <li><a class="color-gray-500" href="{% url 'about'  %}">Haqqımda</a></li>
+                    <li><a class="color-gray-500" href="{% url 'about'  %}">Portfolio</a></li>
+                    <li><a class="color-gray-500" href="{% url 'about'  %}">Rəylər</a></li>
+                  </ul>
+                </li>
                   {% for c in categories %}
                   {% if c.categories.count > 0%}
                   <li class="has-children"><a >{{c.name}}</a>
@@ -153,20 +160,11 @@ color:#eb2810 !important;
                   <li><a href="{% url 'category' c.id %}">{{c.name}}</a></li>
                   {% endif %}
                   {% endfor%}
-                  
+
                 </ul>
               </nav>
             </div>
-            <div class="mobile-account border-gray-800">
 
-              <ul class="mobile-menu">
-                <li><a href="{% url 'about'%}">Haqqımda</a></li>
-                <li><a href="{% url 'about'%}">Portfolio</a></li>
-                <li><a href="{% url 'about'%}">Rəylər</a></li>
-
-                <li><a href="{% url 'about'%}"></a></li>
-              </ul>
-            </div>
              {% for s in socials%}
                   <div class="d-inline-block  " data-wow-delay=".0s">
                     <a class="  color-gray-500 whitebg" href="{{s.link}}" style="display:none;     margin-right: 8px;  " >
