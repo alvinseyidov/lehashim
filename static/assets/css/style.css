@@ -742,7 +742,7 @@ h6 {
 }
 
 .bg-gray-900 {
-  background-color: #0F172A !important;
+  background-color: #000 !important;
 }
 
 .bg-gray-950 {
@@ -3300,7 +3300,7 @@ background-color: #eb2810 !important;
 
 .burger-icon.burger-icon-white > span::before,
 .burger-icon.burger-icon-white > span::after {
-  background-color: #94A9C9;
+  background-color: #fff;
 }
 
 .mobile-search form {
@@ -6531,7 +6531,7 @@ iframe.google-map {
   }
   .swiper-button-next,
 .swiper-button-prev {
-    display: none;
+    display: block;
   }
   .swiper-button-next-style-2,
 .swiper-button-prev-style-2 {

@@ -135,7 +135,7 @@ color:#eb2810 !important;
     <div class="mobile-header-active mobile-header-wrapper-style perfect-scrollbar bg-gray-900">
       <div class="mobile-header-wrapper-inner">
         <div class="mobile-header-content-area">
-          <div class="mobile-logo border-gray-800"><a class="d-flex" href="{% url 'index'%}"><img class="logo-night" alt="GenZ" src="{% static 'assets/imgs/template/logo.svg'%}"><img class="d-none logo-day" alt="GenZ" src="{% static 'assets/imgs/template/logo-day.svg'%}"></a></div>
+          <div class="mobile-logo border-gray-800"><a class="d-flex" href="{% url 'index'%}"><img style=" width: 40px; " class="logo-night" alt="GenZ" src="{% static 'assets/imgs/logo2.svg'%}"><img style=" width: 40px; " class="d-none logo-day" alt="GenZ" src="{% static 'assets/imgs/logo.svg'%}"></a></div>
           <div class="perfect-scroll">
             <div class="mobile-menu-wrap mobile-header-border">
               <nav class="mt-15">
@@ -164,14 +164,7 @@ color:#eb2810 !important;
               </nav>
             </div>
             <div class="mobile-account border-gray-800">
-              <div class="mobile-header-top bg-gray-900">
-                <div class="user-account"><a href="{% url 'about'%}"><img src="{% static 'assets/imgs/template/ava.jpg'%}" alt="GenZ"></a>
-                  <div class="content">
-                    <h6 class="user-name color-white">Hello<span class="color-white"> Steven !</span></h6>
-                    <p class="font-xs text-muted">You have 3 new messages</p>
-                  </div>
-                </div>
-              </div>
+
               <ul class="mobile-menu">
                 <li><a href="{% url 'about'%}">Profile</a></li>
                 <li><a href="{% url 'about'%}">Articles Saved</a></li>
@@ -181,7 +174,17 @@ color:#eb2810 !important;
                 <li><a href="{% url 'about'%}">Sign out</a></li>
               </ul>
             </div>
-            <div class="site-copyright color-gray-400 mt-30">Copyright 2023 &copy; Genz - Personal Blog Template.<br>Designed by<a href="http://alithemes.com" target="_blank">&nbsp; AliThemes</a></div>
+             {% for s in socials%}
+                  <div class="d-inline-block  " data-wow-delay=".0s">
+                    <a class="  color-gray-500 whitebg" href="{{s.link}}" style="display:none;     margin-right: 8px;  " >
+                      <img src="{{s.icon_white_backround.url}}" style=" width: 40px; ">
+                    </a>
+                    <a class="   color-gray-500 blackbg" href="{{s.link}}" style="display:none;     margin-right: 8px;  ">
+                      <img src="{{s.icon_black_backround.url}}" style=" width: 40px; ">
+                    </a>
+                  </div>
+                {% endfor%}
+            <div class="site-copyright color-gray-400 mt-30">© Lehashim.com Bütün hüquqlar qorunur!</div>
           </div>
         </div>
       </div>
