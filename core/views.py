@@ -10,6 +10,7 @@ def index(request):
     general = General.objects.all()
     blogs = Blog.objects.all()
     blogsf = Blog.objects.all()[:3]
+    blogsfmobile = Blog.objects.all()[:1]
     tags = Tag.objects.all()[:6]
     socials = Social.objects.all()
 
@@ -28,6 +29,7 @@ def index(request):
         "tags": tags,
         "blogs": blgs,
         "blogsf": blogsf,
+        "blogsfmobile": blogsfmobile,
         "topics": topics,
         "general": general,
         "featured": featured,

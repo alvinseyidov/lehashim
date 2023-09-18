@@ -1298,6 +1298,55 @@ a.text-brand-3:hover {
 }
 
 
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+  .desktop {
+    display: none !important;
+  }
+
+  .vvffdd{
+  margin-top: 17px;
+  }
+
+  .c1c2c3c4{
+       font-size: 22px !important;
+    font-weight: bold !important;
+    line-height: 31px !important;
+    margin-top: 26px !important;
+    margin-bottom: 10px !important;
+
+}
+.c1c2c3c4c5{
+    font-size: 12px !important;
+    line-height: 21px !important;
+    }
+
+    .fffgg{
+    width: 100% !important;
+    }
+
+}
+
+@media only screen and (min-width: 600px) {
+  .mobile {
+    display: none !important;
+  }
+  .sdsfrrsdsd {
+         padding-right: 61px;
+  }
+
+  .c1c2c3{
+
+   padding-right: 82px;
+   }
+
+
+}
+
 .btn.btn-load-more {
   border-radius: 80px;
   padding: 18px 30px;
