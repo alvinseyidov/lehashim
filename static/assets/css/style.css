@@ -145,25 +145,19 @@ color:#fff !important;
   display: inline-block;
   position: relative;
   color: #eb2810;
+  text-decoration: none;
+  transition: all 1s ease-in;
 }
 
-.hoverunder:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: -2px;
-  left: 0;
-  background-color:#eb2810;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
+
+
+.hoverunder:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #e92710;
+    text-underline-offset: 9px;
 }
 
-.hoverunder:hover:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
 
 
 .theme-night .fontcolor {
