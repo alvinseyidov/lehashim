@@ -31,7 +31,7 @@ def category(request, id):
         "category": category,
         "tags": tags,
         "blogs": blgs,
-        "blogsf": blogsf,
+        "blogsmost": blog,
         "blogsfmobile": blogsfmobile,
         "topics": topics,
         "general": general,
