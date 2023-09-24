@@ -13,7 +13,7 @@ def category(request, id):
     featured = Featured.objects.all()
     topics = HotTopics.objects.all()
     general = General.objects.all()
-    blogs = Blog.objects.all()
+    blogs = Blog.objects.filter(category=category)
     blogsf = Blog.objects.all()[:3]
     blogsfmobile = Blog.objects.all()[:1]
     tags = Tag.objects.all()[:6]

@@ -222,12 +222,10 @@ color:#eb2810 !important;
 
                <div class="row "  style="margin-top:50px;--bs-gutter-x: 1.5rem;">
                 <div class="col-lg-8 col-sm-12 sdsfrrsdsd " >
-                  <h2 class="  d-inline-block mb-10 fontcolor">Ən son paylaşdıqlarım</h2>
-                  <p class="text-lg color-gray-500 ">İzləmədə qalın yeniliklərdən xəbərdar olun – Yeniliklərdən <span style="color:#eb2810 !important;">agah olun</span>.</p>
 
 
 
-                  <div class=" box-list-posts infinite-container" style=" margin-top: 25px; ">
+                  <div class=" box-list-posts infinite-container" style=" margin-top: 0; ">
                     {% for b in blogs %}
                     <div class="card-list-posts wow animate__animated animate__fadeIn infinite-item" style="border-bottom: 1px solid #cfcfcf; padding-bottom: 26px;margin-bottom: 27px;">
                       <a href="{% url 'blog' b.id%}" style="height:200px;margin-right: 35px;background-size: cover;background-image:url({{b.main_image.url}});border-radius:14px;" class="card-image hover-up"></a>
