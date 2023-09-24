@@ -46,7 +46,7 @@ def about(request):
     blogs = Blog.objects.all()[:4]
     context = {
         "general": general,
-        "blogs": blogs,
+        "blogsmost": blogs,
         "socials": socials,
         "categories": categories
     }
