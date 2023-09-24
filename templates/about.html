@@ -206,37 +206,41 @@ color:#eb2810 !important;
 
 
 
-                  <div class=" box-list-posts infinite-container" style=" margin-top: 0; ">
-                    {% for b in blogs %}
-                    <div class="card-list-posts wow animate__animated animate__fadeIn infinite-item" style="border-bottom: 1px solid #cfcfcf; padding-bottom: 26px;margin-bottom: 27px;">
-                      <a href="{% url 'blog' b.id%}" style="height:200px;margin-right: 35px;background-size: cover;background-image:url({{b.main_image.url}});border-radius:14px;" class="card-image hover-up"></a>
-                      <div class="card-info"><a class="btn btn-tag bg-gray-800 hover-up" href="{% url 'category' b.category.id %}">{{b.category.name}}</a><br>
-                        <a href="{% url 'blog' b.id%}">
-                          <h4 class="mt-15 mb-20 color-white hoverunder" style=" font-size: 1.375rem; ">{{b.title}}</h4></a>
-                        <p class="color-gray-500">{{b.short_description}}</p>
-                        <div class="row mt-20">
-                          <div class="col-7">
 
-                            <div class="text-sm mr-15 csdsdc" style=" display: inline; ">{{b.date | date:'d.m.y'}}</div>
-                            <span class="csdsdc text-sm timeread">{{b.reading_time}}</span>
 
-                          </div>
-                          <div class="col-5 text-end"><a href="{% url 'blog' b.id %}" class="linkhover"> <span class="csdsdc text-sm ">Davamını oxu</span></a></div>
-                        </div>
-                      </div>
-                    </div>
-                    {% endfor %}
+
+
+                    <h2 class="  d-inline-block mb-10 fontcolor">Le Hashim Kimdir?</h2>
+                    <p class="fontcolor" style=" font-size: 16px; line-height: 23px; ">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p><br>
+                     <p class="fontcolor" style=" font-size: 16px; line-height: 23px; ">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                    <br>
+                    <img src="{% static 'me2.jpg'%}">
+                    <br>
+                    <br>
+                      <p class="fontcolor" style=" font-size: 16px; line-height: 23px; ">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+
+                    <br>
+                     {% for s in socials%}
+                  <div class="d-inline-block  " data-wow-delay=".0s">
+                    <a class="  color-gray-500 whitebg" href="{{s.link}}" style="display:none;     margin-right: 8px;  " >
+                      <img src="{{s.icon_white_backround.url}}" style=" width: 40px; ">
+                    </a>
+                    <a class="   color-gray-500 blackbg" href="{{s.link}}" style="display:none;     margin-right: 8px;  ">
+                      <img src="{{s.icon_black_backround.url}}" style=" width: 40px; ">
+                    </a>
                   </div>
+                {% endfor%}
 
 
 
 
 
-
-                    <button  style="margin-bottom:33px; width: 100%;border-radius: 9px;height: 55px;margin-top: 33px;" class="btn btn-linear btn-arrow-right">Daha Çox</button>
-                  {% if blogs.has_next %}
-                <a class="infinite-more-link" href="?page={{ blogs.next_page_number }}"></a>
-                {% endif %}
 
 
 
