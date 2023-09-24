@@ -1248,7 +1248,7 @@ a.text-brand-3:hover {
   border: 0;
 }
 .btn:hover {
-  color: #1CC2E7 !important;
+  color: #eb2810 !important;
 }
 .btn.btn-linear {
   background: rgb(14, 165, 234);
@@ -1267,13 +1267,13 @@ a.text-brand-3:hover {
 }
 .btn.btn-linear-small {
   background: rgb(14, 165, 234);
-  background: linear-gradient(90deg, rgb(14, 165, 234), rgb(11, 209, 209) 51%, rgb(14, 165, 234)) var(--x, 0)/200%;
+  background: linear-gradient(90deg, #EB2810, #a00000 51%, #F52910) var(--x, 0)/200%;
   color: #ffffff;
   padding: 6px 24px;
   border-radius: 50px;
 }
 .btn.btn-linear-small:hover {
-  color: #66768F !important;
+  color: #FFF !important;
 }
 .btn.btn-linear-small i {
   vertical-align: middle;
@@ -2970,16 +2970,25 @@ background-color: #eb2810 !important;
 .box-breadcrumbs .breadcrumb li:last-child::before {
   display: none;
 }
-.box-breadcrumbs .breadcrumb li a {
+.theme-night .box-breadcrumbs .breadcrumb li a {
   display: inline-block;
-  color: #667085;
+  color: #b3b3b3;
   font-size: 14px;
   line-height: 19px;
   padding-top: 5px;
   padding-bottom: 5px;
 }
 .box-breadcrumbs .breadcrumb li a:hover {
-  color: #0EA5EA;
+  color: #fff;
+}
+
+.theme-day .box-breadcrumbs .breadcrumb li a {
+color: #000;
+display: inline-block;
+  font-size: 14px !important;
+  line-height: 19px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 .box-breadcrumbs .breadcrumb li a.home {
   background: url(../imgs/template/icons/home.svg) no-repeat left center;

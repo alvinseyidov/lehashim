@@ -31,7 +31,7 @@ def category(request, id):
         "category": category,
         "tags": tags,
         "blogs": blgs,
-        "blogsmost": blog,
+        "blogsmost": blogs,
         "blogsfmobile": blogsfmobile,
         "topics": topics,
         "general": general,
@@ -56,14 +56,27 @@ def tag(request, slug):
     return render(request, 'tag.html', context)
 
 def blog(request, id):
+
     categories = Category.objects.filter(parent__isnull=True)
-    category = Category.objects.get(pk=id)
+    featured = Featured.objects.all()
+    topics = HotTopics.objects.all()
     general = General.objects.all()
+    blog = Blog.objects.get(pk=id)
+    blogs = Blog.objects.all()
+    blogsf = Blog.objects.all()[:3]
+    blogsfmobile = Blog.objects.all()[:1]
+    tags = Tag.objects.all()[:6]
     socials = Social.objects.all()
     context = {
-        "category": category,
+        "blog": blog,
         "general": general,
         "socials": socials,
-        "categories": categories
+        "categories": categories,
+        "tags": tags,
+        "blogs": blogs,
+        "blogsf": blogsf,
+        "blogsfmobile": blogsfmobile,
+        "topics": topics,
+        "featured": featured,
     }
     return render(request, 'blog.html', context)
