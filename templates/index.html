@@ -301,7 +301,7 @@ color:#eb2810 !important;
                   <div class=" box-list-posts infinite-container" style=" margin-top: 25px; ">
                     {% for b in blogs %}
                     <div class="card-list-posts wow animate__animated animate__fadeIn infinite-item" style="border-bottom: 1px solid #cfcfcf; padding-bottom: 26px;margin-bottom: 27px;">
-                      <a href="{% url 'blog' b.id%}" style="margin-right: 35px;background-size: cover;background-image:url({{b.main_image.url}});border-radius:14px;" class="card-image hover-up"></a>
+                      <a href="{% url 'blog' b.id%}" style="height:200px;margin-right: 35px;background-size: cover;background-image:url({{b.main_image.url}});border-radius:14px;" class="card-image hover-up"></a>
                       <div class="card-info"><a class="btn btn-tag bg-gray-800 hover-up" href="{% url 'category' 1 %}">{{b.category.name}}</a><br>
                         <a href="single-sidebar.html">
                           <h4 class="mt-15 mb-20 color-white hoverunder" style=" font-size: 1.375rem; ">{{b.title}}</h4></a>
@@ -320,7 +320,7 @@ color:#eb2810 !important;
                     {% endfor %}
                   </div>
 
-                     
+
 
 
 
