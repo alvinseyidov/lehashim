@@ -39,6 +39,10 @@
 
 
 <style>
+@media (max-width: 499.98px){
+.card-list-posts .card-image {
+height: 200px;
+}}
   .theme-day .hoverr:hover{
 color:#eb2810 !important;
 }
@@ -294,7 +298,7 @@ color:#eb2810 !important;
 
 
 
-                  <div class="desktop box-list-posts infinite-container" style=" margin-top: 25px; ">
+                  <div class=" box-list-posts infinite-container" style=" margin-top: 25px; ">
                     {% for b in blogs %}
                     <div class="card-list-posts wow animate__animated animate__fadeIn infinite-item" style="border-bottom: 1px solid #cfcfcf; padding-bottom: 26px;margin-bottom: 27px;">
                       <a href="{% url 'blog' b.id%}" style="margin-right: 35px;background-size: cover;background-image:url({{b.main_image.url}});border-radius:14px;" class="card-image hover-up"></a>
@@ -316,28 +320,7 @@ color:#eb2810 !important;
                     {% endfor %}
                   </div>
 
-                     <div class="mobile box-list-posts infinite-container" style=" margin-top: 25px; ">
-                    {% for b in blogs %}
-                    <div class="card-list-posts wow animate__animated animate__fadeIn " style="border-bottom: 1px solid #cfcfcf; padding-bottom: 26px;margin-bottom: 27px;">
-                      <a href="{% url 'blog' b.id%}"style="   height: 172px;   margin-right: 0px;background-size: cover;background-image:url({{b.main_image.url}});border-radius:14px;" class="card-image hover-up"></a>
-                      <div class="card-info"><a class="btn btn-tag bg-gray-800 hover-up" href="{% url 'category' 1 %}">{{b.category.name}}</a><br>
-                        <a href="single-sidebar.html">
-                          <h4 class="mt-15 mb-20 color-white hoverunder" style=" font-size: 1.375rem; ">{{b.title}}</h4></a>
-                        <p class="color-gray-500">{{b.short_description}}</p>
-                        <div class="row mt-20">
-                          <div class="col-7">
-
-                            <div class="text-sm mr-15 csdsdc" style=" display: inline; ">{{b.date | date:'d.m.y'}}</div>
-                            <span class="csdsdc text-sm timeread">{{b.reading_time}}</span>
-
-                          </div>
-                          <div class="col-5 text-end"><a href="{% url 'blog' b.id %}" class="linkhover"> <span class="csdsdc text-sm ">Davamını oxu</span></a></div>
-                        </div>
-                      </div>
-                    </div>
-                    {% endfor %}
-                  </div>
-
+                     
 
 
 
