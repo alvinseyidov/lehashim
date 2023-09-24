@@ -43,8 +43,10 @@ def about(request):
     categories = Category.objects.filter(parent__isnull=True)
     general = General.objects.all()
     socials = Social.objects.all()
+    blogs = Blog.objects.all()[:4]
     context = {
         "general": general,
+        "blogs": blogs,
         "socials": socials,
         "categories": categories
     }
