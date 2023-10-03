@@ -1403,7 +1403,7 @@ a.text-brand-3:hover {
 }
 .btn.btn-filter.active {
   color: #ffffff !important;
-  background: linear-gradient(90deg, rgb(14, 165, 234), rgb(11, 209, 209) 51%, rgb(14, 165, 234)) var(--x, 0)/200% !important;
+  background: linear-gradient(90deg, #EB2810, #a00000 51%, #F52910) var(--x, 0)/200% !important;
   border: 2px solid transparent;
 }
 
