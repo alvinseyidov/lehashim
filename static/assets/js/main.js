@@ -321,9 +321,10 @@
         }
     });
 
+    
     // DARK / LIGHT MODE
     const toggleSwitch = document.querySelector('#flexSwitchCheckChecked');
-    const currentTheme = 'night';
+    const currentTheme = localStorage.getItem("theme");
     let currentSection = localStorage.getItem('section');
 
     if (currentTheme) {
