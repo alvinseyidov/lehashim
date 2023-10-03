@@ -72,8 +72,8 @@ color:#eb2810 !important;
                  <li class=""><a class="active hoverr"style=" cursor: pointer; " >Haqqımda</a>
                   <ul class="sub-menu" style=" background: #f9fbff; border: 0px solid #E9EEF5; box-shadow: none; margin-top: 11px; min-width: 268px; ">
                     <li><a class=" cccc hoverr" style=" cursor: pointer; " href="{% url 'about'  %}">Haqqımda</a></li>
-                    <li><a class=" cccc hoverr" style=" cursor: pointer; " href="{% url 'about'  %}">Portfolio</a></li>
-                    <li><a class=" cccc hoverr"style=" cursor: pointer; " href="{% url 'about'  %}">Rəylər</a></li>
+                    <li><a class=" cccc hoverr" style=" cursor: pointer; " href="{% url 'portfolio'  %}">Portfolio</a></li>
+                    <li><a class=" cccc hoverr"style=" cursor: pointer; " href="{% url 'reviews'  %}">Rəylər</a></li>
                   </ul>
                 </li>
                 {% for c in categories%}
@@ -86,7 +86,7 @@ color:#eb2810 !important;
                     {% if s.categories.count > 0 %}
                     <li><a class=" cccc hoverr" style=" cursor: pointer; "href="{% url 'category' s.id %}">{{s.name}}</a>
 
-                     <ul class="sub-menu" style=" background: #f9fbff; border: 1px solid #E9EEF5; box-shadow: none; margin-top: 11px; width: 192px; left: 8px; ">
+                     <ul class="sub-menu" style=" background: #f9fbff; border: 1px solid #d3d3d3; border-color:#d3d3d3 !important;    border-width: 1px !important; box-shadow: none; margin-top: 11px; width: 227px; left: 8px; ">
                     {% for t in s.categories.all %}
                        <li><a class=" cccc hoverr" style=" cursor: pointer; " href="{% url 'category' s.id %}" style="font-size: 14px !important;line-height: 1px;">{{t.name}}</a></li>
                        {% endfor%}
@@ -147,8 +147,8 @@ color:#eb2810 !important;
                    <li class="has-children"><a class="active" >Haqqımda</a>
                   <ul class="sub-menu">
                     <li><a class="color-gray-500" href="{% url 'about'  %}">Haqqımda</a></li>
-                    <li><a class="color-gray-500" href="{% url 'about'  %}">Portfolio</a></li>
-                    <li><a class="color-gray-500" href="{% url 'about'  %}">Rəylər</a></li>
+                    <li><a class="color-gray-500" href="{% url 'portfolio'  %}">Portfolio</a></li>
+                    <li><a class="color-gray-500" href="{% url 'reviews'  %}">Rəylər</a></li>
                   </ul>
                 </li>
                   {% for c in categories %}

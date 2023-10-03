@@ -1369,7 +1369,7 @@ a.text-brand-3:hover {
   border-radius: 8px;
 }
 .btn.btn-border-linear {
-  border: 2px solid #0EA5EA;
+  border: 2px solid #e8260f;
   border-radius: 50px;
   color: #ffffff;
   padding: 5px 15px;
@@ -1378,7 +1378,7 @@ a.text-brand-3:hover {
 }
 .btn.btn-border-linear:hover {
   color: #ffffff !important;
-  background: linear-gradient(90deg, rgb(14, 165, 234), rgb(11, 209, 209) 51%, rgb(14, 165, 234)) var(--x, 0)/200% !important;
+  background: linear-gradient(90deg, #EB2810, #a00000 51%, #F52910) var(--x, 0)/200% !important;
   border: 2px solid transparent;
 }
 .btn.btn-link-more {

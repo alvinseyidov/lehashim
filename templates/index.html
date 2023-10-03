@@ -72,8 +72,8 @@ color:#eb2810 !important;
                  <li class=""><a class="active hoverr"style=" cursor: pointer; " >Haqqımda</a>
                   <ul class="sub-menu" style=" background: #f9fbff; border: 0px solid #E9EEF5; box-shadow: none; margin-top: 11px; min-width: 268px; ">
                     <li><a class=" cccc hoverr" style=" cursor: pointer; " href="{% url 'about'  %}">Haqqımda</a></li>
-                    <li><a class=" cccc hoverr" style=" cursor: pointer; " href="{% url 'about'  %}">Portfolio</a></li>
-                    <li><a class=" cccc hoverr"style=" cursor: pointer; " href="{% url 'about'  %}">Rəylər</a></li>
+                    <li><a class=" cccc hoverr" style=" cursor: pointer; " href="{% url 'portfolio'  %}">Portfolio</a></li>
+                    <li><a class=" cccc hoverr"style=" cursor: pointer; " href="{% url 'reviews'  %}">Rəylər</a></li>
                   </ul>
                 </li>
                 {% for c in categories%}
@@ -147,8 +147,8 @@ color:#eb2810 !important;
                    <li class="has-children"><a class="active" >Haqqımda</a>
                   <ul class="sub-menu">
                     <li><a class="color-gray-500" href="{% url 'about'  %}">Haqqımda</a></li>
-                    <li><a class="color-gray-500" href="{% url 'about'  %}">Portfolio</a></li>
-                    <li><a class="color-gray-500" href="{% url 'about'  %}">Rəylər</a></li>
+                    <li><a class="color-gray-500" href="{% url 'portfolio'  %}">Portfolio</a></li>
+                    <li><a class="color-gray-500" href="{% url 'reviews'  %}">Rəylər</a></li>
                   </ul>
                 </li>
                   {% for c in categories %}

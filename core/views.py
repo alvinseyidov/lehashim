@@ -52,6 +52,31 @@ def about(request):
     }
     return render(request, 'about.html', context)
 
+def reviews(request):
+    categories = Category.objects.filter(parent__isnull=True)
+    general = General.objects.all()
+    socials = Social.objects.all()
+    blogs = Blog.objects.all()[:4]
+    context = {
+        "general": general,
+        "blogsmost": blogs,
+        "socials": socials,
+        "categories": categories
+    }
+    return render(request, 'reviews.html', context)
+
+def portfolio(request):
+    categories = Category.objects.filter(parent__isnull=True)
+    general = General.objects.all()
+    socials = Social.objects.all()
+    blogs = Blog.objects.all()[:4]
+    context = {
+        "general": general,
+        "blogsmost": blogs,
+        "socials": socials,
+        "categories": categories
+    }
+    return render(request, 'portfolio.html', context)
 
 def contact(request):
     categories = Category.objects.filter(parent__isnull=True)
