@@ -1391,6 +1391,7 @@ a.text-brand-3:hover {
 
 .theme-day .menuborder {
 border: 1px solid #c8c8c8 !important;
+background-color: #fff !important;
 }
 
 .btn.btn-tags {
