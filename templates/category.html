@@ -70,7 +70,7 @@ color:#eb2810 !important;
             <nav class="nav-main-menu d-none d-xl-block">
               <ul class="main-menu">
                  <li class=""><a class="active hoverr"style=" cursor: pointer; " >Haqqımda</a>
-                  <ul class="sub-menu" style=" background: #f9fbff; border: 0px solid #E9EEF5; box-shadow: none; margin-top: 11px; min-width: 268px; ">
+                  <ul class="sub-menu menuborder" style=" background: #f9fbff; border: 0px solid #E9EEF5; box-shadow: none; margin-top: 11px; min-width: 268px; ">
                     <li><a class=" cccc hoverr" style=" cursor: pointer; " href="{% url 'about'  %}">Haqqımda</a></li>
                     <li><a class=" cccc hoverr" style=" cursor: pointer; " href="{% url 'portfolio'  %}">Portfolio</a></li>
                     <li><a class=" cccc hoverr"style=" cursor: pointer; " href="{% url 'reviews'  %}">Rəylər</a></li>
@@ -79,14 +79,14 @@ color:#eb2810 !important;
                 {% for c in categories%}
                 {% if c.categories.count > 0 %}
                 <li class=""><a class="active hoverr "style=" cursor: pointer; " >{{c.name}}</a>
-                  <ul class="sub-menu" style=" background: #f9fbff; border: 0px solid #E9EEF5; box-shadow: none; margin-top: 11px; min-width: 268px; ">
+                  <ul class="sub-menu menuborder" style=" background: #f9fbff; border: 0px solid #E9EEF5; box-shadow: none; margin-top: 11px; min-width: 268px; ">
                     {% for s in c.categories.all %}
 
 
                     {% if s.categories.count > 0 %}
                     <li><a class=" cccc hoverr" style=" cursor: pointer; "href="{% url 'category' s.id %}">{{s.name}}</a>
 
-                     <ul class="sub-menu" style=" background: #f9fbff; border: 1px solid #E9EEF5; box-shadow: none; margin-top: 11px; width: 207px; left: 170px; ">
+                     <ul class="sub-menu menuborder" style=" background: #f9fbff; border: 1px solid #E9EEF5; box-shadow: none; margin-top: 11px; width: 207px; left: 170px; ">
                     {% for t in s.categories.all %}
                        <li><a class=" cccc hoverr" style=" cursor: pointer;    font-size: 14px !important; " href="{% url 'category' s.id %}" style="font-size: 14px !important;line-height: 1px;">{{t.name}}</a></li>
                        {% endfor%}

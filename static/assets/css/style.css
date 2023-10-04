@@ -1387,6 +1387,12 @@ a.text-brand-3:hover {
   font-size: 14px;
   line-height: 20px;
 }
+
+
+.theme-day .menuborder {
+border: 1px solid #c8c8c8 !important;
+}
+
 .btn.btn-tags {
   border-width: 1px;
   border-style: solid;
