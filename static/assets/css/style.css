@@ -1393,6 +1393,16 @@ a.text-brand-3:hover {
 background-color: #fff !important;
 }
 
+h5.line-bottom.fontcolor {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #e92710;
+    text-underline-offset: 9px;
+}
+.head-sidebar .line-bottom::before {
+    background-color: #eb281000 !important;
+}
+
 .btn.btn-tags {
   border-width: 1px;
   border-style: solid;
