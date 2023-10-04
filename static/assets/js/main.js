@@ -324,13 +324,38 @@
     
     // DARK / LIGHT MODE
     const toggleSwitch = document.querySelector('#flexSwitchCheckChecked');
-    const currentTheme = localStorage.getItem("theme");
+
+
     let currentSection = localStorage.getItem('section');
 
+    if (localStorage.getItem("theme") == 'day'){
+    const currentTheme = 'day';
+    console.log("1111");
     if (currentTheme) {
     document.documentElement.classList.add(`theme-${currentTheme}`);
     toggleSwitch.checked = currentTheme === 'night';
     }
+    }
+    else if(
+    localStorage.getItem("theme") == 'night'
+    ){
+    const currentTheme = 'night';
+    console.log("2222");
+    if (currentTheme) {
+    document.documentElement.classList.add(`theme-${currentTheme}`);
+    toggleSwitch.checked = currentTheme === 'night';
+    }
+    }else{
+    localStorage.setItem('theme','day');
+    const currentTheme = 'day';
+    console.log("3333");
+    if (currentTheme) {
+    document.documentElement.classList.add(`theme-${currentTheme}`);
+    toggleSwitch.checked = currentTheme === 'night';
+    }
+    }
+
+
 
     if (currentSection) {
     showSection(currentSection);
