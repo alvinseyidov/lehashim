@@ -47,7 +47,9 @@ def tag(request, slug):
     tag = Tag.objects.get(slug=slug)
     general = General.objects.all()
     socials = Social.objects.all()
+    topics = HotTopics.objects.all()
     context = {
+        "topics": topics,
         "general": general,
         "tag": tag,
         "socials": socials,

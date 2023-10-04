@@ -44,7 +44,9 @@ def about(request):
     general = General.objects.all()
     socials = Social.objects.all()
     blogs = Blog.objects.all()[:4]
+    topics = HotTopics.objects.all()
     context = {
+        "topics": topics,
         "general": general,
         "blogsmost": blogs,
         "socials": socials,
@@ -57,7 +59,9 @@ def reviews(request):
     general = General.objects.all()
     socials = Social.objects.all()
     blogs = Blog.objects.all()[:4]
+    topics = HotTopics.objects.all()
     context = {
+        "topics": topics,
         "general": general,
         "blogsmost": blogs,
         "socials": socials,
@@ -70,7 +74,9 @@ def portfolio(request):
     general = General.objects.all()
     socials = Social.objects.all()
     blogs = Blog.objects.all()[:4]
+    topics = HotTopics.objects.all()
     context = {
+        "topics": topics,
         "general": general,
         "blogsmost": blogs,
         "socials": socials,
@@ -82,7 +88,9 @@ def contact(request):
     categories = Category.objects.filter(parent__isnull=True)
     general = General.objects.all()
     socials = Social.objects.all()
+    topics = HotTopics.objects.all()
     context = {
+        "topics": topics,
         "general": general,
         "socials": socials,
         "categories": categories
