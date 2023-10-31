@@ -31,7 +31,6 @@ class Blog(models.Model):
     short_description = models.TextField()
     description = models.TextField()
     date = models.DateField()
-    category = models.ForeignKey(BlogCategory, on_delete=models.CASCADE, null=True, blank=True,related_name="blogs")
     tags = models.ManyToManyField(Tag, blank=True, related_name="blogs")
 
     def __str__(self):
