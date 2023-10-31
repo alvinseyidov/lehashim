@@ -96,3 +96,30 @@ def contact(request):
         "categories": categories
     }
     return render(request, 'contact.html', context)
+
+
+
+def telim(request, id):
+    categories = Category.objects.filter(parent__isnull=True)
+    featured = Featured.objects.all()
+    topics = HotTopics.objects.all()
+    general = General.objects.all()
+    blog = Blog.objects.get(pk=id)
+    blogs = Blog.objects.all()
+    blogsf = Blog.objects.all()[:3]
+    blogsfmobile = Blog.objects.all()[:1]
+    tags = Tag.objects.all()[:6]
+    socials = Social.objects.all()
+    context = {
+        "blog": blog,
+        "general": general,
+        "socials": socials,
+        "categories": categories,
+        "tags": tags,
+        "blogs": blogs,
+        "blogsf": blogsf,
+        "blogsfmobile": blogsfmobile,
+        "topics": topics,
+        "featured": featured,
+    }
+    return render(request, 'telim.html', context)

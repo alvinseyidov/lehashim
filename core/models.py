@@ -46,3 +46,10 @@ class HotTopics(models.Model):
 
     def __str__(self):
         return self.category.name
+
+
+
+
+class Telim(models.Model):
+    title = models.CharField(max_length=256)
+    short_description = models.TextField()

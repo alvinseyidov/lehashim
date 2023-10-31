@@ -17,6 +17,7 @@ urlpatterns = [
     path('tag/<str:slug>/', blog_views.tag, name="tag"),
     path('blog/<int:id>/', blog_views.blog, name="blog"),
     path('contact/', core_views.contact, name="contact"),
+    path('telim/<int:id>/', core_views.telim, name="telim"),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
