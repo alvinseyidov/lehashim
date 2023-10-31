@@ -29,6 +29,7 @@ class Blog(models.Model):
     main_image = models.ImageField()
     short_description = models.TextField()
     description = models.TextField()
+    category = models.ForeignKey(BlogCategory, on_delete=models.SET_NULL, null=True, blank=True, related_name="blogs")
     tags = models.ManyToManyField(Tag, blank=True, related_name="blogs")
 
     def __str__(self):
