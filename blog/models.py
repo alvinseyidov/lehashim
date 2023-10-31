@@ -29,7 +29,6 @@ class Blog(models.Model):
     main_image = models.ImageField()
     short_description = models.TextField()
     description = models.TextField()
-    date = models.DateField()
     tags = models.ManyToManyField(Tag, blank=True, related_name="blogs")
 
     def __str__(self):
