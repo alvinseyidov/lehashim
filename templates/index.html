@@ -106,6 +106,41 @@ color:#eb2810 !important;
                 {% endif %}
                 {% endfor %}
 
+
+                  <li class=""><a class="active hoverr "style=" cursor: pointer; " >Təlimlər</a>
+                  <ul class="sub-menu menuborder" style=" background: #f9fbff; border: 0px solid #E9EEF5; box-shadow: none; margin-top: 11px; min-width: 268px; ">
+                    {% for s in trainings %}
+
+                    <li><a class=" cccc hoverr" style=" cursor: pointer; "href="{% url 'telim' s.id %}">{{s.name}}</a>
+
+                    </li>
+                      {% endfor%}
+                       </ul>
+                      </li>
+
+
+
+
+
+                   <li class=""><a class="active hoverr "style=" cursor: pointer; " >Xidmətlərim</a>
+                  <ul class="sub-menu menuborder" style=" background: #f9fbff; border: 0px solid #E9EEF5; box-shadow: none; margin-top: 11px; min-width: 268px; ">
+                    {% for s in services %}
+
+                    <li><a class=" cccc hoverr" style=" cursor: pointer; "href="{% url 'service' s.id %}">{{s.name}}</a>
+
+                    </li>
+                      {% endfor%}
+                       </ul>
+                      </li>
+
+
+
+             
+
+
+
+
+
               </ul>
             </nav>
             <div class="burger-icon burger-icon-white"><span class="burger-icon-top"></span><span class="burger-icon-mid"></span><span class="burger-icon-bottom"></span></div>
