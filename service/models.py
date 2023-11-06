@@ -6,6 +6,7 @@ from django.db import models
 
 class ServiceCategory(models.Model):
     name = models.CharField(max_length=256)
+    description = models.TextField()
     sort = models.IntegerField(default=0)
 
     class Meta:
