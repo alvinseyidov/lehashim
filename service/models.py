@@ -6,7 +6,7 @@ from django.db import models
 
 class ServiceCategory(models.Model):
     name = models.CharField(max_length=256)
-    description = models.TextField()
+
     sort = models.IntegerField(default=0)
 
     class Meta:
@@ -18,6 +18,7 @@ class ServiceCategory(models.Model):
 
 class Service(models.Model):
     name = models.CharField(max_length=256)
+    description = models.TextField()
     category = models.ForeignKey(ServiceCategory, on_delete=models.SET_NULL, null=True, blank=True,
                                  related_name="services")
     sort = models.IntegerField(default=0)
