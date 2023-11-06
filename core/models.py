@@ -50,6 +50,3 @@ class HotTopics(models.Model):
 
 
 
-class Telim(models.Model):
-    title = models.CharField(max_length=256)
-    short_description = models.TextField()

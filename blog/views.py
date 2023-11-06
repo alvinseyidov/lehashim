@@ -3,6 +3,10 @@ from core.models import *
 from blog.models import BlogCategory as Category, Blog, Tag
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
+from service.models import Service
+from training.models import Telim
+
+
 def category(request, id):
     categories = Category.objects.filter(parent__isnull=True)
     category = Category.objects.get(pk=id)
@@ -27,7 +31,11 @@ def category(request, id):
         blgs = paginator.page(1)
     except EmptyPage:
         blgs = paginator.page(paginator.num_pages)
+    trainings = Telim.objects.all()
+    services = Service.objects.all()
     context = {
+        "trainings": trainings,
+        "services": services,
         "category": category,
         "tags": tags,
         "blogs": blgs,
@@ -48,7 +56,11 @@ def tag(request, slug):
     general = General.objects.all()
     socials = Social.objects.all()
     topics = HotTopics.objects.all()
+    trainings = Telim.objects.all()
+    services = Service.objects.all()
     context = {
+        "trainings": trainings,
+        "services": services,
         "topics": topics,
         "general": general,
         "tag": tag,
@@ -69,7 +81,11 @@ def blog(request, id):
     blogsfmobile = Blog.objects.all()[:1]
     tags = Tag.objects.all()[:6]
     socials = Social.objects.all()
+    trainings = Telim.objects.all()
+    services = Service.objects.all()
     context = {
+        "trainings": trainings,
+        "services": services,
         "blog": blog,
         "general": general,
         "socials": socials,

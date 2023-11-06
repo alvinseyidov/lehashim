@@ -3,6 +3,10 @@ from core.models import *
 from blog.models import BlogCategory as Category, Blog, Tag
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
+from service.models import Service
+from training.models import Telim
+
+
 def index(request):
     categories = Category.objects.filter(parent__isnull=True)
     featured = Featured.objects.all()
@@ -16,6 +20,7 @@ def index(request):
 
 
 
+
     page = request.GET.get('page', 1)
     paginator = Paginator(blogs, 2)
     try:
@@ -25,7 +30,11 @@ def index(request):
     except EmptyPage:
         blgs = paginator.page(paginator.num_pages)
 
+    trainings = Telim.objects.all()
+    services = Service.objects.all()
     context = {
+        "trainings": trainings,
+        "services": services,
         "tags": tags,
         "blogs": blgs,
         "blogsf": blogsf,
@@ -45,7 +54,11 @@ def about(request):
     socials = Social.objects.all()
     blogs = Blog.objects.all()[:4]
     topics = HotTopics.objects.all()
+    trainings = Telim.objects.all()
+    services = Service.objects.all()
     context = {
+        "trainings": trainings,
+        "services": services,
         "topics": topics,
         "general": general,
         "blogsmost": blogs,
@@ -60,7 +73,11 @@ def reviews(request):
     socials = Social.objects.all()
     blogs = Blog.objects.all()[:4]
     topics = HotTopics.objects.all()
+    trainings = Telim.objects.all()
+    services = Service.objects.all()
     context = {
+        "trainings": trainings,
+        "services": services,
         "topics": topics,
         "general": general,
         "blogsmost": blogs,
@@ -75,7 +92,11 @@ def portfolio(request):
     socials = Social.objects.all()
     blogs = Blog.objects.all()[:4]
     topics = HotTopics.objects.all()
+    trainings = Telim.objects.all()
+    services = Service.objects.all()
     context = {
+        "trainings": trainings,
+        "services": services,
         "topics": topics,
         "general": general,
         "blogsmost": blogs,
@@ -89,7 +110,11 @@ def contact(request):
     general = General.objects.all()
     socials = Social.objects.all()
     topics = HotTopics.objects.all()
+    trainings = Telim.objects.all()
+    services = Service.objects.all()
     context = {
+        "trainings": trainings,
+        "services": services,
         "topics": topics,
         "general": general,
         "socials": socials,
@@ -110,7 +135,11 @@ def telim(request, id):
     blogsfmobile = Blog.objects.all()[:1]
     tags = Tag.objects.all()[:6]
     socials = Social.objects.all()
+    trainings = Telim.objects.all()
+    services = Service.objects.all()
     context = {
+        "trainings": trainings,
+        "services": services,
         "blog": blog,
         "general": general,
         "socials": socials,
