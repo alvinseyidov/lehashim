@@ -17,7 +17,7 @@ urlpatterns = [
     path('tag/<str:slug>/', blog_views.tag, name="tag"),
     path('blog/<int:id>/', blog_views.blog, name="blog"),
     path('telim/<int:id>/', blog_views.blog, name="telim"),
-    path('service/<int:id>/', blog_views.blog, name="telim"),
+    path('service/<int:id>/', blog_views.blog, name="service"),
     path('contact/', core_views.contact, name="contact"),
     path('telim/<int:id>/', core_views.telim, name="telim"),
 ]
