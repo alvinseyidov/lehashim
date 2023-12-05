@@ -151,4 +151,35 @@ def telim(request, id):
         "topics": topics,
         "featured": featured,
     }
-    return render(request, 'telim.html', context)
+    return render(request, 'training.html', context)
+
+
+
+def telims(request):
+    categories = Category.objects.filter(parent__isnull=True)
+    featured = Featured.objects.all()
+    topics = HotTopics.objects.all()
+    general = General.objects.all()
+    blog = Blog.objects.get(pk=id)
+    blogs = Blog.objects.all()
+    blogsf = Blog.objects.all()[:3]
+    blogsfmobile = Blog.objects.all()[:1]
+    tags = Tag.objects.all()[:6]
+    socials = Social.objects.all()
+    trainings = Telim.objects.all()
+    services = Service.objects.all()
+    context = {
+        "trainings": trainings,
+        "services": services,
+        "blog": blog,
+        "general": general,
+        "socials": socials,
+        "categories": categories,
+        "tags": tags,
+        "blogs": blogs,
+        "blogsf": blogsf,
+        "blogsfmobile": blogsfmobile,
+        "topics": topics,
+        "featured": featured,
+    }
+    return render(request, 'trainings.html', context)

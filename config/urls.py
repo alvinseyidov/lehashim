@@ -19,9 +19,9 @@ urlpatterns = [
     path('category/<int:id>/', blog_views.category, name="category"),
     path('tag/<str:slug>/', blog_views.tag, name="tag"),
     path('blog/<int:id>/', blog_views.blog, name="blog"),
-    path('telim/<int:id>/', blog_views.blog, name="telim"),
     path('service/<int:id>/', service_views.service, name="service"),
     path('contact/', core_views.contact, name="contact"),
+    path('telims/', core_views.telims, name="telims"),
     path('telim/<int:id>/', core_views.telim, name="telim"),
 ]
 
