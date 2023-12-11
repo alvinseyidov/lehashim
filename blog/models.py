@@ -20,6 +20,8 @@ class BlogCategory(models.Model):
     sort = models.IntegerField(default=0)
     description = models.TextField(null=True, blank=True)
 
+    publish_datetime = models.DateTimeField(auto_now_add=True)
+
     class Meta:
         ordering = ('sort',)
 
