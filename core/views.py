@@ -3,6 +3,7 @@ from core.models import *
 from blog.models import BlogCategory as Category, Blog, Tag
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
+from event.models import Event
 from service.models import Service
 from training.models import Telim
 
@@ -32,7 +33,9 @@ def index(request):
 
     trainings = Telim.objects.all()
     services = Service.objects.all()
+    events = Event.objects.all()
     context = {
+        "events": events,
         "trainings": trainings,
         "services": services,
         "tags": tags,
