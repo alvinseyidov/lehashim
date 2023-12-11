@@ -20,7 +20,7 @@ class BlogCategory(models.Model):
     sort = models.IntegerField(default=0)
     description = models.TextField(null=True, blank=True)
 
-    publish_datetime = models.DateTimeField(null=True, blank=True)
+
 
     class Meta:
         ordering = ('sort',)
@@ -36,6 +36,7 @@ class Blog(models.Model):
     description = models.TextField()
     category = models.ForeignKey(BlogCategory, on_delete=models.SET_NULL, null=True, blank=True, related_name="blogs")
     tags = models.ManyToManyField(Tag, blank=True, related_name="blogs")
+    publish_datetime = models.DateTimeField(null=True, blank=True)
 
     def __str__(self):
         return self.title
