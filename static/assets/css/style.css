@@ -1400,6 +1400,14 @@ background-color: #fff !important;
 }
 
 
+
+.hoverunder2:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 0.1rem;
+    text-decoration-color: #e92710;
+    text-underline-offset: 4px;
+}
+
 .theme-day .menuborder {
 background-color: #fff !important;
 }
