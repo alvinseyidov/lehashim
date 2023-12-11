@@ -275,7 +275,7 @@ color:#eb2810 !important;
                             <div class="info-post border-gray-800" style=" width: 217px; "><a href="{% url 'blog' b.id %}">
                                 <h6 class="color-white" style=" color: #fff !important; ">{{b.title}}</h6></a><span class="color-gray-700" style=" color: #fff !important; ">{{b.category.name}}</span>
                               <ul class="d-inline-block">
-                                <li class="color-gray-700" style=" color: #fff !important; ">{{b.date | date:'d.m.Y'}}</li>
+                                <li class="color-gray-700" style=" color: #fff !important; ">{{b.publish_datetime | date:'d.m.Y'}}</li>
                               </ul>
                             </div>
                           </div>
@@ -315,7 +315,7 @@ color:#eb2810 !important;
                             <div class="info-post border-gray-800" style=" width: 217px; "><a href="{% url 'blog' b.id %}">
                                 <h6 class="color-white" style=" color: #fff !important; ">{{b.title}}</h6></a><span class="color-gray-700" style=" color: #fff !important; ">{{b.category.name}}</span>
                               <ul class="d-inline-block">
-                                <li class="color-gray-700" style=" color: #fff !important; ">{{b.date | date:'d.m.Y'}}</li>
+                                <li class="color-gray-700" style=" color: #fff !important; ">{{b.publish_datetime | date:'d.m.Y'}}</li>
                               </ul>
                             </div>
                           </div>
@@ -356,7 +356,7 @@ color:#eb2810 !important;
                         <div class="row mt-20">
                           <div class="col-7">
 
-                            <div class="text-sm mr-15 csdsdc" style=" display: inline; ">{{b.date | date:'d.m.y'}}</div>
+                            <div class="text-sm mr-15 csdsdc" style=" display: inline; ">{{b.publish_datetime | date:'d.m.y'}}</div>
                             <span class="csdsdc text-sm timeread">{{b.reading_time}}</span>
 
                           </div>
@@ -401,7 +401,7 @@ color:#eb2810 !important;
                             <div class="info-post border-gray-800"><a href="{% url 'blog' b.id %}">
                                 <h6 class="fontcolor hoverunder">{{b.title}}</h6></a><br><span class="fontcolor ">15 dəq</span>
                               <ul class="d-inline-block">
-                                <li class="fontcolor">{{b.date | date:'d.m.Y'}}</li>
+                                <li class="fontcolor">{{b.publish_datetime | date:'d.m.Y'}}</li>
                               </ul>
                             </div>
                           </div>
