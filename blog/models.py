@@ -9,6 +9,9 @@ from ckeditor_uploader.fields import RichTextUploadingField
 class Tag(models.Model):
     name = models.CharField(max_length=256, unique=True)
     slug = models.CharField(max_length=256, unique=True)
+    class Meta:
+        verbose_name = "Bloq teq"
+        verbose_name_plural = "Bloq teqləri"
 
     def __str__(self):
         return self.name
@@ -44,3 +47,6 @@ class Blog(models.Model):
 
     def __str__(self):
         return self.title
+    class Meta:
+        verbose_name = "Bloq yazı"
+        verbose_name_plural = "Bloq yazıları"

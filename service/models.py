@@ -11,6 +11,8 @@ class Service(models.Model):
 
     class Meta:
         ordering = ('sort',)
+        verbose_name = "Xidmət"
+        verbose_name_plural = "Xidmətlər"
 
     def __str__(self):
         return self.name

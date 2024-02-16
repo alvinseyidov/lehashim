@@ -12,6 +12,10 @@ class General(models.Model):
     def __str__(self):
         return f'Ümumi məlumatlar'
 
+    class Meta:
+        verbose_name = "Ümumi Məlumat"
+        verbose_name_plural = "Ümumi Məlumat"
+
 
 class Social(models.Model):
     name = models.CharField(max_length=256)
@@ -27,6 +31,10 @@ class Social(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name = "Sosial Media Hesabı"
+        verbose_name_plural = "Sosial Media Hesabları"
+
 
 class Featured(models.Model):
     blog = models.ForeignKey("blog.Blog", on_delete=models.CASCADE)
@@ -38,6 +46,10 @@ class Featured(models.Model):
     def __str__(self):
         return self.blog.title
 
+    class Meta:
+        verbose_name = "Seçilmiş Bloq"
+        verbose_name_plural = "Seçilmiş Bloqlar"
+
 
 
 class HotTopics(models.Model):
@@ -46,6 +58,10 @@ class HotTopics(models.Model):
 
     def __str__(self):
         return self.category.name
+
+    class Meta:
+        verbose_name = "Seçilmiş Mövzu"
+        verbose_name_plural = "Seçilmiş Mövzular"
 
 
 
