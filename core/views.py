@@ -9,7 +9,7 @@ from training.models import Telim
 
 
 def index(request):
-    categories = Category.objects.filter()
+    categories = Category.objects.filter(parent__isnull=True)
     featured = Featured.objects.all()
     topics = HotTopics.objects.all()
     general = General.objects.all()
