@@ -23,6 +23,7 @@ admin.site.register(Category, DraggableMPTTAdmin,
 
 
 admin.site.register(Blog)
+admin.site.register(Review)
 
 admin.site.register(Tag)
 

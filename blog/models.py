@@ -5,6 +5,18 @@ from ckeditor_uploader.fields import RichTextUploadingField
 
 
 
+class Review(models.Model):
+    full_name = models.CharField(max_length=256)
+    position = models.CharField(max_length=256)
+    feedback = models.TextField()
+    class Meta:
+        verbose_name = "Rəy"
+        verbose_name_plural = "Rəylər"
+
+    def __str__(self):
+        return self.full_name
+
+
 
 class Tag(models.Model):
     name = models.CharField(max_length=256, unique=True)
