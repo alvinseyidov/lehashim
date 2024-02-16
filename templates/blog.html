@@ -243,7 +243,7 @@ color:#eb2810 !important;
                 <div class="box-breadcrumbs">
                   <ul class="breadcrumb">
                     <li><a class="home" href="{% url 'index'%}">Ana səhifə</a></li>
-                    <li><a href="{% url 'category' blog.category.id %}">{{blog.category.name}}</a></li>
+                    <li><a href="{% url 'category' blog.cat.id %}">{{blog.category.name}}</a></li>
                     <li><span class="fontcolor">{{blog.title}}</span></li>
                   </ul>
                 </div>
@@ -274,26 +274,13 @@ color:#eb2810 !important;
                       </div>
                     </div>
                   </div>
-                  <div class="content-detail border-gray-800" style=" margin-bottom: 0; ">
-                    <p class="text-xl color-gray-500">The fancy moon going in little artist painting. Thirty days of lavender in the dreamy light inside. Other perfect oh plants, for and again. I’ve honey feeling. Caring dreamland projects noteworthy than minimal, their it oh pretty feeling may. Include pink be.</p>
-                    <div class="mt-30 mb-20"><img class="img-bdrd-16" src="{% static 'assets/imgs/page/single/img.jpg'%}" alt="Genz"></div>
-                    <p class="text-lg color-gray-500 mb-50">Tortor placerat bibendum consequat sapien, facilisi facilisi pellentesque morbi. Id conse ctetur ut vitae a massa a. Lacus ut bibendum sollicitudin fusce sociis mi. Dictum volutpat praesent ornare accumsan elit venenatis. Congue sodales nunc quis ultricies odio porta. Egestas mauris placerat leo phasellu s ut sit.</p>
-                    <h3 class="color-white mb-30">Use your headings</h3>
-                    <p class="text-lg color-gray-500">Thirty there & time wear across days, make inside on these you. Can young a really, roses blog small of song their dreamy life pretty? Because really duo living to noteworthy bloom bell. Transform clean daydreaming cute twenty process rooms cool. White white dreamy dramatically place everything although. Place out apartment afternoon whimsical kinder, little romantic joy we flowers handmade. Thirty she a studio of she whimsical projects, afternoon effect going an floated maybe.</p>
 
-                    <h4 class="color-white mt-40 mb-30">Smaller heading</h4>
-                    <div class="row">
-                      <div class="col-lg-8 mb-30">
-                        <p class="text-lg color-gray-500 mb-40">Thirty there & time wear across days, make inside on these you. Can young a really, roses blog small of song their dreamy life pretty? Because really duo living to noteworthy bloom bell. Transform clean daydreaming cute twenty process rooms cool. White white dreamy dramatically place everything although.</p>
-                        <p class="text-lg color-gray-500">White white dreamy dramatically place everything although. Place out apartment afternoon whimsical kinder, little romantic joy we flowers handmade. Thirty she a studio of she whimsical projects, afternoon effect going an floated maybe.</p>
-                      </div>
-                      <div class="col-lg-4"><img class="img-bdrd-16 mb-30" src="{% static 'assets/imgs/page/single/img2.jpg'%}" alt="Genz"></div>
+
+
+                    <div>
+                        {{blog.description | safe}}
                     </div>
-                    <p class="text-lg color-gray-500">Tortor placerat bibendum consequat sapien, facilisi facilisi pellentesque morbi. Id consectetur ut vitae a massa a. Lacus ut bibendum sollicitudin fusce sociis mi. Dictum volutpat praesent ornare accumsan elit venenatis. Congue sodales nunc quis ultricies odio porta. Egestas mauris placerat leo phasellus ut sit.</p>
 
-                    <h3 class="color-white mt-50 mb-30">Use your headings</h3>
-                    <p class="text-lg color-gray-500">Thirty there & time wear across days, make inside on these you. Can young a really, roses blog small of song their dreamy life pretty? Because really duo living to noteworthy bloom bell. Transform clean daydreaming cute twenty process rooms cool. White white dreamy dramatically place everything although. Place out apartment afternoon whimsical kinder, little romantic joy we flowers handmade. Thirty she a studio of she whimsical projects, afternoon effect going an floated maybe.</p>
-                  </div>
                   <div class="box-tags"><a class="btn btn-tags bg-gray-850 border-gray-800 mr-10 hover-up" href="blog-archive.html">#Nature</a><a class="btn btn-tags bg-gray-850 border-gray-800 mr-10 hover-up" href="blog-archive.html">#Beauty</a><a class="btn btn-tags bg-gray-850 border-gray-800 mr-10 hover-up" href="blog-archive.html">#Travel Tips</a><a class="btn btn-tags bg-gray-850 border-gray-800 hover-up" href="blog-archive.html">#House</a></div>
 
 

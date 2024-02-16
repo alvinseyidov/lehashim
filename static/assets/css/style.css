@@ -1191,9 +1191,11 @@ h4 {
     transform: translate(0px, 0px) rotate(0deg);
   }
 }
+
+
 /*TYPOGRAPHY*/
 body {
-  color: #94A9C9;
+  color: #292828;
   background-color: #000;
   font-family: 'Montserrat';
   font-size: 14px;
@@ -7132,6 +7134,41 @@ iframe.google-map {
 }
 .theme-day body {
   background-color: #F9FBFF;
+  color: #6a6a6a;
+  font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+}
+.theme-night body {
+  color: #fff !important;
+  font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.theme-day p {
+  color: #6a6a6a;
+  font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+
+body {
+font-family: 'Montserrat';
+}
+p {
+font-family: 'Montserrat';
+font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+}
+h1 h2 h3 h4 h5 h6 {
+font-family: 'Montserrat';
 }
 .theme-day .header .main-menu li ul {
   background: #E8EDF5;

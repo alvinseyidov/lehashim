@@ -12,6 +12,7 @@ from training import views as training_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('summernote/', include('django_summernote.urls')),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
     path('', core_views.index, name="index"),
     path('about/', core_views.about, name="about"),
     path('reviews/', core_views.reviews, name="reviews"),

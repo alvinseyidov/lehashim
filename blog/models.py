@@ -1,5 +1,7 @@
 from django.db import models
-
+from mptt.forms import TreeNodeChoiceField
+from mptt.models import MPTTModel, TreeForeignKey
+from ckeditor_uploader.fields import RichTextUploadingField
 
 
 
@@ -12,8 +14,8 @@ class Tag(models.Model):
         return self.name
 
 
-class BlogCategory(models.Model):
-    parent = models.ForeignKey('self', on_delete=models.SET_NULL, null=True, blank=True,related_name="categories")
+class Category(MPTTModel):
+    parent = TreeForeignKey('self', on_delete=models.SET_NULL, null=True, blank=True,related_name="categories")
     name = models.CharField(max_length=256)
     image = models.ImageField(null=True, blank=True)
     icon = models.ImageField(null=True, blank=True)
@@ -24,6 +26,8 @@ class BlogCategory(models.Model):
 
     class Meta:
         ordering = ('sort',)
+        verbose_name = "Bloq kateqoriya"
+        verbose_name_plural = "Bloq kateqoriyaları"
 
     def __str__(self):
         return self.name
@@ -33,8 +37,8 @@ class Blog(models.Model):
     title = models.CharField(max_length=256)
     main_image = models.ImageField()
     short_description = models.TextField()
-    description = models.TextField()
-    category = models.ForeignKey(BlogCategory, on_delete=models.SET_NULL, null=True, blank=True, related_name="blogs")
+    description = RichTextUploadingField()
+    cat = TreeForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True, related_name="blogs")
     tags = models.ManyToManyField(Tag, blank=True, related_name="blogs")
     publish_datetime = models.DateTimeField(null=True, blank=True)
 

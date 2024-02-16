@@ -41,7 +41,7 @@ class Featured(models.Model):
 
 
 class HotTopics(models.Model):
-    category = models.ForeignKey('blog.BlogCategory', on_delete=models.CASCADE)
+    category = models.ForeignKey('blog.Category', on_delete=models.CASCADE)
     image = models.ImageField()
 
     def __str__(self):

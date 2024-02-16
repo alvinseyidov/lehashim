@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from core.models import *
-from blog.models import BlogCategory as Category, Blog, Tag
+from blog.models import Category as Category, Blog, Tag
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from event.models import Event
@@ -9,7 +9,7 @@ from training.models import Telim
 
 
 def index(request):
-    categories = Category.objects.filter(parent__isnull=True)
+    categories = Category.objects.filter()
     featured = Featured.objects.all()
     topics = HotTopics.objects.all()
     general = General.objects.all()

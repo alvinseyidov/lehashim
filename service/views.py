@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 from core.models import *
-from blog.models import BlogCategory as Category, Blog, Tag
+from blog.models import Category as Category, Blog, Tag
 
 from service.models import Service
 from training.models import Telim
