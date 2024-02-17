@@ -9,6 +9,8 @@ class Review(models.Model):
     full_name = models.CharField(max_length=256)
     position = models.CharField(max_length=256)
     feedback = models.TextField()
+    profile_image = models.ImageField(null=True, blank=True)
+
     class Meta:
         verbose_name = "Rəy"
         verbose_name_plural = "Rəylər"

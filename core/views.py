@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from core.models import *
-from blog.models import Category as Category, Blog, Tag
+from blog.models import Category as Category, Blog, Tag, Review
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from event.models import Event
@@ -22,6 +22,7 @@ def index(request):
 
 
 
+
     page = request.GET.get('page', 1)
     paginator = Paginator(blogs, 2)
     try:
@@ -34,7 +35,9 @@ def index(request):
     trainings = Telim.objects.all()
     services = Service.objects.all()
     events = Event.objects.all()
+    reviews = Review.objects.all()
     context = {
+        "reviews": reviews,
         "events": events,
         "trainings": trainings,
         "services": services,
@@ -60,7 +63,9 @@ def about(request):
     trainings = Telim.objects.all()
     services = Service.objects.all()
     events = Event.objects.all()
+    reviews = Review.objects.all()
     context = {
+        "reviews": reviews,
         "events": events,
         "trainings": trainings,
         "services": services,

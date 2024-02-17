@@ -267,7 +267,7 @@ color:#eb2810 !important;
                     {% for b in blogs %}
                     <div class="card-list-posts wow animate__animated animate__fadeIn infinite-item" style="border-bottom: 1px solid #cfcfcf; padding-bottom: 26px;margin-bottom: 27px;">
                       <a href="{% url 'blog' b.id%}" style="height:200px;margin-right: 35px;background-size: cover;background-image:url({{b.main_image.url}});border-radius:14px;" class="card-image hover-up"></a>
-                      <div class="card-info"><a class="btn btn-tag bg-gray-800 hover-up" href="{% url 'category' b.cat.id %}">{{b.category.name}}</a><br>
+                      <div class="card-info"><a class="btn btn-tag bg-gray-800 hover-up" href="{% url 'category' b.cat.id %}">{{b.cat.name}}</a><br>
                         <a href="{% url 'blog' b.id%}">
                           <h4 class="mt-15 mb-20 color-white hoverunder" style=" font-size: 1.375rem; ">{{b.title}}</h4></a>
                         <p class="color-gray-500">{{b.short_description}}</p>
@@ -342,42 +342,27 @@ color:#eb2810 !important;
                 <div class="box-swiper">
                   <div class="swiper-container swiper-group-33">
                     <div class="swiper-wrapper pt-5">
+                        {% for r in reviews %}
                       <div class="swiper-slide">
                         <div class="card-testimonials bg-gray-850 borderwhitee hover-up hdtfgfg">
-                          <div class="box-author mb-20"><img src="{% static 'assets/imgs/page/about/author.png'%}" alt="Genz">
+                          <div class="box-author mb-20">
+                              {% if r.profile_image %}
+                              <img src="{{r.profile_image.url}}" alt="Genz">
+                              {% else%}
+                              <img src="{% static 'profile.jpg'%}" alt="Genz">
+                              {% endif%}
                             <div class="author-info">
-                              <h6 class=" fontcolor">Karen Adderiy</h6><span class="  text-sm fontcolor">Alithemes Co</span>
+                              <h6 class=" fontcolor">{{r.full_name}}</h6><span class="  text-sm fontcolor">{{r.position}}</span>
                             </div>
                           </div>
                           <div class="card-info">
-                            <p class="color-gray-500">Dignissim quis turpis quis, semper vehicula dolor. Suspendisse tincidunt consequat quam, ac posuere leo dapibus id.</p>
+                            <p class="color-gray-500">
+                                {{r.feedback}}
+                            </p>
                           </div>
                         </div>
                       </div>
-                      <div class="swiper-slide">
-                        <div class="card-testimonials bg-gray-850 borderwhite hover-up hdtfgfg">
-                          <div class="box-author mb-20"><img src="{% static 'assets/imgs/page/about/author2.png'%}" alt="Genz">
-                            <div class="author-info">
-                            <h6 class=" fontcolor">Karen Adderiy</h6><span class="  text-sm fontcolor">Alithemes Co</span>
-                            </div>
-                          </div>
-                          <div class="card-info">
-                            <p class="color-gray-500">Dignissim quis turpis quis, semper vehicula dolor. Suspendisse tincidunt consequat quam, ac posuere leo dapibus id.</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="card-testimonials bg-gray-850 borderwhite hover-up hdtfgfg">
-                          <div class="box-author mb-20"><img src="{% static 'assets/imgs/page/about/author3.png'%}" alt="Genz">
-                            <div class="author-info">
-                             <h6 class=" fontcolor">Karen Adderiy</h6><span class="  text-sm fontcolor">Alithemes Co</span>
-                            </div>
-                          </div>
-                          <div class="card-info">
-                            <p class="color-gray-500">Dignissim quis turpis quis, semper vehicula dolor. Suspendisse tincidunt consequat quam, ac posuere leo dapibus id.</p>
-                          </div>
-                        </div>
-                      </div>
+                        {% endfor%}
                     </div>
                   </div>
                   <div class="swiper-buttons">
