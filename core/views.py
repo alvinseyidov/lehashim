@@ -86,7 +86,9 @@ def reviews(request):
     trainings = Telim.objects.all()
     services = Service.objects.all()
     events = Event.objects.all()
+    reviews = Review.objects.all()
     context = {
+        "reviews": reviews,
         "events": events,
         "trainings": trainings,
         "services": services,
