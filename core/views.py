@@ -59,7 +59,9 @@ def about(request):
     topics = HotTopics.objects.all()
     trainings = Telim.objects.all()
     services = Service.objects.all()
+    events = Event.objects.all()
     context = {
+        "events": events,
         "trainings": trainings,
         "services": services,
         "topics": topics,
@@ -78,7 +80,9 @@ def reviews(request):
     topics = HotTopics.objects.all()
     trainings = Telim.objects.all()
     services = Service.objects.all()
+    events = Event.objects.all()
     context = {
+        "events": events,
         "trainings": trainings,
         "services": services,
         "topics": topics,
@@ -97,7 +101,9 @@ def portfolio(request):
     topics = HotTopics.objects.all()
     trainings = Telim.objects.all()
     services = Service.objects.all()
+    events = Event.objects.all()
     context = {
+        "events": events,
         "trainings": trainings,
         "services": services,
         "topics": topics,
@@ -115,7 +121,9 @@ def contact(request):
     topics = HotTopics.objects.all()
     trainings = Telim.objects.all()
     services = Service.objects.all()
+    events = Event.objects.all()
     context = {
+        "events": events,
         "trainings": trainings,
         "services": services,
         "topics": topics,
@@ -140,7 +148,40 @@ def telim(request, id):
     socials = Social.objects.all()
     trainings = Telim.objects.all()
     services = Service.objects.all()
+    events = Event.objects.all()
     context = {
+        "events": events,
+        "trainings": trainings,
+        "services": services,
+        "blog": blog,
+        "general": general,
+        "socials": socials,
+        "categories": categories,
+        "tags": tags,
+        "blogs": blogs,
+        "blogsf": blogsf,
+        "blogsfmobile": blogsfmobile,
+        "topics": topics,
+        "featured": featured,
+    }
+    return render(request, 'training.html', context)
+
+def event(request, id):
+    categories = Category.objects.filter(parent__isnull=True)
+    featured = Featured.objects.all()
+    topics = HotTopics.objects.all()
+    general = General.objects.all()
+    blog = Blog.objects.get(pk=id)
+    blogs = Blog.objects.all()
+    blogsf = Blog.objects.all()[:3]
+    blogsfmobile = Blog.objects.all()[:1]
+    tags = Tag.objects.all()[:6]
+    socials = Social.objects.all()
+    trainings = Telim.objects.all()
+    services = Service.objects.all()
+    events = Event.objects.all()
+    context = {
+        "events": events,
         "trainings": trainings,
         "services": services,
         "blog": blog,
@@ -171,7 +212,9 @@ def telims(request):
     socials = Social.objects.all()
     trainings = Telim.objects.all()
     services = Service.objects.all()
+    events = Event.objects.all()
     context = {
+        "events": events,
         "trainings": trainings,
         "services": services,
         "blog": blog,
