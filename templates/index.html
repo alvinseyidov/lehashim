@@ -401,7 +401,7 @@ color:#eb2810 !important;
                             <div class="info-post border-gray-800">
                                 <a href="{% url 'blog' b.id %}">
                                 <h6 class="fontcolor hoverunder2">{{b.title}}</h6></a>
-                               <span class="fontcolor" style=" font-size: 14px; ">{{b.cat.name}}</span>
+                               <span class="fontcolor" style=" font-size: 14px; ">Kategoriya: {{b.cat.name}}</span>
                                 <br><span class="fontcolor " style=" font-size: 14px; ">15 dəq</span>
                               <ul class="d-inline-block" style=" margin-top: 0; ">
                                 <li class="fontcolor" style=" font-size: 14px; ">{{b.publish_datetime | date:'d.m.Y'}}</li>
