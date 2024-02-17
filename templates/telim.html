@@ -363,42 +363,28 @@ color:#eb2810 !important;
                 <div class="box-swiper">
                   <div class="swiper-container swiper-group-3">
                     <div class="swiper-wrapper pt-5">
+                     {% for r in reviews %}
                       <div class="swiper-slide">
                         <div class="card-testimonials bg-gray-850 borderwhite hover-up hdtfgfg">
-                          <div class="box-author mb-20"><img src="{% static 'assets/imgs/page/about/author.png'%}" alt="Genz">
+                          <div class="box-author mb-20">
+                              {% if r.profile_image %}
+                              <div style="background-image:url({{r.profile_image.url}});height: 60px; width: 60px; background-size: cover; background-position: center; border-radius: 50%; min-width: 60px; margin-right: 15px;"></div>
+
+                              {% else%}
+                              <img src="{% static 'profile.jpg'%}" alt="Genz">
+                              {% endif%}
                             <div class="author-info">
-                              <h6 class=" fontcolor">Karen Adderiy</h6><span class="  text-sm fontcolor">Alithemes Co</span>
+                              <h6 class=" fontcolor">{{r.full_name}}</h6><span class="  text-sm fontcolor">{{r.position}}</span>
                             </div>
                           </div>
                           <div class="card-info">
-                            <p class="color-gray-500">Dignissim quis turpis quis, semper vehicula dolor. Suspendisse tincidunt consequat quam, ac posuere leo dapibus id.</p>
+                            <p class="color-gray-500" style="font-size: 15px; line-height: 25px;">
+                                {{r.feedback_short_version}}
+                            </p>
                           </div>
                         </div>
                       </div>
-                      <div class="swiper-slide">
-                        <div class="card-testimonials bg-gray-850 borderwhite hover-up hdtfgfg">
-                          <div class="box-author mb-20"><img src="{% static 'assets/imgs/page/about/author2.png'%}" alt="Genz">
-                            <div class="author-info">
-                            <h6 class=" fontcolor">Karen Adderiy</h6><span class="  text-sm fontcolor">Alithemes Co</span>
-                            </div>
-                          </div>
-                          <div class="card-info">
-                            <p class="color-gray-500">Dignissim quis turpis quis, semper vehicula dolor. Suspendisse tincidunt consequat quam, ac posuere leo dapibus id.</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="card-testimonials bg-gray-850 borderwhite hover-up hdtfgfg">
-                          <div class="box-author mb-20"><img src="{% static 'assets/imgs/page/about/author3.png'%}" alt="Genz">
-                            <div class="author-info">
-                             <h6 class=" fontcolor">Karen Adderiy</h6><span class="  text-sm fontcolor">Alithemes Co</span>
-                            </div>
-                          </div>
-                          <div class="card-info">
-                            <p class="color-gray-500">Dignissim quis turpis quis, semper vehicula dolor. Suspendisse tincidunt consequat quam, ac posuere leo dapibus id.</p>
-                          </div>
-                        </div>
-                      </div>
+                      {% endfor %}
                     </div>
                   </div>
                   <div class="swiper-buttons">
