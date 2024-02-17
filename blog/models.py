@@ -53,10 +53,11 @@ class Category(MPTTModel):
 
 class Blog(models.Model):
     title = models.CharField(max_length=256)
+    reading_time = models.CharField(max_length=256)
     main_image = models.ImageField()
     short_description = models.TextField()
     description = RichTextUploadingField()
-    cat = TreeForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True, related_name="blogs")
+    cat = TreeForeignKey(Category, on_delete=models.CASCADE, related_name="blogs")
     tags = models.ManyToManyField(Tag, blank=True, related_name="blogs")
     publish_datetime = models.DateTimeField(null=True, blank=True)
 

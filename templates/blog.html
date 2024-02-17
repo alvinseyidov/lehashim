@@ -53,6 +53,13 @@ color:#eb2810 !important;
 .theme-day .color-gray-700 {
     color: #ffffff !important;
 }
+
+.theme-day .normaltext {
+    color: #6a6a6a !important;
+}
+.theme-night .normaltext {
+    color: #ffffff !important;
+}
 </style>
     <title>Le Hashim</title>
   </head>
@@ -254,7 +261,7 @@ color:#eb2810 !important;
                   <ul class="breadcrumb">
                     <li><a class="home" href="{% url 'index'%}">Ana səhifə</a></li>
                     <li><a href="{% url 'category' blog.cat.id %}">{{blog.cat.name}}</a></li>
-                    <li><span class="fontcolor">{{blog.title}}</span></li>
+                    <li><div style=" color: #000; display: inline-block; font-size: 14px !important; line-height: 19px; padding-top: 5px; padding-bottom: 5px; " class="fontcolor">{{blog.title}}</div></li>
                   </ul>
                 </div>
               </div>
@@ -270,9 +277,11 @@ color:#eb2810 !important;
                 <div class="col-lg-12 m-auto">
                   <div class="row mb-40">
                     <div class="col-md-6 mb-10">
-                      <div class="box-author"><img src="{% static 'assets/imgs/page/about/author2.png'%}" alt="Genz">
+                      <div class="box-author"><img src="{% static 'mecropped.jpg'%}" alt="Genz">
                         <div class="author-info">
-                          <h6 class="color-gray-700">William Randolph</h6><span class="color-gray-700 text-sm mr-30">25 April 2022</span><span class="color-gray-700 text-sm">3 mins to read</span>
+                          <h6 class="normaltext">Le Hashim</h6><span class="normaltext text-sm mr-30">
+                           {{blog.publish_datetime | date:'d.m.Y'}}
+                        </span><span class="normaltext text-sm">{{blog.reading_time}}</span>
                         </div>
                       </div>
                     </div>
