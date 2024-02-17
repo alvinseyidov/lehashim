@@ -2717,7 +2717,7 @@ background-color: #eb2810 !important;
 
 .switch-button {
   display: inline-block;
-  padding: 0px 15px 0px 5px;
+  padding: 0px 0px 0px 5px;
 }
 .switch-button .form-switch {
   padding-left: 0px;
