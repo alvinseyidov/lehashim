@@ -281,14 +281,17 @@ color:#eb2810 !important;
                         <div class="author-info">
                           <h6 class="normaltext">Le Hashim</h6><span class="normaltext text-sm mr-30">
                            {{blog.publish_datetime | date:'d.m.Y'}}
-                        </span><span class="normaltext text-sm">{{blog.reading_time}}</span>
+                        </span>
+                            <ul class="d-inline-block" style=" margin-top: 0; ">
+                                <li class="fontcolor" style="    list-style: disc; font-size: 14px; ">{{blog.reading_time}}</li>
+                              </ul>
                         </div>
                       </div>
                     </div>
                     <div class="col-md-6 text-start text-md-end">
                       <div class="d-inline-block pt-10">
                         <div class="d-flex align-item-center">
-                          <h6 class="d-inline-block color-gray-500 mr-10">Share</h6><a class="icon-media icon-fb" href="#"></a><a class="icon-media icon-tw" href="#"></a><a class="icon-media icon-printest" href="#"></a>
+                          <h6 class="d-inline-block color-gray-500 mr-10">Paylaş</h6><a class="icon-media icon-fb" href="#"></a><a class="icon-media icon-tw" href="#"></a><a class="icon-media icon-printest" href="#"></a>
                         </div>
                       </div>
                     </div>
@@ -300,7 +303,12 @@ color:#eb2810 !important;
                         {{blog.description | safe}}
                     </div>
 
-                  <div class="box-tags"><a class="btn btn-tags bg-gray-850 border-gray-800 mr-10 hover-up" href="blog-archive.html">#Nature</a><a class="btn btn-tags bg-gray-850 border-gray-800 mr-10 hover-up" href="blog-archive.html">#Beauty</a><a class="btn btn-tags bg-gray-850 border-gray-800 mr-10 hover-up" href="blog-archive.html">#Travel Tips</a><a class="btn btn-tags bg-gray-850 border-gray-800 hover-up" href="blog-archive.html">#House</a></div>
+                  <div class="box-tags">
+                      {% for t in blog.tags.all %}
+                      <a class="btn btn-tags bg-gray-850 border-gray-800 mr-10 hover-up" href="{% url 'tag' t.slug %}">#{{t.name}}</a>
+                      {% endfor %}
+
+                  </div>
 
 
                 </div>

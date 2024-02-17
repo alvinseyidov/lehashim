@@ -56,21 +56,46 @@ def category(request, id):
 
 
 def tag(request, slug):
-    categories = Category.objects.filter(parent__isnull=True)
     tag = Tag.objects.get(slug=slug)
+    categories = Category.objects.filter(parent__isnull=True)
     general = General.objects.all()
     socials = Social.objects.all()
+
+    categories = Category.objects.filter(parent__isnull=True)
+    featured = Featured.objects.all()
     topics = HotTopics.objects.all()
+    general = General.objects.all()
+    blogs = tag.blogs.all()
+    blogsf = Blog.objects.all()[:3]
+    blogsfmobile = Blog.objects.all()[:1]
+    tags = Tag.objects.all()[:6]
+    socials = Social.objects.all()
+
+    page = request.GET.get('page', 1)
+    paginator = Paginator(blogs, 2)
+    try:
+        blgs = paginator.page(page)
+    except PageNotAnInteger:
+        blgs = paginator.page(1)
+    except EmptyPage:
+        blgs = paginator.page(paginator.num_pages)
     trainings = Telim.objects.all()
     services = Service.objects.all()
     events = Event.objects.all()
+    reviews = Review.objects.all()
     context = {
+        "reviews": reviews,
+        "tag": tag,
         "events": events,
         "trainings": trainings,
         "services": services,
+        "tags": tags,
+        "blogs": blgs,
+        "blogsmost": blogs,
+        "blogsfmobile": blogsfmobile,
         "topics": topics,
         "general": general,
-        "tag": tag,
+        "featured": featured,
         "socials": socials,
         "categories": categories
     }
