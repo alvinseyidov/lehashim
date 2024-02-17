@@ -8,6 +8,7 @@ from ckeditor_uploader.fields import RichTextUploadingField
 class Review(models.Model):
     full_name = models.CharField(max_length=256)
     position = models.CharField(max_length=256)
+    feedback_short_version = models.TextField()
     feedback = models.TextField()
     profile_image = models.ImageField(null=True, blank=True)
 
