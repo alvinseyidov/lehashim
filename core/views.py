@@ -87,8 +87,14 @@ def reviews(request):
     services = Service.objects.all()
     events = Event.objects.all()
     reviews = Review.objects.all()
+    review_count = reviews.count()//3
+    reviews1 = reviews[:review_count]
+    reviews2 = reviews[review_count:2*review_count]
+    reviews3 = reviews[2*review_count:]
     context = {
-        "reviews": reviews,
+        "reviews1": reviews1,
+        "reviews2": reviews2,
+        "reviews3": reviews3,
         "events": events,
         "trainings": trainings,
         "services": services,

@@ -295,11 +295,15 @@ color:#eb2810 !important;
               <div class="box-testimonials mb-150animate__fadeIn mb-100">
                <div class="container">
                    <div class="row">
-                    {% for r in reviews %}
-                       <div class="col-lg-4 col-12" style=" padding-top: 20px; padding-bottom: 20px; "><div class="card-testimonials bg-gray-850 borderwhite hover-up hdtfgfg">
+                       <div class="col-lg-4 col-12" style=" padding-top: 20px; padding-bottom: 20px; ">
+                    {% for r in reviews1 %}
+
+                           <div class="card-testimonials bg-gray-850 borderwhite hover-up hdtfgfg" style=" margin-top: 28px; ">
                           <div class="box-author mb-20">
                                 {% if r.profile_image %}
-                              <img src="{{r.profile_image.url}}" alt="Genz">
+
+                             <div style="background-image:url({{r.profile_image.url}});height: 60px; width: 60px; background-size: cover; background-position: center; border-radius: 50%; min-width: 60px; margin-right: 15px;"></div>
+
                               {% else%}
                               <img src="{% static 'profile.jpg'%}" alt="Genz">
                               {% endif%}
@@ -308,13 +312,63 @@ color:#eb2810 !important;
                             </div>
                           </div>
                           <div class="card-info">
-                            <p class="color-gray-500">
+                            <p class="color-gray-500"  style="font-size: 14px; line-height: 24px;">
                             {{r.feedback}}
                             </p>
                           </div>
-                        </div></div>
+                        </div>
 
                     {% endfor%}
+                           </div>
+                        <div class="col-lg-4 col-12" style=" padding-top: 20px; padding-bottom: 20px; ">
+                    {% for r in reviews2 %}
+
+                           <div class="card-testimonials bg-gray-850 borderwhite hover-up hdtfgfg" style=" margin-top: 28px; ">
+                          <div class="box-author mb-20">
+                                {% if r.profile_image %}
+                             <div style="background-image:url({{r.profile_image.url}});height: 60px; width: 60px; background-size: cover; background-position: center; border-radius: 50%; min-width: 60px; margin-right: 15px;"></div>
+
+                              {% else%}
+                              <img src="{% static 'profile.jpg'%}" alt="Genz">
+                              {% endif%}
+                            <div class="author-info">
+                              <h6 class=" fontcolor">{{r.full_name}}</h6><span class="  text-sm fontcolor">{{r.position}}</span>
+                            </div>
+                          </div>
+                          <div class="card-info">
+                            <p class="color-gray-500"  style="font-size: 14px; line-height: 24px;">
+                            {{r.feedback}}
+                            </p>
+                          </div>
+                        </div>
+
+                    {% endfor%}
+                           </div>
+                        <div class="col-lg-4 col-12" style=" padding-top: 20px; padding-bottom: 20px; ">
+                    {% for r in reviews3 %}
+
+                           <div class="card-testimonials bg-gray-850 borderwhite hover-up hdtfgfg" style=" margin-top: 28px; ">
+                          <div class="box-author mb-20">
+                                {% if r.profile_image %}
+                              <div style="background-image:url({{r.profile_image.url}});height: 60px; width: 60px; background-size: cover; background-position: center; border-radius: 50%; min-width: 60px; margin-right: 15px;"></div>
+                              {% else%}
+                              <img src="{% static 'profile.jpg'%}" alt="Genz">
+                              {% endif%}
+                            <div class="author-info">
+                              <h6 class=" fontcolor">{{r.full_name}}</h6><span class="  text-sm fontcolor">{{r.position}}</span>
+                            </div>
+                          </div>
+                          <div class="card-info">
+                            <p class="color-gray-500" style="font-size: 14px; line-height: 24px;">
+                            {{r.feedback}}
+                            </p>
+                          </div>
+                        </div>
+
+                    {% endfor%}
+                           </div>
+
+
                    </div>
 
                </div>
