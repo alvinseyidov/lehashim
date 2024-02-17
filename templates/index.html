@@ -273,7 +273,7 @@ color:#eb2810 !important;
                           <div class="item-post wow animate__animated animate__fadeIn">
                             <div class="image-post" style="background-image: url({{b.main_image.url}}); width: 100px; height: 100px; background-size: cover;    max-width: unset;background-position: center;"> </div>
                             <div class="info-post border-gray-800" style=" width: 217px; "><a href="{% url 'blog' b.id %}">
-                                <h6 class="color-white" style=" color: #fff !important; ">{{b.title}}</h6></a><span class="color-gray-700" style=" color: #fff !important; ">{{b.category.name}}</span>
+                                <h6 class="color-white" style=" color: #fff !important; ">{{b.title}}</h6></a><span class="color-gray-700" style=" color: #fff !important; ">{{b.cat.name}}</span>
                               <ul class="d-inline-block">
                                 <li class="color-gray-700" style=" color: #fff !important; ">{{b.publish_datetime | date:'d.m.Y'}}</li>
                               </ul>
@@ -313,7 +313,7 @@ color:#eb2810 !important;
                           <div class="item-post wow animate__animated animate__fadeIn">
                             <div class="image-post" style="background-image: url({{b.main_image.url}}); width: 100px; height: 100px; background-size: cover;    max-width: unset;background-position: center;"> </div>
                             <div class="info-post border-gray-800" style=" width: 217px; "><a href="{% url 'blog' b.id %}">
-                                <h6 class="color-white" style=" color: #fff !important; ">{{b.title}}</h6></a><span class="color-gray-700" style=" color: #fff !important; ">{{b.category.name}}</span>
+                                <h6 class="color-white" style=" color: #fff !important; ">{{b.title}}</h6></a><span class="color-gray-700" style=" color: #fff !important; ">{{b.cat.name}}</span>
                               <ul class="d-inline-block">
                                 <li class="color-gray-700" style=" color: #fff !important; ">{{b.publish_datetime | date:'d.m.Y'}}</li>
                               </ul>
@@ -349,7 +349,7 @@ color:#eb2810 !important;
                     {% for b in blogs %}
                     <div class="card-list-posts wow animate__animated animate__fadeIn infinite-item" style="border-bottom: 1px solid #cfcfcf; padding-bottom: 26px;margin-bottom: 27px;">
                       <a href="{% url 'blog' b.id%}" style="height:200px;margin-right: 35px;background-size: cover;background-image:url({{b.main_image.url}});border-radius:14px;" class="card-image hover-up"></a>
-                      <div class="card-info"><a class="btn btn-tag bg-gray-800 hover-up" href="{% url 'category' 1 %}">{{b.category.name}}</a><br>
+                      <div class="card-info"><a class="btn btn-tag bg-gray-800 hover-up" href="{% url 'category' b.cat.id %}">{{b.cat.name}}</a><br>
                         <a href="{% url 'blog' b.id%}">
                           <h4 class="mt-15 mb-20 color-white hoverunder" style=" font-size: 1.375rem; ">{{b.title}}</h4></a>
                         <p class="color-gray-500">{{b.short_description}}</p>
