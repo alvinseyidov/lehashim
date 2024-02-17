@@ -112,6 +112,16 @@ color:#eb2810 !important;
                 </li>
                 {% endif %}
                 {% endfor %}
+                   <li class=""><a class="active hoverr "style=" cursor: pointer; " >Tədbirlər</a>
+                  <ul class="sub-menu menuborder" style=" background: #f9fbff; border: 0px solid #E9EEF5; box-shadow: none; margin-top: 11px; min-width: 268px; ">
+                    {% for s in events %}
+
+                    <li><a class=" cccc hoverr" style=" cursor: pointer; "href="{% url 'event' s.id %}">{{s.name}}</a>
+
+                    </li>
+                      {% endfor%}
+                       </ul>
+                      </li>
 
                <li class=""><a class="active hoverr "style=" cursor: pointer; " >Təlimlər</a>
                   <ul class="sub-menu menuborder" style=" background: #f9fbff; border: 0px solid #E9EEF5; box-shadow: none; margin-top: 11px; min-width: 268px; ">
