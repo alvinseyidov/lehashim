@@ -66,3 +66,4 @@ class Blog(models.Model):
     class Meta:
         verbose_name = "Bloq yazı"
         verbose_name_plural = "Bloq yazıları"
+        ordering = ('id',)
