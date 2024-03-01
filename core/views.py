@@ -14,7 +14,7 @@ def index(request):
     topics = HotTopics.objects.all()
     general = General.objects.all()
     blogs = Blog.objects.all()
-    bestblogs = Blog.objects.all().order_by('views')[:3]
+    bestblogs = Blog.objects.all().order_by('-views')[:3]
     blogsf = SelectedBlog.objects.all()[:3]
     blogsfmobile = SelectedBlog.objects.all()[:1]
     tags = Tag.objects.all()[:6]
