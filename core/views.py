@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from core.models import *
-from blog.models import Category as Category, Blog, Tag, Review
+from blog.models import Category as Category, Blog, Tag, Review, SelectedBlog
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from event.models import Event
@@ -14,8 +14,8 @@ def index(request):
     topics = HotTopics.objects.all()
     general = General.objects.all()
     blogs = Blog.objects.all()
-    blogsf = Blog.objects.all()[:3]
-    blogsfmobile = Blog.objects.all()[:1]
+    blogsf = SelectedBlog.objects.all()[:3]
+    blogsfmobile = SelectedBlog.objects.all()[:1]
     tags = Tag.objects.all()[:6]
     socials = Social.objects.all()
 

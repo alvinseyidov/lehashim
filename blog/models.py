@@ -67,3 +67,16 @@ class Blog(models.Model):
         verbose_name = "Bloq yazı"
         verbose_name_plural = "Bloq yazıları"
         ordering = ('-id',)
+
+
+class SelectedBlog(models.Model):
+    blog = models.ForeignKey(Blog, on_delete=models.CASCADE)
+    sort = models.IntegerField(default=0)
+
+    def __str__(self):
+        return self.blog.title
+
+    class Meta:
+        verbose_name = "Seçilmiş Bloq yazı"
+        verbose_name_plural = "Seçilmiş Bloq yazıları"
+        ordering = ('sort',)
