@@ -22,6 +22,7 @@ urlpatterns = [
     path('blog/<int:id>/', blog_views.blog, name="blog"),
     path('service/<int:id>/', service_views.service, name="service"),
     path('contact/', core_views.contact, name="contact"),
+    path('subscribe/', core_views.subscribe, name="subscribe"),
     path('telims/', core_views.telims, name="telims"),
     path('telim/<int:id>/', core_views.telim, name="telim"),
     path('event/<int:id>/', core_views.event, name="event"),

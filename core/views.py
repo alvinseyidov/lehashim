@@ -149,6 +149,42 @@ def contact(request):
     return render(request, 'contact.html', context)
 
 
+def subscribe(request):
+    if request.method == "POST":
+        email = request.POST.get("email")
+        is_exist = Subscription.objects.filter(email=email)
+        if not is_exist:
+            Subscription.objects.create(email=email)
+        categories = Category.objects.filter(parent__isnull=True)
+        featured = Featured.objects.all()
+        topics = HotTopics.objects.all()
+        general = General.objects.all()
+        tags = Tag.objects.all()[:6]
+        socials = Social.objects.all()
+
+
+
+        trainings = Telim.objects.all()
+        services = Service.objects.all()
+        events = Event.objects.all()
+        reviews = Review.objects.all()
+
+        context = {
+            "reviews": reviews,
+            "events": events,
+            "trainings": trainings,
+            "services": services,
+            "tags": tags,
+            "topics": topics,
+            "general": general,
+            "featured": featured,
+            "socials": socials,
+            "categories": categories
+        }
+        return render(request, 'success.html', context)
+
+
+
 
 def telim(request, id):
     categories = Category.objects.filter(parent__isnull=True)

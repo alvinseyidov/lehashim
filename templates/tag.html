@@ -582,8 +582,8 @@ color:#eb2810 !important;
 
             <div class="box-subscriber mt-40 mb-50 wow animate__ animate__fadeInUp  animated" style="max-width: 500px; visibility: visible; animation-name: fadeInUp;">
                       <div class="inner-subscriber bg-gray-800" style=" box-shadow: unset; background: unset;    background-color: unset !important; ">
-                        <form class="d-flex" action="#">
-                          <input class="input-sybscriber" type="text" placeholder="Email ünvanı..." style="    background-color: #fff;padding: 0 1px 0 37px; font-size: 15px;border: 1px solid #a8a8a8;border-radius: 32px;height: 55px;margin-right: -50px;">
+                       <form class="d-flex"  method="post" action="{% url 'subscribe'%}">{% csrf_token%}
+                          <input required class="input-sybscriber" type="email" name="email" placeholder="Email ünvanı..." style="    background-color: #fff;padding: 0 1px 0 37px; font-size: 15px;border: 1px solid #a8a8a8;border-radius: 32px;height: 55px;margin-right: -50px;">
                           <button style=" width: 184px; border-radius: 32px; " class="btn btn-linear btn-arrow-right">Abunə Olun<i class="fi-rr-arrow-small-right"></i></button>
                         </form>
                       </div>
@@ -594,14 +594,16 @@ color:#eb2810 !important;
     </div>
 
 
-                  <div style=" margin-bottom: -101px; " class="mobile box-sidebar bg-gray-850 border-gray-800 ">
-
+                <div style=" margin-bottom: -101px; " class="mobile box-sidebar bg-gray-850 border-gray-800 ">
+                      <form method="post" action="{% url 'subscribe'%}">{% csrf_token%}
                       <div class="content-sidebar" style=" margin-bottom: 41px; ">
                       <div class="fontcolor" style=" font-size: 24px;font-weight: bold;line-height: 53px;margin-top: 4px; ">Abunə olun, agah olun</div>
                       <div style=" margin-bottom: 17px; " class="fontcolor">Görüş, buraxılış və bütün yeniliklərdən  xəbərdar olmaq üçün abunə ola bilərsiniz.</div>
-                      <div style=" display: flex; "><input style="    background-color: #fff;padding: 0 1px 0 37px; font-size: 15px;border: 1px solid #a8a8a8;border-radius: 32px;height: 47px;    margin-right: -49px;    width: 100%;" class="input-sybscriber" placeholder="Email ünvanı..." type="email">
+                      <div style=" display: flex; ">
+                          <input name="email" required style="    background-color: #fff;padding: 0 1px 0 37px; font-size: 15px;border: 1px solid #a8a8a8;border-radius: 32px;height: 47px;    margin-right: -49px;    width: 100%;" class="input-sybscriber" placeholder="Email ünvanı..." type="email">
                           <button style="background-image:url({% static 'send.png'%}); width: 184px; border-radius: 32px; width: 50px; border-radius: 32px; background-repeat: no-repeat; background-position: center; background-color: #de210e; background-size: 35px;" class="btn btn-linear btn-arrow-right" type="submit"></button> </div>
                     </div>
+                      </form>
                     </div>
 
             </div>

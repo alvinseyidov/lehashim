@@ -66,3 +66,13 @@ class HotTopics(models.Model):
 
 
 
+class Subscription(models.Model):
+    email = models.CharField(max_length=256)
+    subscribed = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.email
+
+    class Meta:
+        verbose_name = "Abunə olmuş oxucu"
+        verbose_name_plural = "Abunə olmuş oxucular"
