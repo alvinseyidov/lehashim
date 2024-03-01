@@ -60,6 +60,11 @@ class Blog(models.Model):
     cat = TreeForeignKey(Category, on_delete=models.CASCADE, related_name="blogs")
     tags = models.ManyToManyField(Tag, blank=True, related_name="blogs")
     publish_datetime = models.DateTimeField(null=True, blank=True)
+    views = models.IntegerField(default=0)
+
+    def update_views(self, *args, **kwargs):
+        self.views = self.views + 1
+        super(Blog, self).save(*args, **kwargs)
 
     def __str__(self):
         return self.title

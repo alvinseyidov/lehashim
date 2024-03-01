@@ -117,6 +117,7 @@ def blog(request, id):
     services = Service.objects.all()
     events = Event.objects.all()
     reviews = Review.objects.all()
+    blog.update_views()
     context = {
         "reviews": reviews,
         "events": events,
