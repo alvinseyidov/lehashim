@@ -21,8 +21,11 @@ admin.site.register(Category, DraggableMPTTAdmin,
 
 
 
+@admin.register(Blog)
+class BlogAdmin(admin.ModelAdmin):
+    list_display = ['title','cat','publish_datetime','views']
+    search_fields = ['title','cat',]
 
-admin.site.register(Blog)
 admin.site.register(SelectedBlog)
 admin.site.register(Review)
 
