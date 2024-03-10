@@ -2715,6 +2715,14 @@ background-color: #eb2810 !important;
   margin-top: 0;
 }
 
+
+
+.theme-day .burger-icon.burger-icon-white > span::before, .theme-day .burger-icon.burger-icon-white > span::after{
+background-color: #000 !important;
+}
+.theme-night .burger-icon.burger-icon-white > span::before, .theme-night .burger-icon.burger-icon-white > span::after{
+background-color: #fff !important;
+}
 .switch-button {
   display: inline-block;
   padding: 0px 0px 0px 5px;
@@ -6657,7 +6665,7 @@ iframe.google-map {
     display: none;
   }
   .header .main-header .header-right {
-    padding-right: 25px;
+    padding-right: 85px;
   }
   .swiper-button-prev-style-1, .swiper-button-next-style-1 {
     display: block;

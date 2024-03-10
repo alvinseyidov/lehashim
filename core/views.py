@@ -1,4 +1,9 @@
 from django.shortcuts import render
+from django.views import generic
+from django.contrib.auth.forms import UserCreationForm
+from django.urls import reverse_lazy
+from django.views.generic import CreateView
+
 from core.models import *
 from blog.models import Category as Category, Blog, Tag, Review, SelectedBlog
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -6,7 +11,9 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from event.models import Event
 from service.models import Service
 from training.models import Telim
+from django.contrib.auth import get_user_model
 
+User = get_user_model()
 
 def index(request):
     categories = Category.objects.filter(parent__isnull=True)
@@ -148,6 +155,20 @@ def contact(request):
     }
     return render(request, 'contact.html', context)
 
+
+
+class SignUpForm(UserCreationForm):
+#profile_year        = blaaa blaa blaaa irrelevant.. You have your own stuff here don't worry about it
+
+   # here is the important part.. add a class Meta-
+   class Meta:
+      model = User #this is the "YourCustomUser" that you imported at the top of the file
+      fields = ('email', 'full_name','password1', 'password2',)
+
+class SignUpView(generic.CreateView):
+    form_class = SignUpForm
+    success_url = reverse_lazy("login")
+    template_name = "registration/signup.html"
 
 def subscribe(request):
     if request.method == "POST":

@@ -3,6 +3,7 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
 
+
 from core import views as core_views
 from blog import views as blog_views
 from service import views as service_views
@@ -11,6 +12,8 @@ from training import views as training_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("accounts/", include("django.contrib.auth.urls")),
+    path("signup/", core_views.SignUpView.as_view(), name="signup"),
     path('summernote/', include('django_summernote.urls')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
     path('', core_views.index, name="index"),
