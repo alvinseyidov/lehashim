@@ -169,6 +169,31 @@ class SignUpView(generic.CreateView):
     form_class = SignUpForm
     success_url = reverse_lazy("login")
     template_name = "registration/signup.html"
+    categories = Category.objects.filter(parent__isnull=True)
+    general = General.objects.all()
+    socials = Social.objects.all()
+    blogs = Blog.objects.all()[:4]
+    topics = HotTopics.objects.all()
+    trainings = Telim.objects.all()
+    services = Service.objects.all()
+    events = Event.objects.all()
+    reviews = Review.objects.all()
+    extra_context = {
+        "reviews": reviews,
+        "events": events,
+        "trainings": trainings,
+        "services": services,
+        "topics": topics,
+        "general": general,
+        "blogsmost": blogs,
+        "socials": socials,
+        "categories": categories
+    }
+
+    def get_context_data(self, **kwargs):
+        context = super(SignUpView, self).get_context_data(**kwargs)
+        context.update(self.extra_context)
+        return context
 
 def subscribe(request):
     if request.method == "POST":
