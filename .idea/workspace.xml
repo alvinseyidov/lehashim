@@ -5,76 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d3f17b9-72ff-4000-a943-a8736fbd8a95" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/registration/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0002_alter_blogcategory_parent.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0003_tag_blog_tags.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0004_tag_slug.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0005_alter_blog_tags.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0006_blog_date.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0007_blogcategory_description.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0008_blog_reading_time.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0009_remove_blog_category.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0010_remove_blog_reading_time.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0011_remove_blog_date.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0012_blog_category.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0013_blogcategory_publish_datetime.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0014_alter_blogcategory_publish_datetime.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0015_remove_blogcategory_publish_datetime_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0016_category_remove_blogcategory_parent_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0017_delete_blogcategory_category_main_blog_cat.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0018_rename_main_category_parent.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0019_alter_blog_cat_alter_blog_description.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0020_review_alter_blog_options_alter_tag_options.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0021_review_profile_image.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0022_review_feedback_short_version.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0023_blog_reading_time.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0024_alter_blog_cat.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0025_alter_blog_options_selectedblog.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/migrations/0026_blog_views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/account/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/account/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/migrations/0002_hottopics.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/migrations/0003_remove_social_icon_social_icon_black_backround_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/migrations/0004_alter_social_options_social_sort.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/migrations/0005_telim.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/migrations/0006_delete_telim.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/migrations/0007_alter_hottopics_category.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/migrations/0008_alter_featured_options_alter_general_options_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/migrations/0009_subscription.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite4" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/event/migrations/0002_remove_event_category_delete_eventcategory.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/event/migrations/0003_alter_event_options.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/migrations/0002_servicecategory_description.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/migrations/0003_remove_servicecategory_description_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/migrations/0004_remove_service_category_delete_servicecategory.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/migrations/0005_alter_service_options.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blogbackup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blogbackup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/category.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/category.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/categorybackup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/categorybackup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/portfolio.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/portfolio.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/reviews.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/reviews.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/service.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/success.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/success.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tag.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tag.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/telim.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/telim.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/training.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/training.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/trainings.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/trainings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/training/migrations/0002_remove_telim_category_delete_telimcategory.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/training/migrations/0003_alter_telim_options.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
